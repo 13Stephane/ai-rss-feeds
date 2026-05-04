@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 28 Apr 2026 17:16:17 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2026 17:16:02 +0000</lastBuildDate>
     <item>
       <title>Anthropic raises $124 million to build more reliable, general AI systems</title>
       <link>https://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems</link>
@@ -1365,6 +1365,12 @@
       <link>https://www.anthropic.com/news/claude-for-creative-work</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/claude-for-creative-work</guid>
       <pubDate>Tue, 28 Apr 2026 19:22:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Building a new enterprise AI services company with Blackstone, Hellman &amp; Friedman, and Goldman Sachs</title>
+      <link>https://www.anthropic.com/news/enterprise-ai-services-company</link>
+      <guid isPermaLink="true">https://www.anthropic.com/news/enterprise-ai-services-company</guid>
+      <pubDate>Mon, 04 May 2026 15:42:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
