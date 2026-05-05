@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 30 Apr 2026 17:07:46 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 17:09:10 +0000</lastBuildDate>
     <item>
       <title>First Progress Report</title>
       <link>https://www.aisi.gov.uk/blog/first-progress-report</link>
@@ -571,6 +571,13 @@
       <description>AISI conducted cyber evaluations on OpenAI's GPT-5.5. GPT-5.5 is one of the strongest models we have tested on our cyber tasks and is the second model to solve one of our multi-step cyber-attack simulations end-to-end.</description>
       <guid isPermaLink="true">https://www.aisi.gov.uk/blog/our-evaluation-of-openais-gpt-5-5-cyber-capabilities</guid>
       <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Partnering with Microsoft to strengthen frontier AI safety</title>
+      <link>https://www.aisi.gov.uk/blog/partnering-with-microsoft-to-strengthen-frontier-ai-safety</link>
+      <description>A new collaboration on high-risk capability evaluation, safeguard testing, and societal resilience research.</description>
+      <guid isPermaLink="true">https://www.aisi.gov.uk/blog/partnering-with-microsoft-to-strengthen-frontier-ai-safety</guid>
+      <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>

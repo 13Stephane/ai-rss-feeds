@@ -7,14 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 May 2026 17:04:13 +0000</lastBuildDate>
-    <item>
-      <title>Now in Nature: Synthesizing scientific literature with retrieval-augmented LMs</title>
-      <link>https://allenai.org/blog/nature-openscilm</link>
-      <description>We're excited to share that our paper “Synthesizing scientific literature with retrieval-augmented language…</description>
-      <guid isPermaLink="true">https://allenai.org/blog/nature-openscilm</guid>
-      <pubDate>Sat, 28 Feb 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Tue, 05 May 2026 17:09:11 +0000</lastBuildDate>
     <item>
       <title>Introducing AutoDiscovery: Automated scientific discovery, now in AstaLabs</title>
       <link>https://allenai.org/blog/autodiscovery</link>
@@ -69,6 +62,13 @@
       <link>https://allenai.org/blog/peter-clark-qa</link>
       <description>Interim CEO Peter Clark shares his thoughts on this moment for Ai2, our commitment to open science, and where the…</description>
       <guid isPermaLink="true">https://allenai.org/blog/peter-clark-qa</guid>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>MolmoAct 2: An open foundation for robots that work in the real world</title>
+      <link>https://allenai.org/blog/molmoact2</link>
+      <description>MolmoAct 2 is a fully open robotics foundation model that brings faster, stronger 3D action reasoning to…</description>
+      <guid isPermaLink="true">https://allenai.org/blog/molmoact2</guid>
       <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
