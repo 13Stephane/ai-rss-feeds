@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 13 May 2026 17:26:14 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2026 14:38:09 +0000</lastBuildDate>
     <item>
       <title>First Progress Report</title>
       <link>https://www.aisi.gov.uk/blog/first-progress-report</link>
@@ -585,6 +585,13 @@
       <description>The length of tasks frontier models can autonomously complete in our narrow cyber suite has been doubling every few months. This doubling rate has become faster over time, and recent models exceeded our previous trends.</description>
       <guid isPermaLink="true">https://www.aisi.gov.uk/blog/how-fast-is-autonomous-ai-cyber-capability-advancing</guid>
       <pubDate>Wed, 13 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Will it become harder to oversee AI systems?</title>
+      <link>https://www.aisi.gov.uk/blog/will-it-become-harder-to-oversee-ai-systems</link>
+      <description>Our new report examines today’s AI oversight landscape, how robust it is to capability advances, and the pathways that could lead to its degradation.</description>
+      <guid isPermaLink="true">https://www.aisi.gov.uk/blog/will-it-become-harder-to-oversee-ai-systems</guid>
+      <pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
