@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 20 May 2026 14:38:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 20:20:11 +0000</lastBuildDate>
     <item>
       <title>A General Language Assistant as a Laboratory for Alignment</title>
       <link>https://www.anthropic.com/research/a-general-language-assistant-as-a-laboratory-for-alignment</link>
@@ -810,6 +810,13 @@
       <description>Our views on the AI competition between the US and China.</description>
       <guid isPermaLink="true">https://www.anthropic.com/research/2028-ai-leadership</guid>
       <pubDate>Thu, 14 May 2026 17:06:12 +0000</pubDate>
+    </item>
+    <item>
+      <title>Project Glasswing: An initial update</title>
+      <link>https://www.anthropic.com/research/glasswing-initial-update</link>
+      <description>An early update on what we've learned from Project Glasswing.</description>
+      <guid isPermaLink="true">https://www.anthropic.com/research/glasswing-initial-update</guid>
+      <pubDate>Fri, 22 May 2026 18:00:12 +0000</pubDate>
     </item>
   </channel>
 </rss>
