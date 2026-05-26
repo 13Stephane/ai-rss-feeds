@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 26 May 2026 17:46:17 +0000</lastBuildDate>
-    <item>
-      <title>Mila, Aéro Montréal and Espace Aéro Join Forces to Accelerate Artificial Intelligence in Aerospace</title>
-      <link>https://mila.quebec/en/news/mila-aero-montreal-and-espace-aero-join-forces-to-accelerate-artificial-intelligence-in</link>
-      <guid isPermaLink="true">https://mila.quebec/en/news/mila-aero-montreal-and-espace-aero-join-forces-to-accelerate-artificial-intelligence-in</guid>
-      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Tue, 26 May 2026 20:26:36 +0000</lastBuildDate>
     <item>
       <title>Mila and AlayaCare Announce Partnership to Develop Robust Agentic AI for Home Care</title>
       <link>https://mila.quebec/en/news/mila-and-alayacare-announce-partnership-to-develop-robust-agentic-ai-for-home-care</link>
@@ -66,6 +60,12 @@
       <title>Mila and CIFAR Launch the Indigenous AI Advisory Circle</title>
       <link>https://mila.quebec/en/news/mila-and-cifar-launch-the-indigenous-ai-advisory-circle</link>
       <guid isPermaLink="true">https://mila.quebec/en/news/mila-and-cifar-launch-the-indigenous-ai-advisory-circle</guid>
+      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Torc Robotics Partners with Mila in Institute's First-Ever Autonomous-Trucking Collaboration to Advance Physical AI</title>
+      <link>https://mila.quebec/en/news/torc-robotics-partners-with-mila-in-institutes-first-ever-autonomous-trucking-collaboration-to</link>
+      <guid isPermaLink="true">https://mila.quebec/en/news/torc-robotics-partners-with-mila-in-institutes-first-ever-autonomous-trucking-collaboration-to</guid>
       <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
