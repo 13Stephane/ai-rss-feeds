@@ -7,19 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 28 May 2026 17:49:40 +0000</lastBuildDate>
-    <item>
-      <title>Introducing Model Vault: Your private platform for secure and scalable model inference</title>
-      <link>https://cohere.com/blog/model-vault</link>
-      <guid isPermaLink="true">https://cohere.com/blog/model-vault</guid>
-      <pubDate>Wed, 28 Jan 2026 13:59:42 +0000</pubDate>
-    </item>
-    <item>
-      <title>Cohere signs world chess champion Magnus Carlsen as brand ambassador</title>
-      <link>https://cohere.com/blog/cohere-signs-world-chess-champion-magnus-carlsen</link>
-      <guid isPermaLink="true">https://cohere.com/blog/cohere-signs-world-chess-champion-magnus-carlsen</guid>
-      <pubDate>Fri, 13 Feb 2026 14:14:41 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 28 May 2026 20:33:52 +0000</lastBuildDate>
     <item>
       <title>Cohere Labs Launches Tiny Aya, Making Multilingual AI Accessible</title>
       <link>https://cohere.com/blog/cohere-labs-tiny-aya</link>
@@ -93,6 +81,12 @@
       <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Cohere Releases Command A+: An Open-Source Enterprise AI Model Built for Sovereign Critical Infrastructure</title>
+      <link>https://cohere.com/blog/cohere-releases-command-a-plus</link>
+      <guid isPermaLink="true">https://cohere.com/blog/cohere-releases-command-a-plus</guid>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Introducing Command A+: Making sovereign agentic capabilities available to all</title>
       <link>https://cohere.com/blog/command-a-plus</link>
       <guid isPermaLink="true">https://cohere.com/blog/command-a-plus</guid>
@@ -103,6 +97,12 @@
       <link>https://cohere.com/blog/2026-summer-merch-collection</link>
       <guid isPermaLink="true">https://cohere.com/blog/2026-summer-merch-collection</guid>
       <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>RWS and Cohere build top-performing AI language intelligence for the enterprise</title>
+      <link>https://cohere.com/blog/rws-and-cohere-build-ai-language-intelligence</link>
+      <guid isPermaLink="true">https://cohere.com/blog/rws-and-cohere-build-ai-language-intelligence</guid>
+      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Cohere and Mila partner to advance Quebec French language and cultural context in AI</title>
