@@ -22,7 +22,7 @@
 - Be lenient in what selectors can return. For example `item_link_selector` can return either text (the URL) or an HTML node (in which case its `href` attr is taken).
 - Don't follow any links (to articles or to later pages of links), just use the information on the source page.
 - Don't repeatedly curl a page when developing feeds - put a copy into `./snapshots` and refer to that.
-- To refresh a snapshot directly, use e.g. `curl -L https://www.anthropic.com/news -o snapshots/anthropic-news.html`.
+- To refresh a snapshot directly, use e.g. `curl -f https://www.anthropic.com/news -o snapshots/anthropic-news.html`.
 - If a new feed can't be scraped with the existing setup, suggest how to proceed and we can discuss before implementing new scraping methods.
 - If the feed uses nextjs, you can extract the nextjs data like `uv run python extract_nextjs.py snapshots/cohere-blog.html >snapshots/cohere-blog.nextjs.txt`.
 
@@ -32,6 +32,16 @@
 - Look at existing feeds (`feeds.toml`) for consistency.
 - Use selectors that are likely to be stable over time.
 - When you add a new feed, run `uv run python generate_opml.py` to regenerate the OPML list.
+
+## Broken feeds
+- If a feed stops working, it can be marked `broken = true` in `feeds.toml`. This will stop a known problem from failing the whole run, and will flag when it starts working again.
+- To fix a feed:
+  - Grab a new snapshot (as above).
+  - If it uses nextjs, extract the data (as above).
+  - Read the existing feed in `feeds.toml`.
+  - Compare it to the new snapshots and fix the feed.
+  - Remove `broken = true`.
+- News pages sometimes have featured articles shown differently from the main list, ensure you get them all. It can help if the user supplies the titles for a selection of articles (featured and not), so you can find them more easily in the HTML.
 
 ## Regeneration
 - There is a github workflow (`.github/workflows/generate-feeds.yml`) that runs every 3 hours.
