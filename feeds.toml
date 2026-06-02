@@ -46,7 +46,6 @@ item_link_selector = "a[href^='/blog/']::attr(href)"
 item_date_selector = "div.u-text-style-caption::text"
 
 [feeds.turing-blog]
-broken = true
 feed_title = "Turing Blog (Alan Turing Institute)"
 source_url = "https://www.turing.ac.uk/blog"
 item_container_selector = "article.node--type-article"
@@ -102,6 +101,7 @@ item_link_selector = ".slug | if type == \"object\" then .current else . end"
 item_date_selector = ".date // .published_at"
 
 [feeds.mistral-news]
+broken = true
 feed_title = "Mistral News"
 feed_description = "Latest news and announcements from Mistral AI."
 source_url = "https://mistral.ai/news/"
