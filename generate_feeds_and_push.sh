@@ -11,6 +11,7 @@ set -e
 
 if [ $generate_exit -ne 0 ]; then
     echo "=== Some feeds failed, continuing to commit any that succeeded ==="
+    osascript -e 'display notification "Some feeds failed — check the logs" with title "ai-rss-feeds"'
 fi
 
 echo "=== Checking for feed changes ==="
