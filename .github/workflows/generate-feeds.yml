@@ -41,8 +41,12 @@ jobs:
         run: |
           if git diff --quiet -- feeds; then
             echo "No feed changes to commit."
+            echo "::notice::No feed changes to commit."
             exit 0
           fi
+
+          changed=$(git diff --name-only -- feeds | sed 's|feeds/||')
+          echo "::notice::Updated feeds: $(echo "$changed" | tr '\n' ' ')"
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
