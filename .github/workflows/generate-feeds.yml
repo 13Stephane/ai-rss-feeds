@@ -5,6 +5,11 @@ on:
     # Run every 3 hours at 41 minutes past (1:41, 4:41, 7:41, etc.)
     - cron: "41 1/3 * * *"
   workflow_dispatch:
+    inputs:
+      debug:
+        description: "Enable tmate debug session"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -27,6 +32,10 @@ jobs:
 
       # continue-on-error lets the job proceed to the commit step even if some
       # spiders fail, so successfully-generated feeds are still written out.
+      - name: Setup tmate debug session
+        if: ${{ inputs.debug }}
+        uses: mxschmitt/action-tmate@v3
+
       - name: Generate feeds
         id: generate
         continue-on-error: true
