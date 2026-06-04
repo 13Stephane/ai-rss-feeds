@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 21 May 2026 14:38:10 +0000</lastBuildDate>
-    <item>
-      <title>AI forecasting initiative set to strengthen climate resilience and food security in West Africa</title>
-      <link>https://www.turing.ac.uk/news/ai-forecasting-initiative-set-strengthen-climate-resilience-and-food-security-west-africa</link>
-      <guid isPermaLink="true">https://www.turing.ac.uk/news/ai-forecasting-initiative-set-strengthen-climate-resilience-and-food-security-west-africa</guid>
-      <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 04 Jun 2026 15:41:10 +0000</lastBuildDate>
     <item>
       <title>AI assurance key to unlocking AI adoption in defence and driving UK economic growth</title>
       <link>https://www.turing.ac.uk/news/ai-assurance-key-unlocking-ai-adoption-defence-and-driving-uk-economic-growth</link>
@@ -115,6 +109,12 @@
       <link>https://www.turing.ac.uk/news/new-national-blueprint-embedding-data-centric-engineering-skills-higher-education</link>
       <guid isPermaLink="true">https://www.turing.ac.uk/news/new-national-blueprint-embedding-data-centric-engineering-skills-higher-education</guid>
       <pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Turing takes part in Google’s Summer of Code</title>
+      <link>https://www.turing.ac.uk/news/turing-takes-part-googles-summer-code</link>
+      <guid isPermaLink="true">https://www.turing.ac.uk/news/turing-takes-part-googles-summer-code</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
