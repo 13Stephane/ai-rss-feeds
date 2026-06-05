@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 04 Jun 2026 15:41:11 +0000</lastBuildDate>
-    <item>
-      <title>Codex in Chrome 🤖, inside Chinese labs 🇨🇳, improving token efficiency 🛠️</title>
-      <link>https://tldr.tech/ai/2026-05-08</link>
-      <guid isPermaLink="true">https://tldr.tech/ai/2026-05-08</guid>
-      <pubDate>Fri, 08 May 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 05 Jun 2026 15:41:04 +0000</lastBuildDate>
     <item>
       <title>Nvidia invests $40B 💰, Anthropic acquires compute 🤝, Mistral’s growth 📈</title>
       <link>https://tldr.tech/ai/2026-05-11</link>
@@ -127,6 +121,12 @@
       <link>https://tldr.tech/ai/2026-06-04</link>
       <guid isPermaLink="true">https://tldr.tech/ai/2026-06-04</guid>
       <pubDate>Thu, 04 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Anthropic Oceanus leaks 🤖, ChatGPT Dreaming 💭, recursive self improvement 🚀</title>
+      <link>https://tldr.tech/ai/2026-06-05</link>
+      <guid isPermaLink="true">https://tldr.tech/ai/2026-06-05</guid>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>

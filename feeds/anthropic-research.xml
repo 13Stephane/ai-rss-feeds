@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 03 Jun 2026 12:20:05 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 15:41:08 +0000</lastBuildDate>
     <item>
       <title>A General Language Assistant as a Laboratory for Alignment</title>
       <link>https://www.anthropic.com/research/a-general-language-assistant-as-a-laboratory-for-alignment</link>
@@ -525,7 +525,7 @@
     <item>
       <title>Signs of introspection in large language models</title>
       <link>https://www.anthropic.com/research/introspection</link>
-      <description>Can Claude access and report on its own internal states? This research finds evidence for a limited but functional ability to introspect—a step toward understanding what's actually happening inside these models.</description>
+      <description>Can Claude access and report on its own internal states? This research finds evidence for a limited but functional ability to introspect.</description>
       <guid isPermaLink="true">https://www.anthropic.com/research/introspection</guid>
       <pubDate>Wed, 29 Oct 2025 01:20:00 +0000</pubDate>
     </item>
@@ -545,6 +545,7 @@
     <item>
       <title>From shortcuts to sabotage: natural emergent misalignment from reward hacking</title>
       <link>https://www.anthropic.com/research/emergent-misalignment-reward-hacking</link>
+      <description>We show for the first time that realistic AI training processes can accidentally produce misaligned models.</description>
       <guid isPermaLink="true">https://www.anthropic.com/research/emergent-misalignment-reward-hacking</guid>
       <pubDate>Fri, 21 Nov 2025 14:32:00 +0000</pubDate>
     </item>
@@ -557,7 +558,7 @@
     <item>
       <title>Estimating AI productivity gains from Claude conversations</title>
       <link>https://www.anthropic.com/research/estimating-productivity-gains</link>
-      <description>Analyzing 100,000 Claude conversations, this research finds AI reduces task time by 80% on average. If universally adopted over 10 years, current models could increase US labor productivity growth by 1.8% annually—doubling recent rates. Knowledge work like software development and management see the largest gains.</description>
+      <description>Analyzing 100,000 Claude conversations, this research finds AI reduces task time by 80% on average.</description>
       <guid isPermaLink="true">https://www.anthropic.com/research/estimating-productivity-gains</guid>
       <pubDate>Tue, 25 Nov 2025 11:05:00 +0000</pubDate>
     </item>
@@ -591,6 +592,7 @@
     <item>
       <title>Next-generation Constitutional Classifiers: More efficient protection against universal jailbreaks</title>
       <link>https://www.anthropic.com/research/next-generation-constitutional-classifiers</link>
+      <description>Last year, we described a new approach to defend against jailbreaks, which we called Constitutional Classifiers. We’ve now developed the next generation.</description>
       <guid isPermaLink="true">https://www.anthropic.com/research/next-generation-constitutional-classifiers</guid>
       <pubDate>Fri, 09 Jan 2026 17:17:00 +0000</pubDate>
     </item>
@@ -610,6 +612,7 @@
     <item>
       <title>The assistant axis: situating and stabilizing the character of large language models</title>
       <link>https://www.anthropic.com/research/assistant-axis</link>
+      <description>Who is the Assistant? We investigate the character that most modern language models inhabit when interacting with users.</description>
       <guid isPermaLink="true">https://www.anthropic.com/research/assistant-axis</guid>
       <pubDate>Mon, 19 Jan 2026 17:00:00 +0000</pubDate>
     </item>
@@ -653,6 +656,7 @@
     <item>
       <title>The persona selection model</title>
       <link>https://www.anthropic.com/research/persona-selection-model</link>
+      <description>Why do AI assistants like Claude sometimes seem surprisingly human. We advance a theory.</description>
       <guid isPermaLink="true">https://www.anthropic.com/research/persona-selection-model</guid>
       <pubDate>Mon, 23 Feb 2026 11:53:00 +0000</pubDate>
     </item>
@@ -774,6 +778,7 @@
     <item>
       <title>How people ask Claude for personal guidance</title>
       <link>https://www.anthropic.com/research/claude-personal-guidance</link>
+      <description>We look at what types of guidance people ask of Claude, and describe how this research shaped the training of our newest models.</description>
       <guid isPermaLink="true">https://www.anthropic.com/research/claude-personal-guidance</guid>
       <pubDate>Thu, 30 Apr 2026 16:35:00 +0000</pubDate>
     </item>

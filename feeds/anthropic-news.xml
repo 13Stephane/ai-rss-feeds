@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 03 Jun 2026 13:07:17 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 15:41:11 +0000</lastBuildDate>
     <item>
       <title>Anthropic raises $124 million to build more reliable, general AI systems</title>
       <link>https://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems</link>
@@ -1290,13 +1290,6 @@
       <pubDate>Thu, 12 Mar 2026 14:39:00 +0000</pubDate>
     </item>
     <item>
-      <title>What 81,000 people want from AI</title>
-      <link>https://www.anthropic.com/81k-interviews</link>
-      <description>We invited Claude.ai users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people participated—the largest and most multilingual qualitative study of its kind. Here's what we found.</description>
-      <guid isPermaLink="true">https://www.anthropic.com/81k-interviews</guid>
-      <pubDate>Wed, 18 Mar 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Australian government and Anthropic sign MOU for AI safety and research</title>
       <link>https://www.anthropic.com/news/australia-MOU</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/australia-MOU</guid>
@@ -1307,13 +1300,6 @@
       <link>https://www.anthropic.com/news/google-broadcom-partnership-compute</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/google-broadcom-partnership-compute</guid>
       <pubDate>Mon, 06 Apr 2026 21:16:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Project Glasswing</title>
-      <link>https://www.anthropic.com/glasswing</link>
-      <description>A new initiative that brings together Amazon Web Services, Anthropic, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks in an effort to secure the world's most critical software.</description>
-      <guid isPermaLink="true">https://www.anthropic.com/glasswing</guid>
-      <pubDate>Tue, 07 Apr 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Anthropic’s Long-Term Benefit Trust appoints Vas Narasimhan to Board of Directors</title>
@@ -1423,6 +1409,7 @@
     <item>
       <title>Widening the conversation on frontier AI</title>
       <link>https://www.anthropic.com/news/widening-conversation-ai</link>
+      <description>Over the past several months, we’ve been organizing dialogues with groups whose work and traditions bear on the questions raised by AI.</description>
       <guid isPermaLink="true">https://www.anthropic.com/news/widening-conversation-ai</guid>
       <pubDate>Tue, 19 May 2026 21:55:00 +0000</pubDate>
     </item>
@@ -1436,6 +1423,7 @@
     <item>
       <title>Anthropic co-founder Chris Olah's remarks on Pope Leo XIV's encyclical "Magnifica humanitas"</title>
       <link>https://www.anthropic.com/news/chris-olah-pope-leo-encyclical</link>
+      <description>The full text of Chris Olah's remarks on the Pope's encyclical on AI.</description>
       <guid isPermaLink="true">https://www.anthropic.com/news/chris-olah-pope-leo-encyclical</guid>
       <pubDate>Mon, 25 May 2026 17:10:00 +0000</pubDate>
     </item>
