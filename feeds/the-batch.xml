@@ -7,14 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 05 Jun 2026 15:41:04 +0000</lastBuildDate>
-    <item>
-      <title>The New Open-Weights Leader, Big AI’s Political Influence, Predicting Illness, Faster Reasoning</title>
-      <link>https://www.deeplearning.ai/the-batch/issue-341</link>
-      <description>The Batch AI News and Insights: Will AI create new job opportunities? My daughter Nova loves cats, and her favorite color is yellow.</description>
-      <guid isPermaLink="true">https://www.deeplearning.ai/the-batch/issue-341</guid>
-      <pubDate>Fri, 20 Feb 2026 15:14:24 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 12 Jun 2026 15:41:06 +0000</lastBuildDate>
     <item>
       <title>Gemini Seizes the Lead, Investors Panic Over Agentic AI, Optimism at Global AI Summit, Local Versus Cloud</title>
       <link>https://www.deeplearning.ai/the-batch/issue-342</link>
@@ -119,6 +112,13 @@
       <description>The Batch AI News and Insights: There have been intense efforts over the past few years to lobby governments to pass AI laws for regulatory capture or to suppress open source.</description>
       <guid isPermaLink="true">https://www.deeplearning.ai/the-batch/issue-356</guid>
       <pubDate>Fri, 05 Jun 2026 14:00:24 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mythos Begets Fable, Cursor's Composer 2.5, Agents Building Agents</title>
+      <link>https://www.deeplearning.ai/the-batch/issue-357</link>
+      <description>The Batch AI News and Insights: If you haven’t already, I encourage you to experiment with using AI agents not just to chat but to actually do work for you on your desktop.</description>
+      <guid isPermaLink="true">https://www.deeplearning.ai/the-batch/issue-357</guid>
+      <pubDate>Fri, 12 Jun 2026 14:00:49 +0000</pubDate>
     </item>
   </channel>
 </rss>
