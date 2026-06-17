@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 15 Jun 2026 15:41:06 +0000</lastBuildDate>
-    <item>
-      <title>Mila and Sustainable AI Group Join Forces to Advance Environmentally Responsible AI</title>
-      <link>https://mila.quebec/en/news/mila-and-sustainable-ai-group-join-forces-to-advance-environmentally-responsible-ai</link>
-      <guid isPermaLink="true">https://mila.quebec/en/news/mila-and-sustainable-ai-group-join-forces-to-advance-environmentally-responsible-ai</guid>
-      <pubDate>Thu, 14 May 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 17 Jun 2026 15:41:19 +0000</lastBuildDate>
     <item>
       <title>TandemAI and Mila Announce Research Partnership to Advance AI-Driven Drug Discovery and World Models</title>
       <link>https://mila.quebec/en/news/tandemai-and-mila-announce-research-partnership-to-advance-ai-driven-drug-discovery-and-world</link>
@@ -67,6 +61,12 @@
       <link>https://mila.quebec/en/news/mila-techaide-2026-the-tech-community-rallies-and-raises-nearly-118000</link>
       <guid isPermaLink="true">https://mila.quebec/en/news/mila-techaide-2026-the-tech-community-rallies-and-raises-nearly-118000</guid>
       <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>G+D launches AI Hub in Montréal to advance secure AI for critical infrastructure</title>
+      <link>https://mila.quebec/en/news/gd-launches-ai-hub-in-montreal-to-advance-secure-ai-for-critical-infrastructure</link>
+      <guid isPermaLink="true">https://mila.quebec/en/news/gd-launches-ai-hub-in-montreal-to-advance-secure-ai-for-critical-infrastructure</guid>
+      <pubDate>Wed, 17 Jun 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
