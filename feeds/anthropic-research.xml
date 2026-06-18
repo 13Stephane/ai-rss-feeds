@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Jun 2026 18:41:14 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2026 18:41:15 +0000</lastBuildDate>
     <item>
       <title>A General Language Assistant as a Laboratory for Alignment</title>
       <link>https://www.anthropic.com/research/a-general-language-assistant-as-a-laboratory-for-alignment</link>
@@ -968,6 +968,13 @@
       <link>https://www.anthropic.com/research/claude-code-expertise</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/claude-code-expertise</guid>
       <pubDate>Tue, 16 Jun 2026 11:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Project Fetch: Phase two</title>
+      <link>https://www.anthropic.com/research/project-fetch-phase-two</link>
+      <description>We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated robotics tasks. We found that Claude Opus 4.7, operating without human assistance, was about 20 times faster than the fastest human team at all tasks completed by participants less than a year ago.</description>
+      <guid isPermaLink="true">https://www.anthropic.com/research/project-fetch-phase-two</guid>
+      <pubDate>Thu, 18 Jun 2026 18:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
