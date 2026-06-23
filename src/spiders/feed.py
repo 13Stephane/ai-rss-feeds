@@ -343,48 +343,61 @@ class FeedSpider(scrapy.Spider):
         if not scripts:
             raise RuntimeError("No script tags found in response")
 
-        full_text = "".join(scripts)
-        push_pattern = r'self\.__next_f\.push\(\s*(\[.*?\])\s*\)'
+        # Mirror extract_nextjs.py: greedy per-script regex to capture the full
+        # outer array, then line-by-line Flight record parsing.
+        push_pattern = re.compile(r'self\.__next_f\.push\(\s*(\[.*\])\s*\)', re.DOTALL)
         decoder = json.JSONDecoder()
         all_items = []
 
-        for match in re.finditer(push_pattern, full_text, re.DOTALL):
+        for script_text in scripts:
+            if "self.__next_f.push(" not in script_text:
+                continue
+
+            match = push_pattern.search(script_text)
+            if not match:
+                continue
+
             try:
                 outer = json.loads(match.group(1))
             except json.JSONDecodeError:
                 continue
 
-            if not isinstance(outer, list) or len(outer) < 2:
+            if not isinstance(outer, list) or len(outer) < 2 or not isinstance(outer[1], str):
                 continue
 
             payload = outer[1]
-            if not isinstance(payload, str):
-                continue
 
-            # Parse Flight records at line boundaries and allow alphanumeric keys
-            # like 2e/1c/a, which appear in Next.js payloads.
-            key_matches = re.finditer(r'(^|\n)([0-9a-zA-Z]+):', payload)
-            for key_match in key_matches:
-                start_pos = key_match.end(2) + 1
-                try:
-                    parsed_obj, _ = decoder.raw_decode(payload, start_pos)
-                except json.JSONDecodeError:
-                    continue
-
-                try:
-                    matches = self._jq_values(self.item_container_selector, parsed_obj)
-                except Exception:
-                    continue
-
-                items = []
-                for value in matches:
-                    if isinstance(value, dict):
-                        items.append(value)
-                    elif isinstance(value, list):
-                        items.extend(v for v in value if isinstance(v, dict))
-
-                if items:
-                    all_items.extend(items)
+            # Parse Flight records line by line (same algorithm as extract_nextjs.py).
+            pos = 0
+            length = len(payload)
+            while pos < length:
+                line_end = payload.find("\n", pos)
+                if line_end == -1:
+                    line_end = length
+                line = payload[pos:line_end]
+                sep = line.find(":")
+                next_pos = line_end + 1
+                if sep > 0 and line[:sep].isalnum():
+                    value_start = pos + sep + 1
+                    if value_start < length and payload[value_start] not in {"I", "T", "H"}:
+                        try:
+                            parsed_obj, _ = decoder.raw_decode(payload, value_start)
+                        except json.JSONDecodeError:
+                            pass
+                        else:
+                            try:
+                                matches = self._jq_values(self.item_container_selector, parsed_obj)
+                            except Exception:
+                                matches = []
+                            items = []
+                            for value in matches:
+                                if isinstance(value, dict):
+                                    items.append(value)
+                                elif isinstance(value, list):
+                                    items.extend(v for v in value if isinstance(v, dict))
+                            if items:
+                                all_items.extend(items)
+                pos = next_pos
 
         return all_items
 
