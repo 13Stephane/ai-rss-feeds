@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 03 Jul 2026 11:35:21 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2026 20:22:10 +0000</lastBuildDate>
     <item>
       <title>Anthropic raises $124 million to build more reliable, general AI systems</title>
       <link>https://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems</link>
@@ -1571,6 +1571,13 @@
       <link>https://www.anthropic.com/news/fable-safeguards-jailbreak-framework</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/fable-safeguards-jailbreak-framework</guid>
       <pubDate>Thu, 02 Jul 2026 21:07:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Government of Alberta uses Claude to find and fix cybersecurity vulnerabilities across government systems</title>
+      <link>https://www.anthropic.com/news/alberta-government-claude-cybersecurity</link>
+      <description>Since 2025, the Government of Alberta has been using Claude Code with both Opus and Sonnet models to review its systems, find vulnerabilities, and fix them.</description>
+      <guid isPermaLink="true">https://www.anthropic.com/news/alberta-government-claude-cybersecurity</guid>
+      <pubDate>Mon, 06 Jul 2026 16:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
