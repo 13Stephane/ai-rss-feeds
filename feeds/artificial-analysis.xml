@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>Artificial Analysis Articles</title>
+    <link>https://artificialanalysis.ai/articles</link>
+    <description>Independent analysis of AI models and API providers</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-feedgen</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 14 Jul 2026 08:11:21 +0000</lastBuildDate>
+    <item>
+      <title>GLM-5.2 is the new leading open weights model on the Artificial Analysis Intelligence Index</title>
+      <link>https://artificialanalysis.ai/articles/glm-5-2-is-the-new-leading-open-weights-model-on-the-artificial-analysis-intelligence-index</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/glm-5-2-is-the-new-leading-open-weights-model-on-the-artificial-analysis-intelligence-index</guid>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Announcing AA-Briefcase: a frontier knowledge work evaluation</title>
+      <link>https://artificialanalysis.ai/articles/aa-briefcase</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/aa-briefcase</guid>
+      <pubDate>Thu, 18 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Announcing the Artificial Analysis Speech to Speech Index</title>
+      <link>https://artificialanalysis.ai/articles/announcing-the-artificial-analysis-speech-to-speech-index</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/announcing-the-artificial-analysis-speech-to-speech-index</guid>
+      <pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Measuring time per task in AA-Briefcase</title>
+      <link>https://artificialanalysis.ai/articles/aa-briefcase-time-per-task</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/aa-briefcase-time-per-task</guid>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Claude Sonnet 5: strong agentic performance at a higher cost per task</title>
+      <link>https://artificialanalysis.ai/articles/claude-sonnet-5-agentic-cost</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/claude-sonnet-5-agentic-cost</guid>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Announcing AutomationBench-AA</title>
+      <link>https://artificialanalysis.ai/articles/announcing-zapier-automationbench-aa</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/announcing-zapier-automationbench-aa</guid>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Announcing Harvey LAB-AA: evaluating AI agents on real-world legal work</title>
+      <link>https://artificialanalysis.ai/articles/harvey-lab-aa</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/harvey-lab-aa</guid>
+      <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Grok 4.5 brings SpaceXAI to the intelligence frontier</title>
+      <link>https://artificialanalysis.ai/articles/grok-4-5-brings-spacexai-to-the-the-intelligence-frontier</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/grok-4-5-brings-spacexai-to-the-the-intelligence-frontier</guid>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Announcing EnterpriseOps-Gym-AA</title>
+      <link>https://artificialanalysis.ai/articles/announcing-enterpriseops-gym-aa</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/announcing-enterpriseops-gym-aa</guid>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GPT-5.6 benchmarks across Intelligence, Speed and Cost</title>
+      <link>https://artificialanalysis.ai/articles/gpt-5-6-has-landed</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/gpt-5-6-has-landed</guid>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Muse Spark 1.1: Meta gains 8 Intelligence Index points in three months</title>
+      <link>https://artificialanalysis.ai/articles/muse-spark-1-1-everything-you-need-to-know</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/muse-spark-1-1-everything-you-need-to-know</guid>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>How GPT-5.6 Sol, Terra, Luna compare on intelligence vs cost</title>
+      <link>https://artificialanalysis.ai/articles/gpt-5-6-intelligence-vs-cost-across-sol-terra-luna</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/gpt-5-6-intelligence-vs-cost-across-sol-terra-luna</guid>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
