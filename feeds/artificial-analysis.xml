@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Jul 2026 20:29:46 +0000</lastBuildDate>
-    <item>
-      <title>Measuring time per task in AA-Briefcase</title>
-      <link>https://artificialanalysis.ai/articles/aa-briefcase-time-per-task</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/aa-briefcase-time-per-task</guid>
-      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Tue, 21 Jul 2026 17:55:50 +0000</lastBuildDate>
     <item>
       <title>Claude Sonnet 5: strong agentic performance at a higher cost per task</title>
       <link>https://artificialanalysis.ai/articles/claude-sonnet-5-agentic-cost</link>
@@ -79,6 +73,12 @@
       <link>https://artificialanalysis.ai/articles/four-frontier-launches-in-eight-days-six-labs-now-field-a-model-above-50-on-the-artificial-analysis-intelligence-index</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/four-frontier-launches-in-eight-days-six-labs-now-field-a-model-above-50-on-the-artificial-analysis-intelligence-index</guid>
       <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Gemini 3.6 Flash and Gemini 3.5 Flash-Lite: Halving Time per Task</title>
+      <link>https://artificialanalysis.ai/articles/gemini-3-6-flash-3-5-flash-lite-halving-time</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/gemini-3-6-flash-3-5-flash-lite-halving-time</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
