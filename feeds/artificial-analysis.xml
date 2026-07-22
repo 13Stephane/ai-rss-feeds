@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 21 Jul 2026 17:55:50 +0000</lastBuildDate>
-    <item>
-      <title>Claude Sonnet 5: strong agentic performance at a higher cost per task</title>
-      <link>https://artificialanalysis.ai/articles/claude-sonnet-5-agentic-cost</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/claude-sonnet-5-agentic-cost</guid>
-      <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 22 Jul 2026 04:50:51 +0000</lastBuildDate>
     <item>
       <title>Announcing AutomationBench-AA</title>
       <link>https://artificialanalysis.ai/articles/announcing-zapier-automationbench-aa</link>
@@ -78,6 +72,12 @@
       <title>Gemini 3.6 Flash and Gemini 3.5 Flash-Lite: Halving Time per Task</title>
       <link>https://artificialanalysis.ai/articles/gemini-3-6-flash-3-5-flash-lite-halving-time</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/gemini-3-6-flash-3-5-flash-lite-halving-time</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Kimi K3: second only to Fable 5 on AA-Briefcase</title>
+      <link>https://artificialanalysis.ai/articles/kimi-k3-agentic-knowledge-benchmark</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/kimi-k3-agentic-knowledge-benchmark</guid>
       <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
