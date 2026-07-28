@@ -36,6 +36,7 @@
 
 ## Broken feeds
 - If a feed stops working, it can be marked `broken = true` in `feeds.toml`. This will stop a known problem from failing the whole run, and will flag when it starts working again.
+- If a source is *flaky* (intermittently blocks the runner or serves no content, alternating between success and failure), mark it `flaky = true` instead. A flaky feed never fails the run — it warns when it errors and stays silent when it succeeds. Use this only for unreliable sources, not for genuinely-broken feeds (which should stay `broken = true` so they flag when fixed).
 - To fix a feed:
   - Grab a new snapshot (as above).
   - If it uses nextjs, extract the data (as above).

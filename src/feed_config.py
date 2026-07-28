@@ -24,6 +24,7 @@ KNOWN_FEED_FIELDS = {
     "min_item_ratio_vs_previous",
     "format",
     "broken",
+    "flaky",
 }
 
 

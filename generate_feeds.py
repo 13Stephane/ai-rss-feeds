@@ -56,6 +56,11 @@ def main() -> None:
 
     all_feeds = load_all_feeds()
     broken_feed_keys = {k for k, v in all_feeds.items() if v.get("broken")}
+    # Flaky feeds come from sources that intermittently block or fail to serve
+    # (e.g. bot-detection on the runner IP). Unlike a consistently-broken feed,
+    # a flaky one alternates between success and failure, so neither state should
+    # gate the build — it warns either way and never fails the run.
+    flaky_feed_keys = {k for k, v in all_feeds.items() if v.get("flaky")}
 
     settings = get_project_settings()
     if args.no_cache:
@@ -80,7 +85,15 @@ def main() -> None:
     in_gha = os.environ.get("GITHUB_ACTIONS") == "true"
 
     for feed_key in selected_feed_keys:
-        if feed_key in broken_feed_keys:
+        if feed_key in flaky_feed_keys:
+            if feed_key in spider_errors:
+                msg = f"FLAKY: {feed_key}: {spider_errors[feed_key]}"
+                print(msg)
+                if in_gha:
+                    print(f"::warning::{msg}")
+            else:
+                print(f"FLAKY OK: {feed_key}: succeeded")
+        elif feed_key in broken_feed_keys:
             if feed_key in spider_errors:
                 msg = f"BROKEN: {feed_key}: {spider_errors[feed_key]}"
                 print(msg)
