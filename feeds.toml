@@ -81,18 +81,6 @@ item_title_selector = "div.field-name-node-title a::text"
 item_link_selector = "div.field-name-node-title a::attr(href)"
 item_date_selector = "div.field-name-dynamic-twig-fieldnode-default-date-format-wrapped span::text"
 
-[feeds.the-batch]
-broken = true
-feed_title = "The Batch"
-feed_description = "Weekly AI news for engineers, executives, and enthusiasts."
-source_url = "https://www.deeplearning.ai/the-batch"
-format = "nextjs"
-item_container_selector = ".props.pageProps.posts[]"
-item_link_selector = ".slug"
-item_title_selector = ".title"
-item_date_selector = ".published_at"
-item_description_selector = ".custom_excerpt // .excerpt"
-
 [feeds.tldr-ai]
 feed_title = "TLDR AI"
 source_url = "https://tldr.tech/ai/archives"
