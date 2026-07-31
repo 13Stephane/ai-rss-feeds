@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 30 Jul 2026 20:45:07 +0000</lastBuildDate>
-    <item>
-      <title>Muse Spark 1.1: Meta gains 8 Intelligence Index points in three months</title>
-      <link>https://artificialanalysis.ai/articles/muse-spark-1-1-everything-you-need-to-know</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/muse-spark-1-1-everything-you-need-to-know</guid>
-      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 31 Jul 2026 15:39:17 +0000</lastBuildDate>
     <item>
       <title>How GPT-5.6 Sol, Terra, Luna compare on intelligence vs cost</title>
       <link>https://artificialanalysis.ai/articles/gpt-5-6-intelligence-vs-cost-across-sol-terra-luna</link>
@@ -79,6 +73,12 @@
       <link>https://artificialanalysis.ai/articles/inkling-small-lands-within-a-point-of-inkling-on-the-artificial-analysis-intelligence-index-with-less-than-a-third-of-the-parameters</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/inkling-small-lands-within-a-point-of-inkling-on-the-artificial-analysis-intelligence-index-with-less-than-a-third-of-the-parameters</guid>
       <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>DeepSeek V4 Flash 0731 scores 50 on the Artificial Analysis Intelligence Index, 10 points above previous DeepSeek V4 Flash</title>
+      <link>https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash</guid>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
