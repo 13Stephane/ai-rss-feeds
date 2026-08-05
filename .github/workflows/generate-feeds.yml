@@ -17,6 +17,13 @@ jobs:
   generate-and-commit:
     runs-on: ubuntu-latest
 
+    # Secrets are mapped to env because the `secrets` context is not available
+    # in step-level `if:` conditions — this is what lets the email step skip
+    # gracefully when the mail secrets have not been configured.
+    env:
+      MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+      MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -34,7 +41,9 @@ jobs:
       - name: Generate feeds
         id: generate
         continue-on-error: true
-        run: uv run python generate_feeds.py --no-cache --skip-unchanged
+        run: |
+          set -o pipefail
+          uv run python generate_feeds.py --no-cache --skip-unchanged 2>&1 | tee generate.log
 
       # always() ensures this runs even when the generate step failed, so any
       # feeds that did succeed get committed.
@@ -58,6 +67,57 @@ jobs:
           git add feeds
           git commit -m "chore: regenerate RSS feeds ($(echo "$changed" | tr '\n' ' ' | sed 's/ $//'))"
           git push origin "${BRANCH_NAME}"
+
+      # Turn the generator's own "ERROR:"/"BROKEN:"/"FLAKY:" lines into a short
+      # Markdown report, used for both the job summary and the alert email.
+      - name: Build failure report
+        if: steps.generate.outcome == 'failure'
+        env:
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          # grep exits 1 when nothing matches (e.g. the generator itself
+          # crashed before reporting), so capture first and fall back.
+          failures=$(grep -E '^(ERROR|BROKEN|FLAKY):' generate.log | sed 's/^/- /') || true
+          if [ -z "$failures" ]; then
+            failures="- No per-feed errors were reported — see the run log."
+          fi
+
+          {
+            echo "# Feed generation failed"
+            echo
+            echo "Spiders that errored in \`${GITHUB_REPOSITORY}\`:"
+            echo
+            echo "$failures"
+            echo
+            echo "[View the workflow run](${RUN_URL})"
+          } > generate-failure-report.md
+
+          cat generate-failure-report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Email the failure report
+        if: steps.generate.outcome == 'failure' && env.MAIL_USERNAME != '' && env.MAIL_PASSWORD != ''
+        uses: dawidd6/action-send-mail@v17
+        with:
+          server_address: ${{ vars.MAIL_SERVER || 'smtp.gmail.com' }}
+          server_port: ${{ vars.MAIL_PORT || 465 }}
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          from: RSS feed health <${{ secrets.MAIL_USERNAME }}>
+          to: ${{ vars.ALERT_EMAIL_TO || 'guerraz.stephane@gmail.com' }}
+          subject: "[${{ github.repository }}] RSS feed generation failed"
+          convert_markdown: true
+          html_body: file://generate-failure-report.md
+          body: |
+            Feed generation failed for ${{ github.repository }}.
+            See ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          priority: normal
+
+      # Without the mail secrets there is no email, so say so in the log —
+      # GitHub's own failure notification is the fallback in that case.
+      - name: Note skipped email
+        if: steps.generate.outcome == 'failure' && (env.MAIL_USERNAME == '' || env.MAIL_PASSWORD == '')
+        run: echo "::notice::MAIL_USERNAME/MAIL_PASSWORD are not set — skipping the alert email. Relying on GitHub's own workflow failure notification."
 
       - name: Setup tmate debug session
         if: ${{ inputs.debug && steps.generate.outcome == 'failure' }}

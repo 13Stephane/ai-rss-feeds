@@ -15,3 +15,7 @@ snapshots
 
 # local cron logs
 logs/
+
+# health check / workflow run artifacts
+generate.log
+*-report.md
