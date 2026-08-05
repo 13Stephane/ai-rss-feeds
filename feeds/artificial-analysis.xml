@@ -7,19 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 31 Jul 2026 15:39:17 +0000</lastBuildDate>
-    <item>
-      <title>How GPT-5.6 Sol, Terra, Luna compare on intelligence vs cost</title>
-      <link>https://artificialanalysis.ai/articles/gpt-5-6-intelligence-vs-cost-across-sol-terra-luna</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/gpt-5-6-intelligence-vs-cost-across-sol-terra-luna</guid>
-      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Thinking Machines has released Inkling, the new leading U.S. open weights model</title>
-      <link>https://artificialanalysis.ai/articles/thinking-machines-has-released-inkling-the-new-leading-u-s-open-weights-model</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/thinking-machines-has-released-inkling-the-new-leading-u-s-open-weights-model</guid>
-      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 05 Aug 2026 23:32:25 +0000</lastBuildDate>
     <item>
       <title>Kimi K3 achieves #3 in the Artificial Analysis Intelligence Index, comparable to Opus 4.8 and GPT-5.5</title>
       <link>https://artificialanalysis.ai/articles/kimi-k3-achieves-3-in-the-artificial-analysis-intelligence-index-comparable-to-opus-4-8-and-gpt-5-5</link>
@@ -79,6 +67,18 @@
       <link>https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash</guid>
       <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Launching the Endpoint Accuracy Index: Same Model, Different Accuracy</title>
+      <link>https://artificialanalysis.ai/articles/endpoint-accuracy-index</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/endpoint-accuracy-index</guid>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Muse Spark 1.2</title>
+      <link>https://artificialanalysis.ai/articles/muse-spark-1-2</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/muse-spark-1-2</guid>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
