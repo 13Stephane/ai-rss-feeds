@@ -65,6 +65,66 @@ By default, each spider enforces:
 This prevents silently writing empty or unexpectedly tiny feeds when page markup changes.
 `uv run python generate_feeds.py` exits with a non-zero status if any spider errors.
 
+### Feed Health Monitoring
+
+Generation is fail-fast, but a feed can still go bad silently: sources marked
+`broken` or `flaky` only warn, and `--skip-unchanged` means a source that stops
+publishing produces no commit and no signal. The health check covers that gap by
+testing the *published* feeds.
+
+```bash
+uv run --no-project python check_feeds.py            # check published feeds
+uv run --no-project python check_feeds.py --local    # check the files in ./feeds
+```
+
+`check_feeds.py` uses only the standard library, so `--no-project` skips
+installing the scraping dependencies. Feed keys are read from `feeds.toml`.
+Each feed fails on one of:
+
+| Failure | Meaning |
+|---|---|
+| `UNREACHABLE` | connection failed or timed out after retries |
+| `HTTP_<code>` | the URL returned a non-200 status |
+| `MALFORMED` | not well-formed XML, not RSS 2.0, or fewer items than the minimum |
+| `STALE` | no new item within the age limit (newest `pubDate`, falling back to `lastBuildDate`) |
+
+Feeds marked `broken = true` are skipped unless `--include-broken` is passed.
+Run `uv run --no-project python check_feeds.py --help` for all options.
+
+The `.github/workflows/feed-health.yml` workflow runs this daily and can also be
+triggered manually. On failure it writes a report to the job summary and emails
+it via Gmail SMTP.
+
+#### Alert Email Setup
+
+Email alerting is optional. Without the secrets below, the email step skips with
+a notice and the workflow still fails, so GitHub's own failure notification
+remains the fallback. Both this workflow and `generate-feeds.yml` use the same
+secrets and variables.
+
+Repository **secrets**:
+
+| Secret | Value |
+|---|---|
+| `MAIL_USERNAME` | the sending Gmail address |
+| `MAIL_PASSWORD` | a Gmail [App Password](https://support.google.com/accounts/answer/185833) (requires 2-Step Verification), not the account password |
+
+Repository **variables**, all optional:
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `ALERT_EMAIL_TO` | `guerraz.stephane@gmail.com` | alert recipient(s) |
+| `MAIL_SERVER` | `smtp.gmail.com` | SMTP host |
+| `MAIL_PORT` | `465` | SMTP port (TLS) |
+| `FEED_HEALTH_BASE_URL` | this repo's raw default branch | where the feeds are published |
+| `FEED_HEALTH_MAX_AGE_DAYS` | `21` | staleness limit in days |
+| `FEED_HEALTH_MIN_ITEMS` | `1` | minimum items per feed |
+| `FEED_HEALTH_AGE_OVERRIDES` | none | JSON per-feed age limits, e.g. `{"turing-news": 90}` |
+| `FEED_HEALTH_SKIP` | none | comma-separated feed keys to exclude |
+
+Use `FEED_HEALTH_AGE_OVERRIDES` for sources that genuinely publish rarely, so
+their quiet periods do not drown out real breakage.
+
 ### HTTP Cache
 
 Scrapy HTTP cache is enabled by default in `src/settings.py`.

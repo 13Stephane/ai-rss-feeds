@@ -1,0 +1,106 @@
+name: Feed health check
+
+on:
+  schedule:
+    - cron: "23 7 * * *"
+  workflow_dispatch:
+    inputs:
+      max_age_days:
+        description: "Override the staleness limit in days"
+        type: string
+        default: ""
+      include_broken:
+        description: "Also check feeds marked broken=true in feeds.toml"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    # Secrets are mapped to env because the `secrets` context is not available
+    # in step-level `if:` conditions — this is what lets the email step skip
+    # gracefully when the mail secrets have not been configured.
+    env:
+      MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+      MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.14"
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+
+      # continue-on-error lets the job reach the email step when feeds fail.
+      # check_feeds.py is standard-library only, so --no-project skips
+      # installing the scraping dependencies it does not need.
+      - name: Check published feeds
+        id: check
+        continue-on-error: true
+        env:
+          # Configuration comes in through env rather than being interpolated
+          # straight into the shell, so variable values are never treated as
+          # script. Each falls back to the script's own default when unset.
+          FEED_HEALTH_BASE_URL: ${{ vars.FEED_HEALTH_BASE_URL || format('https://raw.githubusercontent.com/{0}/refs/heads/{1}', github.repository, github.event.repository.default_branch || github.ref_name) }}
+          MAX_AGE_DAYS: ${{ inputs.max_age_days || vars.FEED_HEALTH_MAX_AGE_DAYS || 21 }}
+          MIN_ITEMS: ${{ vars.FEED_HEALTH_MIN_ITEMS || 1 }}
+          AGE_OVERRIDES: ${{ vars.FEED_HEALTH_AGE_OVERRIDES }}
+          SKIP_FEEDS: ${{ vars.FEED_HEALTH_SKIP }}
+          INCLUDE_BROKEN: ${{ inputs.include_broken || false }}
+        run: |
+          args=(
+            --max-age-days "$MAX_AGE_DAYS"
+            --min-items "$MIN_ITEMS"
+            --age-overrides "$AGE_OVERRIDES"
+            --skip "$SKIP_FEEDS"
+            --report feed-health-report.md
+          )
+          if [ "$INCLUDE_BROKEN" = "true" ]; then
+            args+=(--include-broken)
+          fi
+
+          uv run --no-project python check_feeds.py "${args[@]}"
+
+      - name: Publish report to job summary
+        if: always() && hashFiles('feed-health-report.md') != ''
+        run: cat feed-health-report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Email the failure report
+        if: steps.check.outcome == 'failure' && env.MAIL_USERNAME != '' && env.MAIL_PASSWORD != ''
+        uses: dawidd6/action-send-mail@v17
+        with:
+          server_address: ${{ vars.MAIL_SERVER || 'smtp.gmail.com' }}
+          server_port: ${{ vars.MAIL_PORT || 465 }}
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          from: RSS feed health <${{ secrets.MAIL_USERNAME }}>
+          to: ${{ vars.ALERT_EMAIL_TO || 'guerraz.stephane@gmail.com' }}
+          subject: "[${{ github.repository }}] RSS feed health check failed"
+          convert_markdown: true
+          html_body: file://feed-health-report.md
+          body: |
+            The RSS feed health check failed for ${{ github.repository }}.
+            See ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          priority: normal
+
+      # Without the mail secrets there is no email, so say so in the log —
+      # GitHub's own failure notification is the fallback in that case.
+      - name: Note skipped email
+        if: steps.check.outcome == 'failure' && (env.MAIL_USERNAME == '' || env.MAIL_PASSWORD == '')
+        run: echo "::notice::MAIL_USERNAME/MAIL_PASSWORD are not set — skipping the alert email. Relying on GitHub's own workflow failure notification."
+
+      # Re-raise the check failure so the run is marked failed even though the
+      # email step was allowed to run above.
+      - name: Fail if any feeds failed
+        if: steps.check.outcome == 'failure'
+        run: exit 1
