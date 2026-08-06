@@ -126,3 +126,8 @@ site_url = "https://techcrunch.com/"
 feed_title = "Import AI (Jack Clark)"
 external_feed_url = "https://importai.substack.com/feed"
 site_url = "https://importai.substack.com/"
+
+[feeds.rundown-ai]
+feed_title = "The Rundown AI"
+external_feed_url = "https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml"
+site_url = "https://www.therundown.ai/"

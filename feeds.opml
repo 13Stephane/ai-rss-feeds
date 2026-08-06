@@ -15,6 +15,7 @@
     <outline type="rss" text="Mila News (Quebec AI Institute)" title="Mila News (Quebec AI Institute)" xmlUrl="https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/mila-news.xml" htmlUrl="https://mila.quebec/en/news" />
     <outline type="rss" text="Mistral News" title="Mistral News" xmlUrl="https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/mistral-news.xml" htmlUrl="https://mistral.ai/news/" />
     <outline type="rss" text="TechCrunch" title="TechCrunch" xmlUrl="https://techcrunch.com/feed/" htmlUrl="https://techcrunch.com/" />
+    <outline type="rss" text="The Rundown AI" title="The Rundown AI" xmlUrl="https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml" htmlUrl="https://www.therundown.ai/" />
     <outline type="rss" text="TLDR AI" title="TLDR AI" xmlUrl="https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/tldr-ai.xml" htmlUrl="https://tldr.tech/ai/archives" />
     <outline type="rss" text="Turing Blog (Alan Turing Institute)" title="Turing Blog (Alan Turing Institute)" xmlUrl="https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/turing-blog.xml" htmlUrl="https://www.turing.ac.uk/blog" />
     <outline type="rss" text="Turing News (Alan Turing Institute)" title="Turing News (Alan Turing Institute)" xmlUrl="https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/turing-news.xml" htmlUrl="https://www.turing.ac.uk/news" />
