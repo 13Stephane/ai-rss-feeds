@@ -39,9 +39,15 @@ DEFAULT_RETRIES = 3
 
 FEEDS_DIR = Path(__file__).resolve().parent / "feeds"
 
-# Some CDNs reject requests without a User-Agent, which would look like a feed
-# failure rather than a client problem.
-USER_AGENT = "ai-rss-feeds-health-check (+https://github.com/alan-turing-institute/ai-rss-feeds)"
+# Some CDNs reject requests without a User-Agent, and several publishers
+# (Substack among them) answer 403 to anything that self-identifies as a bot.
+# The check exists to answer "would a subscriber's reader get this feed?", so it
+# asks the way a reader does. Override with --user-agent when a source wants
+# something specific.
+DEFAULT_USER_AGENT = (
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/140.0.0.0 Safari/537.36"
+)
 
 
 class FeedFailure(Exception):
@@ -112,6 +118,11 @@ def parse_args() -> argparse.Namespace:
         help=f"Attempts per feed before reporting it unreachable (default: {DEFAULT_RETRIES}).",
     )
     parser.add_argument(
+        "--user-agent",
+        default=os.environ.get("FEED_HEALTH_USER_AGENT") or DEFAULT_USER_AGENT,
+        help="User-Agent to send when fetching feeds.",
+    )
+    parser.add_argument(
         "--report",
         type=Path,
         help="Write a Markdown report of the results to this path.",
@@ -143,9 +154,9 @@ def parse_age_overrides(raw: str) -> dict[str, float]:
     return parsed
 
 
-def fetch_feed(url: str, timeout: float, retries: int) -> bytes:
+def fetch_feed(url: str, timeout: float, retries: int, user_agent: str) -> bytes:
     """Return the feed body, raising FeedFailure if it can't be fetched."""
-    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    request = urllib.request.Request(url, headers={"User-Agent": user_agent})
     last_error = None
 
     for attempt in range(1, retries + 1):
@@ -339,7 +350,7 @@ def main() -> None:
                     feed_url = config["external_feed_url"]
                 else:
                     feed_url = f"{base_url}/feeds/{feed_key}.xml"
-                body = fetch_feed(feed_url, args.timeout, args.retries)
+                body = fetch_feed(feed_url, args.timeout, args.retries, args.user_agent)
             checked = check_feed(body, args.min_items, max_age_days, now)
         except FeedFailure as failure:
             print(f"FAIL: {feed_key}: {failure.kind}: {failure.detail}")

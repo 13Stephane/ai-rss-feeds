@@ -134,6 +134,7 @@ Repository **variables**, all optional:
 | `FEED_HEALTH_MIN_ITEMS` | `1` | minimum items per feed |
 | `FEED_HEALTH_AGE_OVERRIDES` | none | JSON per-feed age limits, e.g. `{"turing-news": 90}` |
 | `FEED_HEALTH_SKIP` | none | comma-separated feed keys to exclude |
+| `FEED_HEALTH_USER_AGENT` | a browser UA | `User-Agent` sent when fetching feeds |
 
 Use `FEED_HEALTH_AGE_OVERRIDES` for sources that genuinely publish rarely, so
 their quiet periods do not drown out real breakage.
