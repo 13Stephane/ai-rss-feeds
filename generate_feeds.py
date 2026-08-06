@@ -18,12 +18,13 @@ from scrapy import signals
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 
-from src.feed_config import list_feed_keys, load_all_feeds
+from src.feed_config import list_scraped_feed_keys, load_all_feeds
 from src.spiders.feed import FeedSpider
 
 
 def parse_args() -> argparse.Namespace:
-    feed_keys = list_feed_keys()
+    # External feeds are published by someone else, so there is nothing to run.
+    feed_keys = list_scraped_feed_keys()
 
     parser = argparse.ArgumentParser(
         description=(
@@ -52,7 +53,7 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
-    selected_feed_keys = args.feed_keys or list_feed_keys()
+    selected_feed_keys = args.feed_keys or list_scraped_feed_keys()
 
     all_feeds = load_all_feeds()
     broken_feed_keys = {k for k, v in all_feeds.items() if v.get("broken")}

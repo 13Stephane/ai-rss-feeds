@@ -24,6 +24,18 @@ Or you can import selected feeds by copying the URL of the XML files in the belo
 
 \* These feeds come from a source that intermittently blocks automated access, so they update only when it is reachable.
 
+### External Feeds
+
+These publishers already provide RSS, so this repo generates nothing for them.
+They are carried in [feeds.opml](feeds.opml) so they arrive in your reader with
+the rest, and the health check verifies them, but the URL points at the
+publisher rather than at this repo.
+
+| Name | Feed |
+|---|---|
+| [Import AI (Jack Clark)](https://importai.substack.com/) | https://importai.substack.com/feed |
+| [TechCrunch](https://techcrunch.com/) | https://techcrunch.com/feed/ |
+
 ## Developer Guide
 
 ### Generate Feeds
@@ -156,3 +168,26 @@ rm -rf .scrapy/httpcache
 	- comments above the feed table to keep source/structure notes alongside selectors
 5. Add the new feed entry to the table above, keeping it sorted by name.
 6. Run `uv run python generate_feeds.py` and verify output in `feeds/`.
+7. Run `uv run python generate_opml.py` to regenerate the OPML.
+
+### Add An External Feed
+
+When a source already publishes its own RSS there is nothing to scrape. Add it
+as an external feed instead, so it reaches your reader through the OPML without
+this repo generating a duplicate copy:
+
+```toml
+[feeds.techcrunch]
+feed_title = "TechCrunch"
+external_feed_url = "https://techcrunch.com/feed/"
+site_url = "https://techcrunch.com/"
+```
+
+`external_feed_url` is the RSS URL and `site_url` is the human-readable page
+(optional; it defaults to the feed URL). No selectors apply — setting any
+scraping field on an external feed is rejected, rather than silently ignored.
+External feeds are skipped by `generate_feeds.py` and by
+`check_feeds.py --local`, since neither has anything to act on.
+
+Then add it to the External Feeds table above and run
+`uv run python generate_opml.py`.

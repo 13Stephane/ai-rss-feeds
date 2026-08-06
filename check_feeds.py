@@ -26,7 +26,7 @@ from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
-from src.feed_config import load_all_feeds
+from src.feed_config import is_external, load_all_feeds
 
 
 DEFAULT_BASE_URL = (
@@ -309,6 +309,10 @@ def main() -> None:
             skipped.append(f"{feed_key} (skip list)")
         elif all_feeds[feed_key].get("broken") and not args.include_broken:
             skipped.append(f"{feed_key} (broken=true)")
+        elif args.local and is_external(all_feeds[feed_key]):
+            # Nothing is generated for an external feed, so there is no local
+            # file to check — only the published URL means anything.
+            skipped.append(f"{feed_key} (external, no local file)")
         else:
             feed_keys.append(feed_key)
 
@@ -324,11 +328,18 @@ def main() -> None:
 
     for feed_key in feed_keys:
         max_age_days = age_overrides.get(feed_key, args.max_age_days)
+        config = all_feeds[feed_key]
         try:
             if args.local:
                 body = read_local_feed(feed_key)
             else:
-                body = fetch_feed(f"{base_url}/feeds/{feed_key}.xml", args.timeout, args.retries)
+                # An external feed lives at the publisher's URL; a generated one
+                # lives under the base URL this repo publishes to.
+                if is_external(config):
+                    feed_url = config["external_feed_url"]
+                else:
+                    feed_url = f"{base_url}/feeds/{feed_key}.xml"
+                body = fetch_feed(feed_url, args.timeout, args.retries)
             checked = check_feed(body, args.min_items, max_age_days, now)
         except FeedFailure as failure:
             print(f"FAIL: {feed_key}: {failure.kind}: {failure.detail}")

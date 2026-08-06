@@ -110,3 +110,19 @@ item_link_selector = "a::attr(href)"
 item_date_selector = "footer div:first-child p ::text"
 item_description_selector = "h2 + p ::text"
 
+
+# --- External feeds -----------------------------------------------------
+# These publishers already provide RSS, so nothing is scraped or generated for
+# them. They exist only to be passed through into feeds.opml, so they land in
+# the reader alongside the generated feeds. Set `external_feed_url` (the RSS
+# URL) and optionally `site_url` (the human page). No selectors apply.
+
+[feeds.techcrunch]
+feed_title = "TechCrunch"
+external_feed_url = "https://techcrunch.com/feed/"
+site_url = "https://techcrunch.com/"
+
+[feeds.import-ai]
+feed_title = "Import AI (Jack Clark)"
+external_feed_url = "https://importai.substack.com/feed"
+site_url = "https://importai.substack.com/"
