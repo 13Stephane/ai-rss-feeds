@@ -33,9 +33,13 @@ publisher rather than at this repo.
 
 | Name | Feed |
 |---|---|
-| [Import AI (Jack Clark)](https://importai.substack.com/) | https://importai.substack.com/feed |
+| \*\* [Import AI (Jack Clark)](https://importai.substack.com/) | https://importai.substack.com/feed |
 | [TechCrunch](https://techcrunch.com/) | https://techcrunch.com/feed/ |
 | [The Rundown AI](https://www.therundown.ai/) | https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml |
+
+\*\* Substack refuses GitHub's runner IPs, so the health check cannot verify this
+feed even though it works in a reader. Marked `flaky = true`, so it warns
+instead of failing the run.
 
 ## Developer Guide
 
@@ -102,7 +106,10 @@ Each feed fails on one of:
 | `STALE` | no new item within the age limit (newest `pubDate`, falling back to `lastBuildDate`) |
 
 Feeds marked `broken = true` are skipped unless `--include-broken` is passed.
-Run `uv run --no-project python check_feeds.py --help` for all options.
+Feeds marked `flaky = true` are checked, but an error is reported as a warning
+and does not fail the run — for sources that refuse the runner while serving
+readers normally. Run `uv run --no-project python check_feeds.py --help` for all
+options.
 
 The `.github/workflows/feed-health.yml` workflow runs this daily and can also be
 triggered manually. On failure it writes a report to the job summary and emails
@@ -134,7 +141,6 @@ Repository **variables**, all optional:
 | `FEED_HEALTH_MIN_ITEMS` | `1` | minimum items per feed |
 | `FEED_HEALTH_AGE_OVERRIDES` | none | JSON per-feed age limits, e.g. `{"turing-news": 90}` |
 | `FEED_HEALTH_SKIP` | none | comma-separated feed keys to exclude |
-| `FEED_HEALTH_USER_AGENT` | a browser UA | `User-Agent` sent when fetching feeds |
 
 Use `FEED_HEALTH_AGE_OVERRIDES` for sources that genuinely publish rarely, so
 their quiet periods do not drown out real breakage.

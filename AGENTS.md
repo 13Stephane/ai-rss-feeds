@@ -38,6 +38,7 @@
 - Some sources already publish their own RSS. This repo exists for sites that don't, so those are *not* scraped.
 - Add them to `feeds.toml` with `external_feed_url` (and optional `site_url`) instead. They are passed through to `feeds.opml` and checked by `check_feeds.py`, but nothing is generated for them.
 - Setting a scraping field on an external feed is a hard error — see `src/feed_config.py`.
+- `flaky = true` applies to external feeds too. Some publishers (Substack) refuse GitHub's runner IPs while serving readers normally, so the health check warns instead of failing. Confirm the feed really is fine before reaching for this.
 
 ## Broken feeds
 - If a feed stops working, it can be marked `broken = true` in `feeds.toml`. This will stop a known problem from failing the whole run, and will flag when it starts working again.

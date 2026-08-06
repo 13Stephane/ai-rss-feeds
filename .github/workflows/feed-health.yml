@@ -55,8 +55,6 @@ jobs:
           MIN_ITEMS: ${{ vars.FEED_HEALTH_MIN_ITEMS || 1 }}
           AGE_OVERRIDES: ${{ vars.FEED_HEALTH_AGE_OVERRIDES }}
           SKIP_FEEDS: ${{ vars.FEED_HEALTH_SKIP }}
-          # Read directly by check_feeds.py; unset falls back to its default.
-          FEED_HEALTH_USER_AGENT: ${{ vars.FEED_HEALTH_USER_AGENT }}
           INCLUDE_BROKEN: ${{ inputs.include_broken || false }}
         run: |
           args=(

@@ -122,7 +122,11 @@ feed_title = "TechCrunch"
 external_feed_url = "https://techcrunch.com/feed/"
 site_url = "https://techcrunch.com/"
 
+# Substack answers 403 to GitHub's runner IPs — a browser User-Agent does not
+# change it — while serving the feed normally to subscribers. Flaky so the
+# health check reports that without failing the run on a feed that is fine.
 [feeds.import-ai]
+flaky = true
 feed_title = "Import AI (Jack Clark)"
 external_feed_url = "https://importai.substack.com/feed"
 site_url = "https://importai.substack.com/"
