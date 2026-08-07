@@ -33,13 +33,13 @@ publisher rather than at this repo.
 
 | Name | Feed |
 |---|---|
-| [Deep Phenotype](https://deepphenotype.substack.com/) | https://deepphenotype.substack.com/feed |
+| \*\* [Deep Phenotype](https://deepphenotype.substack.com/) | https://deepphenotype.substack.com/feed |
 | \*\* [Import AI (Jack Clark)](https://importai.substack.com/) | https://importai.substack.com/feed |
 | [TechCrunch](https://techcrunch.com/) | https://techcrunch.com/feed/ |
 | [The Rundown AI](https://www.therundown.ai/) | https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml |
 
-\*\* Substack refuses GitHub's runner IPs, so the health check cannot verify this
-feed even though it works in a reader. Marked `flaky = true`, so it warns
+\*\* Substack refuses GitHub's runner IPs, so the health check cannot verify these
+feeds even though they work in a reader. Marked `flaky = true`, so they warn
 instead of failing the run.
 
 ## Developer Guide
