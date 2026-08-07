@@ -33,6 +33,7 @@ publisher rather than at this repo.
 
 | Name | Feed |
 |---|---|
+| [Clouded Judgement](https://cloudedjudgement.substack.com/) | https://cloudedjudgement.substack.com/feed |
 | \*\* [Deep Phenotype](https://deepphenotype.substack.com/) | https://deepphenotype.substack.com/feed |
 | \*\* [Import AI (Jack Clark)](https://importai.substack.com/) | https://importai.substack.com/feed |
 | [TechCrunch](https://techcrunch.com/) | https://techcrunch.com/feed/ |

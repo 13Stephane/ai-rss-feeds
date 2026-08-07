@@ -10,6 +10,7 @@
     <outline type="rss" text="Anthropic Research" title="Anthropic Research" xmlUrl="https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/anthropic-research.xml" htmlUrl="https://www.anthropic.com/research" />
     <outline type="rss" text="Artificial Analysis Articles" title="Artificial Analysis Articles" xmlUrl="https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/artificial-analysis.xml" htmlUrl="https://artificialanalysis.ai/articles" />
     <outline type="rss" text="Claude Blog" title="Claude Blog" xmlUrl="https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/claude-blog.xml" htmlUrl="https://claude.com/blog" />
+    <outline type="rss" text="Clouded Judgement" title="Clouded Judgement" xmlUrl="https://cloudedjudgement.substack.com/feed" htmlUrl="https://cloudedjudgement.substack.com/" />
     <outline type="rss" text="Cohere Blog" title="Cohere Blog" xmlUrl="https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/cohere-blog.xml" htmlUrl="https://cohere.com/blog" />
     <outline type="rss" text="Deep Phenotype" title="Deep Phenotype" xmlUrl="https://deepphenotype.substack.com/feed" htmlUrl="https://deepphenotype.substack.com/" />
     <outline type="rss" text="Import AI (Jack Clark)" title="Import AI (Jack Clark)" xmlUrl="https://importai.substack.com/feed" htmlUrl="https://importai.substack.com/" />
