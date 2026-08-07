@@ -33,6 +33,7 @@ publisher rather than at this repo.
 
 | Name | Feed |
 |---|---|
+| [Deep Phenotype](https://deepphenotype.substack.com/) | https://deepphenotype.substack.com/feed |
 | \*\* [Import AI (Jack Clark)](https://importai.substack.com/) | https://importai.substack.com/feed |
 | [TechCrunch](https://techcrunch.com/) | https://techcrunch.com/feed/ |
 | [The Rundown AI](https://www.therundown.ai/) | https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml |
