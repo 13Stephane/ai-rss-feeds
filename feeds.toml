@@ -144,7 +144,10 @@ feed_title = "Deep Phenotype"
 external_feed_url = "https://deepphenotype.substack.com/feed"
 site_url = "https://deepphenotype.substack.com/"
 
+# Substack again: confirmed HTTP 403 from a GitHub runner, so the same
+# runner-IP block as import-ai and deep-phenotype rather than a bad URL.
 [feeds.clouded-judgement]
+flaky = true
 feed_title = "Clouded Judgement"
 external_feed_url = "https://cloudedjudgement.substack.com/feed"
 site_url = "https://cloudedjudgement.substack.com/"
