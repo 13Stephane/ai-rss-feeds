@@ -31,12 +31,14 @@ jobs:
         run: |
           echo "=== ITEM COUNT ==="
           grep -c "<item>" feeds/hbr-ai.xml
-          echo "=== FIRST 3 ITEMS ==="
+          echo "=== ALL ITEMS (date | title | host) ==="
           python3 - <<'PY'
           import xml.etree.ElementTree as ET
+          from urllib.parse import urlparse
           ch = ET.parse("feeds/hbr-ai.xml").getroot().find("channel")
-          for item in ch.findall("item")[:3]:
-              for tag in ("title", "link", "pubDate", "description"):
-                  print(f"{tag}: {(item.findtext(tag) or '')[:120]}")
-              print("-")
+          for item in ch.findall("item"):
+              date = (item.findtext("pubDate") or "")[:16]
+              title = (item.findtext("title") or "")[:70]
+              host = urlparse(item.findtext("link") or "").netloc
+              print(f"{date} | {title} | {host}")
           PY
