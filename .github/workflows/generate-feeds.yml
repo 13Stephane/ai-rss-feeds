@@ -12,25 +12,29 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Inspect the topic page's item markup
+      - name: Locate the publication dates within each item
         env:
           UA: "ai-rss-feeds-bot/1.0 (+https://github.com/alan-turing-institute/ai-rss-feeds)"
           URL: "https://hbr.org/topic/subject/ai-and-machine-learning"
         run: |
           curl -sS -A "$UA" -o page.html -L --max-time 60 "$URL"
+          tr '<' '\n<' < page.html > tags.txt
 
-          echo "=== ITEM COUNT ==="
-          grep -c '<stream-item' page.html
-          grep -c 'class="stream-entry"' page.html
+          echo "=== COUNTS ==="
+          printf 'stream-item     %s\n' "$(grep -c '<stream-item' tags.txt || true)"
+          printf 'stream-entry    %s\n' "$(grep -c 'class="stream-entry"' tags.txt || true)"
+          printf 'utility pubdate %s\n' "$(grep -c 'utility pubdate' tags.txt || true)"
+          printf 'data-pub-date   %s\n' "$(grep -c 'data-publication-date' tags.txt || true)"
 
-          echo "=== CONTENT TYPES ==="
-          grep -o 'data-content-type="[^"]*"' page.html | sort | uniq -c
+          echo "=== AROUND FIRST 2 pubdate OCCURRENCES ==="
+          grep -n -B6 -A6 'utility pubdate' tags.txt | head -40
 
-          echo "=== ANY DATE MARKUP? ==="
-          grep -o -i -E '<time[^>]*>|datetime="[^"]*"|data-[a-z-]*date[a-z-]*="[^"]*"|class="[^"]*date[^"]*"' page.html | sort | uniq -c | head -20
+          echo "=== FULL OPENING TAG OF AN ITEM CARRYING data-publication-date ==="
+          awk '/<stream-item/{buf=""; keep=1}
+               keep{buf = buf $0 "\n"}
+               /data-list-price/{if (keep && buf ~ /data-publication-date/) {print buf; exit} keep=0}' tags.txt | head -30
 
-          echo "=== ITEM OPENING TAGS (all data attrs, first 4 items) ==="
-          tr '>' '>\n' < page.html | grep -A0 -E 'data-url="/[0-9]{4}/[0-9]{2}/' | head -4
-
-          echo "=== stream-item-info BLOCKS (first 3) ==="
-          tr '<' '\n<' < page.html | grep -A12 'div class="stream-item-info"' | head -60
+          echo "=== FIRST STREAM ITEM WITHOUT data-publication-date ==="
+          awk '/<stream-item/{buf=""; keep=1}
+               keep{buf = buf $0 "\n"}
+               /data-list-price/{if (keep && buf !~ /data-publication-date/) {print buf; exit} keep=0}' tags.txt | head -20
