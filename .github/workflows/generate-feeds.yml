@@ -1,16 +1,29 @@
-# TEMPORARY: this branch swaps the generator for an hbr.org probe so it can be
-# dispatched; restored in the following commit.
 name: Generate RSS feeds
 
 on:
+  schedule:
+    - cron: "41 1/3 * * *"
   workflow_dispatch:
+    inputs:
+      debug:
+        description: "Enable tmate debug session"
+        type: boolean
+        default: false
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  probe:
+  generate-and-commit:
     runs-on: ubuntu-latest
+
+    # Secrets are mapped to env because the `secrets` context is not available
+    # in step-level `if:` conditions — this is what lets the email step skip
+    # gracefully when the mail secrets have not been configured.
+    env:
+      MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+      MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -23,22 +36,95 @@ jobs:
       - name: Set up uv
         uses: astral-sh/setup-uv@v7
 
-      - name: Generate only the HBR feed
+      # continue-on-error lets the job proceed to the commit step even if some
+      # spiders fail, so successfully-generated feeds are still written out.
+      - name: Generate feeds
+        id: generate
+        continue-on-error: true
         run: |
-          uv run python generate_feeds.py hbr-ai --no-cache 2>&1 | tail -25
+          set -o pipefail
+          uv run python generate_feeds.py --no-cache --skip-unchanged 2>&1 | tee generate.log
 
-      - name: Show what came out
+      # always() ensures this runs even when the generate step failed, so any
+      # feeds that did succeed get committed.
+      - name: Commit and push updated feeds
+        if: always()
+        env:
+          BRANCH_NAME: ${{ github.ref_name }}
         run: |
-          echo "=== ITEM COUNT ==="
-          grep -c "<item>" feeds/hbr-ai.xml
-          echo "=== ALL ITEMS (date | title | host) ==="
-          python3 - <<'PY'
-          import xml.etree.ElementTree as ET
-          from urllib.parse import urlparse
-          ch = ET.parse("feeds/hbr-ai.xml").getroot().find("channel")
-          for item in ch.findall("item"):
-              date = (item.findtext("pubDate") or "")[:16]
-              title = (item.findtext("title") or "")[:70]
-              host = urlparse(item.findtext("link") or "").netloc
-              print(f"{date} | {title} | {host}")
-          PY
+          if git diff --quiet -- feeds; then
+            echo "No feed changes to commit."
+            echo "::notice::No feed changes to commit."
+            exit 0
+          fi
+
+          changed=$(git diff --name-only -- feeds | sed 's|feeds/||')
+          echo "::notice::Updated feeds: $(echo "$changed" | tr '\n' ' ')"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add feeds
+          git commit -m "chore: regenerate RSS feeds ($(echo "$changed" | tr '\n' ' ' | sed 's/ $//'))"
+          git push origin "${BRANCH_NAME}"
+
+      # Turn the generator's own "ERROR:"/"BROKEN:"/"FLAKY:" lines into a short
+      # Markdown report, used for both the job summary and the alert email.
+      - name: Build failure report
+        if: steps.generate.outcome == 'failure'
+        env:
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          # grep exits 1 when nothing matches (e.g. the generator itself
+          # crashed before reporting), so capture first and fall back.
+          failures=$(grep -E '^(ERROR|BROKEN|FLAKY):' generate.log | sed 's/^/- /') || true
+          if [ -z "$failures" ]; then
+            failures="- No per-feed errors were reported — see the run log."
+          fi
+
+          {
+            echo "# Feed generation failed"
+            echo
+            echo "Spiders that errored in \`${GITHUB_REPOSITORY}\`:"
+            echo
+            echo "$failures"
+            echo
+            echo "[View the workflow run](${RUN_URL})"
+          } > generate-failure-report.md
+
+          cat generate-failure-report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Email the failure report
+        if: steps.generate.outcome == 'failure' && env.MAIL_USERNAME != '' && env.MAIL_PASSWORD != ''
+        uses: dawidd6/action-send-mail@v17
+        with:
+          server_address: ${{ vars.MAIL_SERVER || 'smtp.gmail.com' }}
+          server_port: ${{ vars.MAIL_PORT || 465 }}
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          from: RSS feed health <${{ secrets.MAIL_USERNAME }}>
+          to: ${{ vars.ALERT_EMAIL_TO || 'guerraz.stephane@gmail.com' }}
+          subject: "[${{ github.repository }}] RSS feed generation failed"
+          convert_markdown: true
+          html_body: file://generate-failure-report.md
+          body: |
+            Feed generation failed for ${{ github.repository }}.
+            See ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          priority: normal
+
+      # Without the mail secrets there is no email, so say so in the log —
+      # GitHub's own failure notification is the fallback in that case.
+      - name: Note skipped email
+        if: steps.generate.outcome == 'failure' && (env.MAIL_USERNAME == '' || env.MAIL_PASSWORD == '')
+        run: echo "::notice::MAIL_USERNAME/MAIL_PASSWORD are not set — skipping the alert email. Relying on GitHub's own workflow failure notification."
+
+      - name: Setup tmate debug session
+        if: ${{ inputs.debug && steps.generate.outcome == 'failure' }}
+        uses: mxschmitt/action-tmate@v3
+
+      # Re-raise the generate failure so the workflow is marked as failed,
+      # even though the commit step was allowed to run above.
+      - name: Fail if any spiders errored
+        if: steps.generate.outcome == 'failure'
+        run: exit 1
