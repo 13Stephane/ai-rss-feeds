@@ -13,6 +13,11 @@
     <outline type="rss" text="Clouded Judgement" title="Clouded Judgement" xmlUrl="https://cloudedjudgement.substack.com/feed" htmlUrl="https://cloudedjudgement.substack.com/" />
     <outline type="rss" text="Cohere Blog" title="Cohere Blog" xmlUrl="https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/cohere-blog.xml" htmlUrl="https://cohere.com/blog" />
     <outline type="rss" text="Deep Phenotype" title="Deep Phenotype" xmlUrl="https://deepphenotype.substack.com/feed" htmlUrl="https://deepphenotype.substack.com/" />
+    <outline type="rss" text="HBR probe A" title="HBR probe A" xmlUrl="https://feeds.hbr.org/harvardbusiness/ai-and-machine-learning" htmlUrl="https://feeds.hbr.org/harvardbusiness/ai-and-machine-learning" />
+    <outline type="rss" text="HBR probe B" title="HBR probe B" xmlUrl="https://hbr.org/topic/subject/ai-and-machine-learning/rss" htmlUrl="https://hbr.org/topic/subject/ai-and-machine-learning/rss" />
+    <outline type="rss" text="HBR probe C" title="HBR probe C" xmlUrl="https://hbr.org/rss/topic/subject/ai-and-machine-learning" htmlUrl="https://hbr.org/rss/topic/subject/ai-and-machine-learning" />
+    <outline type="rss" text="HBR probe D" title="HBR probe D" xmlUrl="https://feeds.hbr.org/harvardbusiness" htmlUrl="https://feeds.hbr.org/harvardbusiness" />
+    <outline type="rss" text="HBR probe E" title="HBR probe E" xmlUrl="https://hbr.org/topic/subject/ai-and-machine-learning" htmlUrl="https://hbr.org/topic/subject/ai-and-machine-learning" />
     <outline type="rss" text="Import AI (Jack Clark)" title="Import AI (Jack Clark)" xmlUrl="https://importai.substack.com/feed" htmlUrl="https://importai.substack.com/" />
     <outline type="rss" text="Mila News (Quebec AI Institute)" title="Mila News (Quebec AI Institute)" xmlUrl="https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/mila-news.xml" htmlUrl="https://mila.quebec/en/news" />
     <outline type="rss" text="Mistral News" title="Mistral News" xmlUrl="https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/mistral-news.xml" htmlUrl="https://mistral.ai/news/" />

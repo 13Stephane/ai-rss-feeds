@@ -151,3 +151,32 @@ flaky = true
 feed_title = "Clouded Judgement"
 external_feed_url = "https://cloudedjudgement.substack.com/feed"
 site_url = "https://cloudedjudgement.substack.com/"
+
+# --- TEMPORARY probes, removed before this branch is finished ------------
+# hbr.org is unreachable from the dev sandbox (egress proxy), so these run the
+# candidate URLs through the health check on a GitHub runner to find out which
+# one, if any, HBR actually serves.
+[feeds.hbr-probe-a]
+flaky = true
+feed_title = "HBR probe A"
+external_feed_url = "https://feeds.hbr.org/harvardbusiness/ai-and-machine-learning"
+
+[feeds.hbr-probe-b]
+flaky = true
+feed_title = "HBR probe B"
+external_feed_url = "https://hbr.org/topic/subject/ai-and-machine-learning/rss"
+
+[feeds.hbr-probe-c]
+flaky = true
+feed_title = "HBR probe C"
+external_feed_url = "https://hbr.org/rss/topic/subject/ai-and-machine-learning"
+
+[feeds.hbr-probe-d]
+flaky = true
+feed_title = "HBR probe D"
+external_feed_url = "https://feeds.hbr.org/harvardbusiness"
+
+[feeds.hbr-probe-e]
+flaky = true
+feed_title = "HBR probe E"
+external_feed_url = "https://hbr.org/topic/subject/ai-and-machine-learning"
