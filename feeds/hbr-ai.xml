@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>HBR AI and Machine Learning</title>
+    <link>https://hbr.org/topic/subject/ai-and-machine-learning</link>
+    <description>AI and machine learning coverage from Harvard Business Review.</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-feedgen</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 08 Aug 2026 07:19:39 +0000</lastBuildDate>
+    <item>
+      <title>HBR Virtual Roundtable: The Hidden Realities of AI Adoption</title>
+      <link>https://hbr.org/2026/07/hbr-roundtable-the-hidden-realities-of-ai-adoption</link>
+      <description>Join us July 29, 2026 at 11 am ET for a subscriber-only discussion about the pitfalls of integrating AI into organizations—and how leaders can avoid them.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/07/hbr-roundtable-the-hidden-realities-of-ai-adoption</guid>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Responsible AI Is Becoming a Growth Strategy</title>
+      <link>https://hbr.org/2026/07/responsible-ai-is-becoming-a-growth-strategy</link>
+      <description>A playbook for turning good governance into a competitive edge.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/07/responsible-ai-is-becoming-a-growth-strategy</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>When Employees Are Held Accountable for AI-Generated Decisions</title>
+      <link>https://hbr.org/2026/07/when-employees-are-held-accountable-for-ai-generated-decisions</link>
+      <description>Research finds that workers actively interpret, reshape, and mask AI’s decisions to protect their credibility and meet stakeholder expectations.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/07/when-employees-are-held-accountable-for-ai-generated-decisions</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Research: Why Some Junior Employees Work Well with AI—and Others Don’t</title>
+      <link>https://hbr.org/2026/07/research-why-some-junior-employees-work-well-with-ai-and-others-dont</link>
+      <description>A new study found that foundational skills such as critical thinking, AI literacy, and domain knowledge weren’t clear indicators of success.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/07/research-why-some-junior-employees-work-well-with-ai-and-others-dont</guid>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Don’t Let AI Make Bad Analytics Worse</title>
+      <link>https://hbr.org/2026/07/dont-let-ai-make-bad-analytics-worse</link>
+      <description>Companies need discipline to keep flawed analysis from scaling.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/07/dont-let-ai-make-bad-analytics-worse</guid>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Why Some Junior Employees Work Well with AI—and Others Don’t</title>
+      <link>https://hbr.org/2026/07/why-some-junior-employees-work-well-with-ai-and-others-dont-2</link>
+      <description>In this week’s The Insider newsletter, tech editor Tom Stackpole shares new research on AI’s impact on entry-level workers.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/07/why-some-junior-employees-work-well-with-ai-and-others-dont-2</guid>
+      <pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Research: How AI Agents Broaden the Scope of Knowledge Work</title>
+      <link>https://hbr.org/2026/07/research-how-ai-agents-broaden-the-scope-of-knowledge-work</link>
+      <description>Efficiency gains are only part of the story.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/07/research-how-ai-agents-broaden-the-scope-of-knowledge-work</guid>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Embrace AI Without Damaging Trust: Lessons from the “Financial Times”</title>
+      <link>https://hbr.org/2026/07/embrace-ai-without-damaging-trust-lessons-from-the-financial-times</link>
+      <description>An HBR Executive Masterclass with Harvard Business School professor Sandra J. Sucher.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/07/embrace-ai-without-damaging-trust-lessons-from-the-financial-times</guid>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>AI and the Looming Competition for Margin</title>
+      <link>https://hbr.org/2026/07/ai-and-the-looming-competition-for-margin</link>
+      <description>If industries achieve productivity growth with AI, they’ll likely also see fierce price competition and margin erosion.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/07/ai-and-the-looming-competition-for-margin</guid>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Hidden Realities of AI Adoption</title>
+      <link>https://hbr.org/2026/07/the-hidden-realities-of-ai-adoption</link>
+      <description>A virtual roundtable with Kate Niederhoffer and Thomas Davenport, exclusively for HBR subscribers.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/07/the-hidden-realities-of-ai-adoption</guid>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>AI and IT Teams Often Clash. But They Don’t Have To.</title>
+      <link>https://hbr.org/2026/07/ai-and-it-teams-often-clash-but-they-dont-have-to</link>
+      <description>How three companies resolved common conflicts.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/07/ai-and-it-teams-often-clash-but-they-dont-have-to</guid>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Are You Spending Wisely on AI?</title>
+      <link>https://hbr.org/2026/07/are-you-spending-wisely-on-ai</link>
+      <description>As AI costs spiral, HBS professor Iavor Bojinov offers a practical guide to help leaders weigh the tradeoffs between cost, capability, and security.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/07/are-you-spending-wisely-on-ai</guid>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Don’t Let AI Flatten Your Leadership Style</title>
+      <link>https://hbr.org/2026/08/dont-let-ai-flatten-your-leadership-style</link>
+      <description>How to protect your judgment, voice, and presence.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/08/dont-let-ai-flatten-your-leadership-style</guid>
+      <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>How Much Time Do Your Employees Spend Botsitting?</title>
+      <link>https://hbr.org/2026/08/how-much-time-do-your-employees-spend-botsitting</link>
+      <description>AI can automate hours of work each week, but it also requires substantial human oversight. Leaders need to account for that hidden labor.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/08/how-much-time-do-your-employees-spend-botsitting</guid>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>How to Recognize When Your Customers Want You to Act</title>
+      <link>https://hbr.org/2026/08/how-to-recognize-when-your-customers-want-you-to-act</link>
+      <description>Four actions companies can take to better understand critical cues about timing.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/08/how-to-recognize-when-your-customers-want-you-to-act</guid>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>AI Experiments Need Domain Experts. Here’s How to Support Them.</title>
+      <link>https://hbr.org/2026/08/ai-experiments-need-domain-experts-heres-how-to-support-them</link>
+      <description>Without the right scaffolding, the people closest to the work often end up quietly dropping out of the innovation process.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/08/ai-experiments-need-domain-experts-heres-how-to-support-them</guid>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Algorithmic Shopping Is Here. Is Your Company Ready?</title>
+      <link>https://hbr.org/2026/08/algorithmic-shopping-is-here-is-your-company-ready</link>
+      <description>A five-pillar audit for the C-suite.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/08/algorithmic-shopping-is-here-is-your-company-ready</guid>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Crafting Strategy in the Age of AI</title>
+      <link>https://hbr.org/2026/08/crafting-strategy-in-the-age-of-ai</link>
+      <description>How human strategists can free up time and focus on using their unique judgment.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/08/crafting-strategy-in-the-age-of-ai</guid>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
