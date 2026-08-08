@@ -111,9 +111,9 @@ item_date_selector = "footer div:first-child p ::text"
 item_description_selector = "h2 + p ::text"
 
 # The stream mixes dated articles with magazine teasers whose only date is
-# "From the forthcoming September-October 2026 Issue". item_date_regex matches
-# an explicit date and nothing else, so the teasers are dropped rather than
-# entering the feed dated to a future issue that has not been published.
+# "From the forthcoming September-October 2026 Issue". That text does not parse
+# as a date, so those items are skipped instead of entering the feed dated to a
+# future issue - which is what would otherwise defeat the staleness check.
 [feeds.hbr-ai]
 feed_title = "HBR AI and Machine Learning"
 feed_description = "AI and machine learning coverage from Harvard Business Review."
@@ -122,7 +122,6 @@ item_container_selector = "li.stream-entry"
 item_title_selector = "h2.hed a::text"
 item_link_selector = "h2.hed a::attr(href)"
 item_date_selector = "div.utility.pubdate time::text"
-item_date_regex = "[A-Z][a-z]+ \\d{1,2}, \\d{4}"
 item_description_selector = "div.dek ::text"
 min_item_count = 5
 
