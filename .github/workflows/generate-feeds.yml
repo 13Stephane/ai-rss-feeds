@@ -1,5 +1,5 @@
-# TEMPORARY: this branch swaps the generator for an hbr.org page probe so
-# it can be dispatched; restored in the following commit.
+# TEMPORARY: this branch swaps the generator for an hbr.org probe so it can be
+# dispatched; restored in the following commit.
 name: Generate RSS feeds
 
 on:
@@ -12,16 +12,31 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Print one complete stream entry
-        env:
-          UA: "ai-rss-feeds-bot/1.0 (+https://github.com/alan-turing-institute/ai-rss-feeds)"
-          URL: "https://hbr.org/topic/subject/ai-and-machine-learning"
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.14"
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+
+      - name: Generate only the HBR feed
         run: |
-          curl -sS -A "$UA" -o page.html -L --max-time 60 "$URL"
-          tr '<' '\n<' < page.html > tags.txt
+          uv run python generate_feeds.py hbr-ai --no-cache 2>&1 | tail -25
 
-          echo "=== ENTRY 3 (skipping the two magazine teasers) ==="
-          awk '/<li class="stream-entry"/{n++} n==3' tags.txt | head -70
-
-          echo "=== DEK / SUMMARY MARKUP PRESENT? ==="
-          grep -o -E 'class="[^"]*(dek|summary|description)[^"]*"' tags.txt | sort | uniq -c | head
+      - name: Show what came out
+        run: |
+          echo "=== ITEM COUNT ==="
+          grep -c "<item>" feeds/hbr-ai.xml
+          echo "=== FIRST 3 ITEMS ==="
+          python3 - <<'PY'
+          import xml.etree.ElementTree as ET
+          ch = ET.parse("feeds/hbr-ai.xml").getroot().find("channel")
+          for item in ch.findall("item")[:3]:
+              for tag in ("title", "link", "pubDate", "description"):
+                  print(f"{tag}: {(item.findtext(tag) or '')[:120]}")
+              print("-")
+          PY
