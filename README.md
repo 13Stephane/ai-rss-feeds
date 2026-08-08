@@ -16,6 +16,7 @@ Or you can import selected feeds by copying the URL of the XML files in the belo
 | [Anthropic Research](https://www.anthropic.com/research) | [feeds/anthropic-research.xml](https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/anthropic-research.xml) |
 | [Claude Blog](https://claude.com/blog) | [feeds/claude-blog.xml](https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/claude-blog.xml) |
 | [Cohere Blog](https://cohere.com/blog) | [feeds/cohere-blog.xml](https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/cohere-blog.xml) |
+| [HBR AI and Machine Learning](https://hbr.org/topic/subject/ai-and-machine-learning) | [feeds/hbr-ai.xml](https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/hbr-ai.xml) |
 | [Mila News (Quebec AI Institute)](https://mila.quebec/en/news) | [feeds/mila-news.xml](https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/mila-news.xml) |
 | [Mistral News](https://mistral.ai/news) | [feeds/mistral-news.xml](https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/mistral-news.xml) |
 | [TLDR AI](https://tldr.tech/ai/archives) | [feeds/tldr-ai.xml](https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/tldr-ai.xml) |
@@ -23,6 +24,25 @@ Or you can import selected feeds by copying the URL of the XML files in the belo
 | \* [Turing News (Alan Turing Institute)](https://www.turing.ac.uk/news) | [feeds/turing-news.xml](https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/turing-news.xml) |
 
 \* These feeds come from a source that intermittently blocks automated access, so they update only when it is reachable.
+
+### External Feeds
+
+These publishers already provide RSS, so this repo generates nothing for them.
+They are carried in [feeds.opml](feeds.opml) so they arrive in your reader with
+the rest, and the health check verifies them, but the URL points at the
+publisher rather than at this repo.
+
+| Name | Feed |
+|---|---|
+| \*\* [Clouded Judgement](https://cloudedjudgement.substack.com/) | https://cloudedjudgement.substack.com/feed |
+| \*\* [Deep Phenotype](https://deepphenotype.substack.com/) | https://deepphenotype.substack.com/feed |
+| \*\* [Import AI (Jack Clark)](https://importai.substack.com/) | https://importai.substack.com/feed |
+| [TechCrunch](https://techcrunch.com/) | https://techcrunch.com/feed/ |
+| [The Rundown AI](https://www.therundown.ai/) | https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml |
+
+\*\* Substack refuses GitHub's runner IPs, so the health check cannot verify these
+feeds even though they work in a reader. Marked `flaky = true`, so they warn
+instead of failing the run.
 
 ## Developer Guide
 
@@ -89,7 +109,10 @@ Each feed fails on one of:
 | `STALE` | no new item within the age limit (newest `pubDate`, falling back to `lastBuildDate`) |
 
 Feeds marked `broken = true` are skipped unless `--include-broken` is passed.
-Run `uv run --no-project python check_feeds.py --help` for all options.
+Feeds marked `flaky = true` are checked, but an error is reported as a warning
+and does not fail the run — for sources that refuse the runner while serving
+readers normally. Run `uv run --no-project python check_feeds.py --help` for all
+options.
 
 The `.github/workflows/feed-health.yml` workflow runs this daily and can also be
 triggered manually. On failure it writes a report to the job summary and emails
@@ -156,3 +179,26 @@ rm -rf .scrapy/httpcache
 	- comments above the feed table to keep source/structure notes alongside selectors
 5. Add the new feed entry to the table above, keeping it sorted by name.
 6. Run `uv run python generate_feeds.py` and verify output in `feeds/`.
+7. Run `uv run python generate_opml.py` to regenerate the OPML.
+
+### Add An External Feed
+
+When a source already publishes its own RSS there is nothing to scrape. Add it
+as an external feed instead, so it reaches your reader through the OPML without
+this repo generating a duplicate copy:
+
+```toml
+[feeds.techcrunch]
+feed_title = "TechCrunch"
+external_feed_url = "https://techcrunch.com/feed/"
+site_url = "https://techcrunch.com/"
+```
+
+`external_feed_url` is the RSS URL and `site_url` is the human-readable page
+(optional; it defaults to the feed URL). No selectors apply — setting any
+scraping field on an external feed is rejected, rather than silently ignored.
+External feeds are skipped by `generate_feeds.py` and by
+`check_feeds.py --local`, since neither has anything to act on.
+
+Then add it to the External Feeds table above and run
+`uv run python generate_opml.py`.

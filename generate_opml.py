@@ -3,7 +3,7 @@
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
-from src.feed_config import load_all_feeds
+from src.feed_config import is_external, load_all_feeds
 
 
 REPO_RAW_BASE_URL = (
@@ -23,8 +23,16 @@ def build_opml_tree() -> ET.ElementTree:
 
     for feed_key, config in sorted(feeds.items(), key=lambda item: (item[1]["feed_title"].lower(), item[0])):
         feed_title = config["feed_title"]
-        feed_url = f"{REPO_RAW_BASE_URL}/feeds/{feed_key}.xml"
-        source_url = config["source_url"]
+
+        # External feeds already publish RSS, so point subscribers straight at
+        # the publisher rather than at a copy this repo would have to generate.
+        if is_external(config):
+            feed_url = config["external_feed_url"]
+            site_url = config.get("site_url", feed_url)
+        else:
+            feed_url = f"{REPO_RAW_BASE_URL}/feeds/{feed_key}.xml"
+            site_url = config["source_url"]
+
         ET.SubElement(
             body,
             "outline",
@@ -33,7 +41,7 @@ def build_opml_tree() -> ET.ElementTree:
                 "text": feed_title,
                 "title": feed_title,
                 "xmlUrl": feed_url,
-                "htmlUrl": source_url,
+                "htmlUrl": site_url,
             },
         )
 
