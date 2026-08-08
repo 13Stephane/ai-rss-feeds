@@ -12,7 +12,7 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Locate the publication dates within each item
+      - name: Print one complete stream entry
         env:
           UA: "ai-rss-feeds-bot/1.0 (+https://github.com/alan-turing-institute/ai-rss-feeds)"
           URL: "https://hbr.org/topic/subject/ai-and-machine-learning"
@@ -20,21 +20,8 @@ jobs:
           curl -sS -A "$UA" -o page.html -L --max-time 60 "$URL"
           tr '<' '\n<' < page.html > tags.txt
 
-          echo "=== COUNTS ==="
-          printf 'stream-item     %s\n' "$(grep -c '<stream-item' tags.txt || true)"
-          printf 'stream-entry    %s\n' "$(grep -c 'class="stream-entry"' tags.txt || true)"
-          printf 'utility pubdate %s\n' "$(grep -c 'utility pubdate' tags.txt || true)"
-          printf 'data-pub-date   %s\n' "$(grep -c 'data-publication-date' tags.txt || true)"
+          echo "=== ENTRY 3 (skipping the two magazine teasers) ==="
+          awk '/<li class="stream-entry"/{n++} n==3' tags.txt | head -70
 
-          echo "=== AROUND FIRST 2 pubdate OCCURRENCES ==="
-          grep -n -B6 -A6 'utility pubdate' tags.txt | head -40
-
-          echo "=== FULL OPENING TAG OF AN ITEM CARRYING data-publication-date ==="
-          awk '/<stream-item/{buf=""; keep=1}
-               keep{buf = buf $0 "\n"}
-               /data-list-price/{if (keep && buf ~ /data-publication-date/) {print buf; exit} keep=0}' tags.txt | head -30
-
-          echo "=== FIRST STREAM ITEM WITHOUT data-publication-date ==="
-          awk '/<stream-item/{buf=""; keep=1}
-               keep{buf = buf $0 "\n"}
-               /data-list-price/{if (keep && buf !~ /data-publication-date/) {print buf; exit} keep=0}' tags.txt | head -20
+          echo "=== DEK / SUMMARY MARKUP PRESENT? ==="
+          grep -o -E 'class="[^"]*(dek|summary|description)[^"]*"' tags.txt | sort | uniq -c | head
