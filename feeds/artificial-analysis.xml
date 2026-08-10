@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 07 Aug 2026 00:48:49 +0000</lastBuildDate>
-    <item>
-      <title>Four frontier launches in eight days: six labs now field a model above 50 on the Artificial Analysis Intelligence Index</title>
-      <link>https://artificialanalysis.ai/articles/four-frontier-launches-in-eight-days-six-labs-now-field-a-model-above-50-on-the-artificial-analysis-intelligence-index</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/four-frontier-launches-in-eight-days-six-labs-now-field-a-model-above-50-on-the-artificial-analysis-intelligence-index</guid>
-      <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Mon, 10 Aug 2026 23:09:31 +0000</lastBuildDate>
     <item>
       <title>Gemini 3.6 Flash and Gemini 3.5 Flash-Lite: Halving Time per Task</title>
       <link>https://artificialanalysis.ai/articles/gemini-3-6-flash-3-5-flash-lite-halving-time</link>
@@ -79,6 +73,12 @@
       <link>https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-1-1</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-1-1</guid>
       <pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Muse Glimmer</title>
+      <link>https://artificialanalysis.ai/articles/muse-glimmer</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/muse-glimmer</guid>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
