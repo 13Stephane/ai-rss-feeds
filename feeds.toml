@@ -63,15 +63,6 @@ item_title_selector = "h3 a[href^='/blog/'] span::text"
 item_link_selector = "h3 a[href^='/blog/']::attr(href)"
 item_date_selector = "div.field-published-date span::text"
 
-[feeds.turing-news]
-flaky = true
-feed_title = "Turing News (Alan Turing Institute)"
-source_url = "https://www.turing.ac.uk/news"
-item_container_selector = "article.node--type-article"
-item_title_selector = "h3 a[href^='/news/'] span::text"
-item_link_selector = "h3 a[href^='/news/']::attr(href)"
-item_date_selector = "div.field-published-date span::text"
-
 [feeds.mila-news]
 feed_title = "Mila News (Quebec AI Institute)"
 feed_description = "News and announcements from Mila - Quebec AI Institute."
