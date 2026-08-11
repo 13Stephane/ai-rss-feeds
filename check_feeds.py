@@ -30,7 +30,7 @@ from src.feed_config import is_external, load_all_feeds
 
 
 DEFAULT_BASE_URL = (
-    "https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main"
+    "https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main"
 )
 DEFAULT_MAX_AGE_DAYS = 21
 DEFAULT_MIN_ITEMS = 1

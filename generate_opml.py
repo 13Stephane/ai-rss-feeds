@@ -7,7 +7,7 @@ from src.feed_config import is_external, load_all_feeds
 
 
 REPO_RAW_BASE_URL = (
-    "https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main"
+    "https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main"
 )
 OPML_PATH = Path(__file__).resolve().parent / "feeds.opml"
 

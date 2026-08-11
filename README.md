@@ -2,7 +2,7 @@
 
 This project generates RSS 2.0 feeds for AI news/blog sites that do not publish feeds directly.
 
-You can import all of these feeds into your RSS reader with this [feeds.opml](https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds.opml) file.
+You can import all of these feeds into your RSS reader with this [feeds.opml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds.opml) file.
 
 Or you can import selected feeds by copying the URL of the XML files in the below table.
 
@@ -10,18 +10,17 @@ Or you can import selected feeds by copying the URL of the XML files in the belo
 
 | Name | File |
 |---|---|
-| [Ai2 News (Allen Institute for AI)](https://allenai.org/news) | [feeds/allenai-news.xml](https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/allenai-news.xml) |
-| [AISI Blog (AI Security Institute)](https://www.aisi.gov.uk/blog) | [feeds/aisi-blog.xml](https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/aisi-blog.xml) |
-| [Anthropic News](https://www.anthropic.com/news) | [feeds/anthropic-news.xml](https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/anthropic-news.xml) |
-| [Anthropic Research](https://www.anthropic.com/research) | [feeds/anthropic-research.xml](https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/anthropic-research.xml) |
-| [Claude Blog](https://claude.com/blog) | [feeds/claude-blog.xml](https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/claude-blog.xml) |
-| [Cohere Blog](https://cohere.com/blog) | [feeds/cohere-blog.xml](https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/cohere-blog.xml) |
-| [HBR AI and Machine Learning](https://hbr.org/topic/subject/ai-and-machine-learning) | [feeds/hbr-ai.xml](https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/hbr-ai.xml) |
-| [Mila News (Quebec AI Institute)](https://mila.quebec/en/news) | [feeds/mila-news.xml](https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/mila-news.xml) |
-| [Mistral News](https://mistral.ai/news) | [feeds/mistral-news.xml](https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/mistral-news.xml) |
-| [TLDR AI](https://tldr.tech/ai/archives) | [feeds/tldr-ai.xml](https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/tldr-ai.xml) |
-| \* [Turing Blog (Alan Turing Institute)](https://www.turing.ac.uk/blog) | [feeds/turing-blog.xml](https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/turing-blog.xml) |
-| \* [Turing News (Alan Turing Institute)](https://www.turing.ac.uk/news) | [feeds/turing-news.xml](https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/turing-news.xml) |
+| [Ai2 News (Allen Institute for AI)](https://allenai.org/news) | [feeds/allenai-news.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/allenai-news.xml) |
+| [AISI Blog (AI Security Institute)](https://www.aisi.gov.uk/blog) | [feeds/aisi-blog.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/aisi-blog.xml) |
+| [Anthropic News](https://www.anthropic.com/news) | [feeds/anthropic-news.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/anthropic-news.xml) |
+| [Anthropic Research](https://www.anthropic.com/research) | [feeds/anthropic-research.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/anthropic-research.xml) |
+| [Claude Blog](https://claude.com/blog) | [feeds/claude-blog.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/claude-blog.xml) |
+| [Cohere Blog](https://cohere.com/blog) | [feeds/cohere-blog.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/cohere-blog.xml) |
+| [HBR AI and Machine Learning](https://hbr.org/topic/subject/ai-and-machine-learning) | [feeds/hbr-ai.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/hbr-ai.xml) |
+| [Mila News (Quebec AI Institute)](https://mila.quebec/en/news) | [feeds/mila-news.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/mila-news.xml) |
+| [Mistral News](https://mistral.ai/news) | [feeds/mistral-news.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/mistral-news.xml) |
+| [TLDR AI](https://tldr.tech/ai/archives) | [feeds/tldr-ai.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/tldr-ai.xml) |
+| \* [Turing Blog (Alan Turing Institute)](https://www.turing.ac.uk/blog) | [feeds/turing-blog.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/turing-blog.xml) |
 
 \* These feeds come from a source that intermittently blocks automated access, so they update only when it is reachable.
 
@@ -142,7 +141,7 @@ Repository **variables**, all optional:
 | `FEED_HEALTH_BASE_URL` | this repo's raw default branch | where the feeds are published |
 | `FEED_HEALTH_MAX_AGE_DAYS` | `21` | staleness limit in days |
 | `FEED_HEALTH_MIN_ITEMS` | `1` | minimum items per feed |
-| `FEED_HEALTH_AGE_OVERRIDES` | none | JSON per-feed age limits, e.g. `{"turing-news": 90}` |
+| `FEED_HEALTH_AGE_OVERRIDES` | none | JSON per-feed age limits, e.g. `{"turing-blog": 90}` |
 | `FEED_HEALTH_SKIP` | none | comma-separated feed keys to exclude |
 
 Use `FEED_HEALTH_AGE_OVERRIDES` for sources that genuinely publish rarely, so
