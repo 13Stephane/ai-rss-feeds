@@ -26,7 +26,7 @@ from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
-from src.feed_config import load_all_feeds
+from src.feed_config import is_external, load_all_feeds
 
 
 DEFAULT_BASE_URL = (
@@ -247,13 +247,18 @@ def check_feed(body: bytes, min_items: int, max_age_days: float, now: datetime) 
     return {"item_count": item_count, "age_days": age_days, "date_source": date_source}
 
 
-def build_report(results: list[dict], failures: list[dict], context: dict) -> str:
+def build_report(
+    results: list[dict], failures: list[dict], warnings: list[dict], context: dict
+) -> str:
     lines = ["# RSS feed health check", ""]
 
     if failures:
         lines.append(f"**{len(failures)} of {len(results)} feeds failed.**")
     else:
         lines.append(f"All {len(results)} feeds passed.")
+
+    if warnings:
+        lines.append(f"{len(warnings)} flaky feed(s) errored without failing the run.")
 
     lines += [
         "",
@@ -270,6 +275,12 @@ def build_report(results: list[dict], failures: list[dict], context: dict) -> st
             lines.append(f"| `{failure['feed_key']}` | {failure['kind']} | {failure['detail']} |")
         lines.append("")
 
+    if warnings:
+        lines += ["## Flaky (warned, did not fail)", "", "| Feed | Problem | Detail |", "|---|---|---|"]
+        for warning in warnings:
+            lines.append(f"| `{warning['feed_key']}` | {warning['kind']} | {warning['detail']} |")
+        lines.append("")
+
     lines += ["## All feeds", "", "| Feed | Status | Items | Age (days) |", "|---|---|---|---|"]
     for result in results:
         if result["ok"]:
@@ -277,7 +288,8 @@ def build_report(results: list[dict], failures: list[dict], context: dict) -> st
                 f"| `{result['feed_key']}` | OK | {result['item_count']} | {result['age_days']:.1f} |"
             )
         else:
-            lines.append(f"| `{result['feed_key']}` | {result['kind']} | — | — |")
+            status = f"{result['kind']} (flaky)" if result["flaky"] else result["kind"]
+            lines.append(f"| `{result['feed_key']}` | {status} | — | — |")
     lines.append("")
 
     if context["skipped"]:
@@ -309,6 +321,10 @@ def main() -> None:
             skipped.append(f"{feed_key} (skip list)")
         elif all_feeds[feed_key].get("broken") and not args.include_broken:
             skipped.append(f"{feed_key} (broken=true)")
+        elif args.local and is_external(all_feeds[feed_key]):
+            # Nothing is generated for an external feed, so there is no local
+            # file to check — only the published URL means anything.
+            skipped.append(f"{feed_key} (external, no local file)")
         else:
             feed_keys.append(feed_key)
 
@@ -321,32 +337,44 @@ def main() -> None:
 
     results = []
     failures = []
+    # A flaky source blocks or stonewalls the runner while serving subscribers
+    # normally, so its errors are reported but must not fail the run.
+    warnings = []
 
     for feed_key in feed_keys:
         max_age_days = age_overrides.get(feed_key, args.max_age_days)
+        config = all_feeds[feed_key]
         try:
             if args.local:
                 body = read_local_feed(feed_key)
             else:
-                body = fetch_feed(f"{base_url}/feeds/{feed_key}.xml", args.timeout, args.retries)
+                # An external feed lives at the publisher's URL; a generated one
+                # lives under the base URL this repo publishes to.
+                if is_external(config):
+                    feed_url = config["external_feed_url"]
+                else:
+                    feed_url = f"{base_url}/feeds/{feed_key}.xml"
+                body = fetch_feed(feed_url, args.timeout, args.retries)
             checked = check_feed(body, args.min_items, max_age_days, now)
         except FeedFailure as failure:
-            print(f"FAIL: {feed_key}: {failure.kind}: {failure.detail}")
+            flaky = bool(config.get("flaky"))
+            print(f"{'WARN' if flaky else 'FAIL'}: {feed_key}: {failure.kind}: {failure.detail}")
             record = {
                 "feed_key": feed_key,
                 "ok": False,
+                "flaky": flaky,
                 "kind": failure.kind,
                 "detail": failure.detail,
             }
             results.append(record)
-            failures.append(record)
+            (warnings if flaky else failures).append(record)
             continue
 
         print(
             f"OK: {feed_key}: {checked['item_count']} items, "
             f"newest {checked['age_days']:.1f} days old"
         )
-        results.append({"feed_key": feed_key, "ok": True, **checked})
+        results.append({"feed_key": feed_key, "ok": True, "flaky": False, **checked})
 
     for note in skipped:
         print(f"SKIP: {note}")
@@ -360,11 +388,18 @@ def main() -> None:
     }
 
     if args.report:
-        args.report.write_text(build_report(results, failures, context), encoding="utf-8")
+        args.report.write_text(
+            build_report(results, failures, warnings, context), encoding="utf-8"
+        )
 
     if os.environ.get("GITHUB_ACTIONS") == "true":
         for failure in failures:
             print(f"::error::{failure['feed_key']}: {failure['kind']}: {failure['detail']}")
+        for warning in warnings:
+            print(f"::warning::{warning['feed_key']}: {warning['kind']}: {warning['detail']}")
+
+    if warnings:
+        print(f"{len(warnings)} flaky feed(s) errored without failing the run.")
 
     if failures:
         print(f"\n{len(failures)} of {len(results)} feeds failed.", file=sys.stderr)
