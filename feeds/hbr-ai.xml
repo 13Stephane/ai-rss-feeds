@@ -7,42 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 08 Aug 2026 07:19:39 +0000</lastBuildDate>
-    <item>
-      <title>HBR Virtual Roundtable: The Hidden Realities of AI Adoption</title>
-      <link>https://hbr.org/2026/07/hbr-roundtable-the-hidden-realities-of-ai-adoption</link>
-      <description>Join us July 29, 2026 at 11 am ET for a subscriber-only discussion about the pitfalls of integrating AI into organizations—and how leaders can avoid them.</description>
-      <guid isPermaLink="true">https://hbr.org/2026/07/hbr-roundtable-the-hidden-realities-of-ai-adoption</guid>
-      <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Responsible AI Is Becoming a Growth Strategy</title>
-      <link>https://hbr.org/2026/07/responsible-ai-is-becoming-a-growth-strategy</link>
-      <description>A playbook for turning good governance into a competitive edge.</description>
-      <guid isPermaLink="true">https://hbr.org/2026/07/responsible-ai-is-becoming-a-growth-strategy</guid>
-      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>When Employees Are Held Accountable for AI-Generated Decisions</title>
-      <link>https://hbr.org/2026/07/when-employees-are-held-accountable-for-ai-generated-decisions</link>
-      <description>Research finds that workers actively interpret, reshape, and mask AI’s decisions to protect their credibility and meet stakeholder expectations.</description>
-      <guid isPermaLink="true">https://hbr.org/2026/07/when-employees-are-held-accountable-for-ai-generated-decisions</guid>
-      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Research: Why Some Junior Employees Work Well with AI—and Others Don’t</title>
-      <link>https://hbr.org/2026/07/research-why-some-junior-employees-work-well-with-ai-and-others-dont</link>
-      <description>A new study found that foundational skills such as critical thinking, AI literacy, and domain knowledge weren’t clear indicators of success.</description>
-      <guid isPermaLink="true">https://hbr.org/2026/07/research-why-some-junior-employees-work-well-with-ai-and-others-dont</guid>
-      <pubDate>Thu, 23 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Don’t Let AI Make Bad Analytics Worse</title>
-      <link>https://hbr.org/2026/07/dont-let-ai-make-bad-analytics-worse</link>
-      <description>Companies need discipline to keep flawed analysis from scaling.</description>
-      <guid isPermaLink="true">https://hbr.org/2026/07/dont-let-ai-make-bad-analytics-worse</guid>
-      <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Tue, 11 Aug 2026 17:33:58 +0000</lastBuildDate>
     <item>
       <title>Why Some Junior Employees Work Well with AI—and Others Don’t</title>
       <link>https://hbr.org/2026/07/why-some-junior-employees-work-well-with-ai-and-others-dont-2</link>
@@ -133,6 +98,27 @@
       <description>How human strategists can free up time and focus on using their unique judgment.</description>
       <guid isPermaLink="true">https://hbr.org/2026/08/crafting-strategy-in-the-age-of-ai</guid>
       <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>What Does AI Talent Look for in an Employer?</title>
+      <link>https://hbr.org/2026/08/what-does-ai-talent-look-for-in-an-employer</link>
+      <description>Three leader attributes that candidates gravitated toward, according to an analysis of the talent-matching platform CoffeeSpace.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/08/what-does-ai-talent-look-for-in-an-employer</guid>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>“Leadership Drift” Is Stalling Your AI Strategy</title>
+      <link>https://hbr.org/2026/08/leadership-drift-is-stalling-your-ai-strategy</link>
+      <description>Research highlights the unintentional and collective inertia that prevents leadership teams from making decisions.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/08/leadership-drift-is-stalling-your-ai-strategy</guid>
+      <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Driving Change When You Lack Authority</title>
+      <link>https://hbr.org/2026/08/driving-change-when-you-lack-authority</link>
+      <description>In the August 10 edition of The Insider newsletter, managing editor Gretchen Gavett writes on influencing others when you lack formal authority, board relationships, and the hidden labor of “botsitting.”</description>
+      <guid isPermaLink="true">https://hbr.org/2026/08/driving-change-when-you-lack-authority</guid>
+      <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
