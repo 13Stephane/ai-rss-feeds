@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 11 Aug 2026 14:39:19 +0000</lastBuildDate>
-    <item>
-      <title>Kimi K3: second only to Fable 5 on AA-Briefcase</title>
-      <link>https://artificialanalysis.ai/articles/kimi-k3-agentic-knowledge-benchmark</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/kimi-k3-agentic-knowledge-benchmark</guid>
-      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Tue, 11 Aug 2026 23:20:48 +0000</lastBuildDate>
     <item>
       <title>How Thinking Machines Lab’s Inkling performs on agentic knowledge work</title>
       <link>https://artificialanalysis.ai/articles/how-thinking-machines-lab-s-inkling-performs-on-agentic-knowledge-work</link>
@@ -72,6 +66,12 @@
       <title>Muse Glimmer</title>
       <link>https://artificialanalysis.ai/articles/muse-glimmer</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/muse-glimmer</guid>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Announcing AA-AnalystAgent: an agentic benchmark for quantitative analysis on real-world spreadsheets and documents</title>
+      <link>https://artificialanalysis.ai/articles/aa-analyst-agent</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/aa-analyst-agent</guid>
       <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
