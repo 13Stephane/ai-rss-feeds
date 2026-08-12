@@ -7,14 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 11 Aug 2026 20:20:12 +0000</lastBuildDate>
-    <item>
-      <title>Research: How AI Agents Broaden the Scope of Knowledge Work</title>
-      <link>https://hbr.org/2026/07/research-how-ai-agents-broaden-the-scope-of-knowledge-work</link>
-      <description>Efficiency gains are only part of the story.</description>
-      <guid isPermaLink="true">https://hbr.org/2026/07/research-how-ai-agents-broaden-the-scope-of-knowledge-work</guid>
-      <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 12 Aug 2026 14:39:04 +0000</lastBuildDate>
     <item>
       <title>Embrace AI Without Damaging Trust: Lessons from the “Financial Times”</title>
       <link>https://hbr.org/2026/07/embrace-ai-without-damaging-trust-lessons-from-the-financial-times</link>
@@ -112,6 +105,13 @@
       <description>In the August 10 edition of The Insider newsletter, managing editor Gretchen Gavett writes on influencing others when you lack formal authority, board relationships, and the hidden labor of “botsitting.”</description>
       <guid isPermaLink="true">https://hbr.org/2026/08/driving-change-when-you-lack-authority</guid>
       <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>AI Makes Building Easy. Choosing What to Build Is Harder.</title>
+      <link>https://hbr.org/2026/08/ai-makes-building-easy-choosing-what-to-build-is-harder</link>
+      <description>If everyone has access to similar AI tools, your team’s advantage isn’t technical capability—it’s understanding the problem.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/08/ai-makes-building-easy-choosing-what-to-build-is-harder</guid>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
