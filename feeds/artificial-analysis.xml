@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 12 Aug 2026 17:35:30 +0000</lastBuildDate>
-    <item>
-      <title>Claude Opus 5: the new leader in agentic knowledge work</title>
-      <link>https://artificialanalysis.ai/articles/claude-opus-5-leader-agentic-knowledge-work</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/claude-opus-5-leader-agentic-knowledge-work</guid>
-      <pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 13 Aug 2026 23:21:52 +0000</lastBuildDate>
     <item>
       <title>Agnes AI releases Agnes 2.5 Pro Alpha</title>
       <link>https://artificialanalysis.ai/articles/agnes-ai-releases-agnes-2-5-pro-alpha</link>
@@ -79,6 +73,12 @@
       <link>https://artificialanalysis.ai/articles/upstage-solar-pro-4</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/upstage-solar-pro-4</guid>
       <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Gemini 3.7 Flash: On the Intelligence vs. Time per Task Pareto frontier</title>
+      <link>https://artificialanalysis.ai/articles/gemini-3-7-time-frontier</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/gemini-3-7-time-frontier</guid>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
