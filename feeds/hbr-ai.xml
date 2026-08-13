@@ -7,14 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 12 Aug 2026 14:39:04 +0000</lastBuildDate>
-    <item>
-      <title>Embrace AI Without Damaging Trust: Lessons from the “Financial Times”</title>
-      <link>https://hbr.org/2026/07/embrace-ai-without-damaging-trust-lessons-from-the-financial-times</link>
-      <description>An HBR Executive Masterclass with Harvard Business School professor Sandra J. Sucher.</description>
-      <guid isPermaLink="true">https://hbr.org/2026/07/embrace-ai-without-damaging-trust-lessons-from-the-financial-times</guid>
-      <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 13 Aug 2026 14:39:58 +0000</lastBuildDate>
     <item>
       <title>AI and the Looming Competition for Margin</title>
       <link>https://hbr.org/2026/07/ai-and-the-looming-competition-for-margin</link>
@@ -112,6 +105,13 @@
       <description>If everyone has access to similar AI tools, your team’s advantage isn’t technical capability—it’s understanding the problem.</description>
       <guid isPermaLink="true">https://hbr.org/2026/08/ai-makes-building-easy-choosing-what-to-build-is-harder</guid>
       <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Why Agentic AI Could Transform Procurement</title>
+      <link>https://hbr.org/2026/08/why-agentic-ai-could-transform-procurement</link>
+      <description>The combination of economic visibility, process structure, and persistent friction make it a huge opportunity.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/08/why-agentic-ai-could-transform-procurement</guid>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
