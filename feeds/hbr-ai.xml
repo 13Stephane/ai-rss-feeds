@@ -7,14 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 13 Aug 2026 14:39:58 +0000</lastBuildDate>
-    <item>
-      <title>AI and the Looming Competition for Margin</title>
-      <link>https://hbr.org/2026/07/ai-and-the-looming-competition-for-margin</link>
-      <description>If industries achieve productivity growth with AI, they’ll likely also see fierce price competition and margin erosion.</description>
-      <guid isPermaLink="true">https://hbr.org/2026/07/ai-and-the-looming-competition-for-margin</guid>
-      <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 14 Aug 2026 14:34:02 +0000</lastBuildDate>
     <item>
       <title>The Hidden Realities of AI Adoption</title>
       <link>https://hbr.org/2026/07/the-hidden-realities-of-ai-adoption</link>
@@ -112,6 +105,13 @@
       <description>The combination of economic visibility, process structure, and persistent friction make it a huge opportunity.</description>
       <guid isPermaLink="true">https://hbr.org/2026/08/why-agentic-ai-could-transform-procurement</guid>
       <pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Research: The Innovation Problems AI Can’t Solve</title>
+      <link>https://hbr.org/2026/08/research-the-innovation-problems-ai-cant-solve</link>
+      <description>Generative AI speeds innovation, but it can also narrow thinking, reinforce bias, and distance teams from customers.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/08/research-the-innovation-problems-ai-cant-solve</guid>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
