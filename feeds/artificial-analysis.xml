@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 13 Aug 2026 23:21:52 +0000</lastBuildDate>
-    <item>
-      <title>Agnes AI releases Agnes 2.5 Pro Alpha</title>
-      <link>https://artificialanalysis.ai/articles/agnes-ai-releases-agnes-2-5-pro-alpha</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/agnes-ai-releases-agnes-2-5-pro-alpha</guid>
-      <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 14 Aug 2026 08:46:58 +0000</lastBuildDate>
     <item>
       <title>Inkling Small lands within a point of Inkling on the Artificial Analysis Intelligence Index with less than a third of the parameters</title>
       <link>https://artificialanalysis.ai/articles/inkling-small-lands-within-a-point-of-inkling-on-the-artificial-analysis-intelligence-index-with-less-than-a-third-of-the-parameters</link>
@@ -78,6 +72,12 @@
       <title>Gemini 3.7 Flash: On the Intelligence vs. Time per Task Pareto frontier</title>
       <link>https://artificialanalysis.ai/articles/gemini-3-7-time-frontier</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/gemini-3-7-time-frontier</guid>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Announcing Optima: create a custom benchmark for your use case</title>
+      <link>https://artificialanalysis.ai/articles/optima</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/optima</guid>
       <pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
