@@ -107,6 +107,17 @@ min_item_count = 5
 # the reader alongside the generated feeds. Set `external_feed_url` (the RSS
 # URL) and optionally `site_url` (the human page). No selectors apply.
 
+# Google News search, standing in for a Google Alert: an alert's own RSS URL
+# carries a per-account token, and the RSS delivery option is unavailable on
+# this account. This URL needs no account. The query is deliberately unquoted —
+# the exact-phrase form ranks by relevance and returns items up to 10 months
+# old, while this one returns nothing older than about three weeks, so it reads
+# as a live monitor and never trips the staleness check on ranking alone.
+[feeds.ai-productivity-news]
+feed_title = "AI Productivity, Growth and Value (Google News)"
+external_feed_url = "https://news.google.com/rss/search?hl=en-US&gl=US&ceid=US:en&q=AI%20productivity%20OR%20growth%20OR%20value"
+site_url = "https://news.google.com/search?hl=en-US&gl=US&ceid=US:en&q=AI%20productivity%20OR%20growth%20OR%20value"
+
 [feeds.techcrunch]
 feed_title = "TechCrunch"
 external_feed_url = "https://techcrunch.com/feed/"

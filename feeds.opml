@@ -4,6 +4,7 @@
     <title>AI RSS Feeds</title>
   </head>
   <body>
+    <outline type="rss" text="AI Productivity, Growth and Value (Google News)" title="AI Productivity, Growth and Value (Google News)" xmlUrl="https://news.google.com/rss/search?hl=en-US&amp;gl=US&amp;ceid=US:en&amp;q=AI%20productivity%20OR%20growth%20OR%20value" htmlUrl="https://news.google.com/search?hl=en-US&amp;gl=US&amp;ceid=US:en&amp;q=AI%20productivity%20OR%20growth%20OR%20value" />
     <outline type="rss" text="Ai2 News (Allen Institute for AI)" title="Ai2 News (Allen Institute for AI)" xmlUrl="https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/allenai-news.xml" htmlUrl="https://allenai.org/news" />
     <outline type="rss" text="AISI Blog (AI Security Institute)" title="AISI Blog (AI Security Institute)" xmlUrl="https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/aisi-blog.xml" htmlUrl="https://www.aisi.gov.uk/blog" />
     <outline type="rss" text="Anthropic News" title="Anthropic News" xmlUrl="https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/anthropic-news.xml" htmlUrl="https://www.anthropic.com/news" />
