@@ -75,33 +75,6 @@ item_title_selector = "div.field-name-node-title a::text"
 item_link_selector = "div.field-name-node-title a::attr(href)"
 item_date_selector = "div.field-name-dynamic-twig-fieldnode-default-date-format-wrapped span::text"
 
-# Frozen since 2026-07-09: the runner is served a 20-issue window that has not
-# advanced in over a month, for a publisher that ships every weekday. Note that
-# `broken = true` is the wrong lever here — it means "the spider errors", and
-# this spider succeeds, so the generator would report the feed as recovered and
-# fail the run. The staleness is real and the health check should keep saying so.
-[feeds.tldr-ai]
-feed_title = "TLDR AI"
-source_url = "https://tldr.tech/ai/archives"
-item_container_selector = "a[href^='/ai/20']"
-item_link_selector = "::attr(href)"
-item_title_selector = "div::text"
-item_date_selector = "::attr(href)"
-item_date_regex = "\\d{4}-\\d{2}-\\d{2}"
-
-# Cohere rebuilt the blog in August 2026: the posts are no longer in the nextjs
-# payload, so this is a plain HTML scrape now. The date cell sits in the same
-# span as the read time ("May 28, 2026" then "8 min read"), hence the regex.
-[feeds.cohere-blog]
-feed_title = "Cohere Blog"
-feed_description = "Latest news and updates from Cohere."
-source_url = "https://cohere.com/blog"
-item_container_selector = "li.min-w-0"
-item_title_selector = "p.text-web3-20::text"
-item_link_selector = "a[href^='/blog/']:not([href*='/blog/tag/'])::attr(href)"
-item_date_selector = "p.font-eyebrow::text"
-item_date_regex = "[A-Z][a-z]+ [0-9]{1,2}, [0-9]{4}"
-
 [feeds.mistral-news]
 feed_title = "Mistral News"
 feed_description = "Latest news and announcements from Mistral AI."
