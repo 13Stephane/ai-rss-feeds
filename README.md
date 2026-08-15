@@ -19,14 +19,10 @@ Or you can import selected feeds by copying the URL of the XML files in the belo
 | [HBR AI and Machine Learning](https://hbr.org/topic/subject/ai-and-machine-learning) | [feeds/hbr-ai.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/hbr-ai.xml) |
 | [Mila News (Quebec AI Institute)](https://mila.quebec/en/news) | [feeds/mila-news.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/mila-news.xml) |
 | [Mistral News](https://mistral.ai/news) | [feeds/mistral-news.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/mistral-news.xml) |
-| † [TLDR AI](https://tldr.tech/ai/archives) | [feeds/tldr-ai.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/tldr-ai.xml) |
+| [TLDR AI](https://tldr.tech/ai/archives) | [feeds/tldr-ai.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/tldr-ai.xml) |
 | \* [Turing Blog (Alan Turing Institute)](https://www.turing.ac.uk/blog) | [feeds/turing-blog.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/turing-blog.xml) |
 
 \* These feeds come from a source that intermittently blocks automated access, so they update only when it is reachable.
-
-† Marked `broken = true`: the scrape reports success but the source serves the
-runner a window that stopped advancing on 2026-07-09, so the feed is stale and
-excluded from the health check until it recovers.
 
 ### External Feeds
 
