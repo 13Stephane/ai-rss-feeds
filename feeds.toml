@@ -75,12 +75,12 @@ item_title_selector = "div.field-name-node-title a::text"
 item_link_selector = "div.field-name-node-title a::attr(href)"
 item_date_selector = "div.field-name-dynamic-twig-fieldnode-default-date-format-wrapped span::text"
 
-# Broken since 2026-07-09: the scrape succeeds but the runner is served a
-# stale 20-issue window that has not advanced in a month, for a publisher that
-# ships every weekday. Parked so it stops failing every run, and so it flags
-# automatically if it ever starts working again.
+# Frozen since 2026-07-09: the runner is served a 20-issue window that has not
+# advanced in over a month, for a publisher that ships every weekday. Note that
+# `broken = true` is the wrong lever here — it means "the spider errors", and
+# this spider succeeds, so the generator would report the feed as recovered and
+# fail the run. The staleness is real and the health check should keep saying so.
 [feeds.tldr-ai]
-broken = true
 feed_title = "TLDR AI"
 source_url = "https://tldr.tech/ai/archives"
 item_container_selector = "a[href^='/ai/20']"
