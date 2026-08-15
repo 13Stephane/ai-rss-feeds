@@ -333,7 +333,13 @@ class FeedSpider(scrapy.Spider):
                 "RETURN_AS_TIMEZONE_AWARE": True,
                 "TIMEZONE": "UTC",
                 "TO_TIMEZONE": "UTC",
-                "PREFER_DAY_OF_MONTH": "last",
+                # Some sources date items by month only ("August 2026"). Taking
+                # the last day would place the current month's items in the
+                # future, which is wrong and permanently defeats the staleness
+                # check — a feed whose newest date is always ahead of now can
+                # never be reported stale. The first of the month is in the past
+                # as soon as the month starts.
+                "PREFER_DAY_OF_MONTH": "first",
             },
         )
         if parsed is None:

@@ -342,8 +342,14 @@ def main() -> None:
     warnings = []
 
     for feed_key in feed_keys:
-        max_age_days = age_overrides.get(feed_key, args.max_age_days)
         config = all_feeds[feed_key]
+        # Precedence: --age-overrides (or the workflow variable) beats the
+        # per-feed max_age_days in feeds.toml, which beats the global default.
+        # The per-feed value is for sources that genuinely publish rarely, so
+        # their quiet spells do not drown out real breakage.
+        max_age_days = age_overrides.get(
+            feed_key, config.get("max_age_days", args.max_age_days)
+        )
         try:
             if args.local:
                 body = read_local_feed(feed_key)
