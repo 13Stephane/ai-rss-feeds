@@ -158,8 +158,21 @@ def fetch_feed(url: str, timeout: float, retries: int) -> bytes:
                     )
                 return response.read()
         except urllib.error.HTTPError as exc:
-            # A non-200 is a definite answer from the server, so don't retry it.
-            raise FeedFailure(f"HTTP_{exc.code}", f"returned HTTP {exc.code} {exc.reason}")
+            # 4xx is a definite answer from the server, so don't retry it. 5xx
+            # and 429 are the server saying "not now": Google News serves an
+            # occasional 503 to a request that succeeds moments later, and
+            # failing the whole run on one of those reports breakage that isn't
+            # there.
+            if exc.code < 500 and exc.code != 429:
+                raise FeedFailure(
+                    f"HTTP_{exc.code}", f"returned HTTP {exc.code} {exc.reason}"
+                )
+            if attempt == retries:
+                raise FeedFailure(
+                    f"HTTP_{exc.code}",
+                    f"returned HTTP {exc.code} {exc.reason} on {retries} attempts",
+                )
+            time.sleep(2**attempt)
         except (urllib.error.URLError, ssl.SSLError, TimeoutError, OSError) as exc:
             last_error = exc
             if attempt < retries:
