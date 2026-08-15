@@ -102,7 +102,7 @@ Each feed fails on one of:
 | Failure | Meaning |
 |---|---|
 | `UNREACHABLE` | connection failed or timed out after retries |
-| `HTTP_<code>` | the URL returned a non-200 status |
+| `HTTP_<code>` | the URL returned a non-200 status. 4xx fails at once; 5xx and 429 are retried first, since those mean "not now" rather than "no" |
 | `MALFORMED` | not well-formed XML, not RSS 2.0, or fewer items than the minimum |
 | `STALE` | no new item within the age limit (newest `pubDate`, falling back to `lastBuildDate`) |
 
