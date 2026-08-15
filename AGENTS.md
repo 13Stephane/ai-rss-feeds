@@ -59,4 +59,5 @@
 - `check_feeds.py` checks the *published* feeds are reachable, valid RSS, and fresh. Keep it standard-library only so it can run with `uv run --no-project`.
 - A github workflow (`.github/workflows/feed-health.yml`) runs it daily and emails a report on failure.
 - Both workflows email via `dawidd6/action-send-mail` using the `MAIL_USERNAME`/`MAIL_PASSWORD` secrets, and skip the email step when those are absent so GitHub's own failure notification still fires.
-- Thresholds, the recipient, and the published base URL are repo variables — see the README. Feeds that publish rarely belong in `FEED_HEALTH_AGE_OVERRIDES` rather than having the global limit raised.
+- Thresholds, the recipient, and the published base URL are repo variables — see the README. Feeds that publish rarely belong in `FEED_HEALTH_AGE_OVERRIDES`, or in a per-feed `max_age_days` in `feeds.toml`, rather than having the global limit raised.
+- A source that dates items by month only ("August 2026") resolves to the *first* of that month. Taking the last day would date the current month in the future, and a feed whose newest date is always ahead of now can never be reported stale.

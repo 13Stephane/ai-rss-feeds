@@ -19,10 +19,14 @@ Or you can import selected feeds by copying the URL of the XML files in the belo
 | [HBR AI and Machine Learning](https://hbr.org/topic/subject/ai-and-machine-learning) | [feeds/hbr-ai.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/hbr-ai.xml) |
 | [Mila News (Quebec AI Institute)](https://mila.quebec/en/news) | [feeds/mila-news.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/mila-news.xml) |
 | [Mistral News](https://mistral.ai/news) | [feeds/mistral-news.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/mistral-news.xml) |
-| [TLDR AI](https://tldr.tech/ai/archives) | [feeds/tldr-ai.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/tldr-ai.xml) |
+| † [TLDR AI](https://tldr.tech/ai/archives) | [feeds/tldr-ai.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/tldr-ai.xml) |
 | \* [Turing Blog (Alan Turing Institute)](https://www.turing.ac.uk/blog) | [feeds/turing-blog.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/turing-blog.xml) |
 
 \* These feeds come from a source that intermittently blocks automated access, so they update only when it is reachable.
+
+† Marked `broken = true`: the scrape reports success but the source serves the
+runner a window that stopped advancing on 2026-07-09, so the feed is stale and
+excluded from the health check until it recovers.
 
 ### External Feeds
 
@@ -145,7 +149,17 @@ Repository **variables**, all optional:
 | `FEED_HEALTH_SKIP` | none | comma-separated feed keys to exclude |
 
 Use `FEED_HEALTH_AGE_OVERRIDES` for sources that genuinely publish rarely, so
-their quiet periods do not drown out real breakage.
+their quiet periods do not drown out real breakage. The same thing can be set
+per feed in `feeds.toml`, which keeps it in version control next to the feed it
+describes:
+
+```toml
+[feeds.claude-blog]
+max_age_days = 90
+```
+
+`FEED_HEALTH_AGE_OVERRIDES` (and `--age-overrides`) still win over the value in
+`feeds.toml`, which in turn wins over the global default.
 
 ### HTTP Cache
 

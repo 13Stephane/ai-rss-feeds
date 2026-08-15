@@ -47,6 +47,7 @@ KNOWN_FEED_FIELDS = {
     "format",
     "broken",
     "flaky",
+    "max_age_days",
 }
 
 
