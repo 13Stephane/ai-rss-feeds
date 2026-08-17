@@ -31,6 +31,8 @@ publisher rather than at this repo.
 
 | Name | Feed |
 |---|---|
+| [AI and Corporate Innovation (Google News)](https://news.google.com/search?hl=en-US&gl=US&ceid=US:en&q=AI%20corporate%20innovation%20OR%20enterprise%20innovation%20OR%20business%20innovation) | https://news.google.com/rss/search?hl=en-US&gl=US&ceid=US:en&q=AI%20corporate%20innovation%20OR%20enterprise%20innovation%20OR%20business%20innovation |
+| [AI, Culture and Workforce (Google News)](https://news.google.com/search?hl=en-US&gl=US&ceid=US:en&q=AI%20culture%20OR%20talent%20OR%20workforce) | https://news.google.com/rss/search?hl=en-US&gl=US&ceid=US:en&q=AI%20culture%20OR%20talent%20OR%20workforce |
 | [AI Productivity, Growth and Value (Google News)](https://news.google.com/search?hl=en-US&gl=US&ceid=US:en&q=AI%20productivity%20OR%20growth%20OR%20value) | https://news.google.com/rss/search?hl=en-US&gl=US&ceid=US:en&q=AI%20productivity%20OR%20growth%20OR%20value |
 | \*\* [Clouded Judgement](https://cloudedjudgement.substack.com/) | https://cloudedjudgement.substack.com/feed |
 | \*\* [Deep Phenotype](https://deepphenotype.substack.com/) | https://deepphenotype.substack.com/feed |
