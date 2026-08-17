@@ -107,16 +107,36 @@ min_item_count = 5
 # the reader alongside the generated feeds. Set `external_feed_url` (the RSS
 # URL) and optionally `site_url` (the human page). No selectors apply.
 
-# Google News search, standing in for a Google Alert: an alert's own RSS URL
-# carries a per-account token, and the RSS delivery option is unavailable on
-# this account. This URL needs no account. The query is deliberately unquoted —
-# the exact-phrase form ranks by relevance and returns items up to 10 months
-# old, while this one returns nothing older than about three weeks, so it reads
-# as a live monitor and never trips the staleness check on ranking alone.
+# Google News searches standing in for Google Alerts. An alert's own RSS URL
+# carries a per-account token and the RSS delivery option is unavailable on the
+# owner's account, so the alerts cannot be carried directly.
+#
+# All three use the loose OR form on purpose. Probed from a runner: the alerts'
+# own booleans return relevance-ranked archives (newest 3-10 days, tails running
+# back 8-11 years), and space-separated phrasings are little better. The OR form
+# returns recency-ranked results, which is what makes these read as monitors and
+# keeps them clear of the staleness limit.
+
 [feeds.ai-productivity-news]
 feed_title = "AI Productivity, Growth and Value (Google News)"
 external_feed_url = "https://news.google.com/rss/search?hl=en-US&gl=US&ceid=US:en&q=AI%20productivity%20OR%20growth%20OR%20value"
 site_url = "https://news.google.com/search?hl=en-US&gl=US&ceid=US:en&q=AI%20productivity%20OR%20growth%20OR%20value"
+
+# Stands in for the alert `Innovation AND "artificial intelligence" AND Corporate`.
+# Measured: median 25 days, 54 of 100 items within 30 days.
+[feeds.ai-corporate-innovation]
+feed_title = "AI and Corporate Innovation (Google News)"
+external_feed_url = "https://news.google.com/rss/search?hl=en-US&gl=US&ceid=US:en&q=AI%20corporate%20innovation%20OR%20enterprise%20innovation%20OR%20business%20innovation"
+site_url = "https://news.google.com/search?hl=en-US&gl=US&ceid=US:en&q=AI%20corporate%20innovation%20OR%20enterprise%20innovation%20OR%20business%20innovation"
+
+# Stands in for the alert `"corporate culture" AND "artificial intelligence"`.
+# Broader than that alert - it takes in talent and workforce as well as culture -
+# because the culture-only phrasings returned mostly months-old material
+# (23 of 100 within 30 days). Measured here: median 4 days, 76 of 100 within 30.
+[feeds.ai-culture-workforce]
+feed_title = "AI, Culture and Workforce (Google News)"
+external_feed_url = "https://news.google.com/rss/search?hl=en-US&gl=US&ceid=US:en&q=AI%20culture%20OR%20talent%20OR%20workforce"
+site_url = "https://news.google.com/search?hl=en-US&gl=US&ceid=US:en&q=AI%20culture%20OR%20talent%20OR%20workforce"
 
 [feeds.techcrunch]
 feed_title = "TechCrunch"
