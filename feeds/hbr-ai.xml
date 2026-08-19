@@ -7,14 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 18 Aug 2026 17:01:00 +0000</lastBuildDate>
-    <item>
-      <title>Are You Spending Wisely on AI?</title>
-      <link>https://hbr.org/2026/07/are-you-spending-wisely-on-ai</link>
-      <description>As AI costs spiral, HBS professor Iavor Bojinov offers a practical guide to help leaders weigh the tradeoffs between cost, capability, and security.</description>
-      <guid isPermaLink="true">https://hbr.org/2026/07/are-you-spending-wisely-on-ai</guid>
-      <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 19 Aug 2026 14:09:17 +0000</lastBuildDate>
     <item>
       <title>Don’t Let AI Flatten Your Leadership Style</title>
       <link>https://hbr.org/2026/08/dont-let-ai-flatten-your-leadership-style</link>
@@ -112,6 +105,13 @@
       <description>In the August 17 edition of The Insider newsletter, managing editor Gretchen Gavett writes on how AI is changing strategy-making, the end of the traditional career arc, and more.</description>
       <guid isPermaLink="true">https://hbr.org/2026/08/strategy-making-gets-an-ai-boost</guid>
       <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>AI Is Undermining Leaders’ Judgment. Here’s What to Do About It.</title>
+      <link>https://hbr.org/2026/08/ai-is-undermining-leaders-judgment-heres-what-to-do-about-it</link>
+      <description>The tools designed to augment your decision-making could end up making it weaker.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/08/ai-is-undermining-leaders-judgment-heres-what-to-do-about-it</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
