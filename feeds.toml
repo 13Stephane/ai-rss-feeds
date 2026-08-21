@@ -85,11 +85,15 @@ item_link_selector = "a::attr(href)"
 item_date_selector = "footer div:first-child p ::text"
 item_description_selector = "h2 + p ::text"
 
-# The stream mixes dated articles with magazine teasers whose only date is
-# "From the forthcoming September-October 2026 Issue". That text does not parse
-# as a date, so those items are skipped instead of entering the feed dated to a
-# future issue - which is what would otherwise defeat the staleness check.
+# Broken 2026-08-20: HBR rebuilt the topic page. It is now a faceted search
+# results page - CSS-module class names, 10 cards, no "Latest" stream - and,
+# decisively, the cards carry no publication date at all, only a magazine issue
+# name ("September-October 2026 Issue"). Every item needs a date, so there is
+# nothing valid to scrape from this URL. Marked broken so the run stays green
+# and flags automatically if the page regains dates; the selectors below are
+# kept as the record of what the old markup looked like.
 [feeds.hbr-ai]
+broken = true
 feed_title = "HBR AI and Machine Learning"
 feed_description = "AI and machine learning coverage from Harvard Business Review."
 source_url = "https://hbr.org/topic/subject/ai-and-machine-learning"
