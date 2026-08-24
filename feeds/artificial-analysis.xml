@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 18 Aug 2026 19:52:35 +0000</lastBuildDate>
-    <item>
-      <title>DeepSeek V4 Flash 0731 scores 50 on the Artificial Analysis Intelligence Index, 10 points above previous DeepSeek V4 Flash</title>
-      <link>https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash</guid>
-      <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Mon, 24 Aug 2026 17:08:33 +0000</lastBuildDate>
     <item>
       <title>Launching the Endpoint Accuracy Index: Same Model, Different Accuracy</title>
       <link>https://artificialanalysis.ai/articles/endpoint-accuracy-index</link>
@@ -79,6 +73,12 @@
       <link>https://artificialanalysis.ai/articles/search-api</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/search-api</guid>
       <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Intelligence at pocket scale: Benchmarking small models and mobile phones</title>
+      <link>https://artificialanalysis.ai/articles/mobile-phone-intelligence-inference</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/mobile-phone-intelligence-inference</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
