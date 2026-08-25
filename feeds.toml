@@ -7,7 +7,11 @@ item_link_selector = "::attr(href)"
 item_title_selector = "h3::text"
 item_date_selector = "p.text-muted-foreground::text"
 
+# Posts several times most months but takes long breaks - nothing between
+# 2026-08-04 and at least 2026-08-25. The scrape is healthy (95 items, full
+# dates), so a limit that rides out a summer lull is the honest signal.
 [feeds.aisi-blog]
+max_age_days = 35
 feed_title = "AISI Blog (AI Security Institute)"
 feed_description = "Updates on AISI's work - AI Security Institute"
 source_url = "https://www.aisi.gov.uk/blog"
@@ -17,7 +21,13 @@ item_title_selector = "h3::text"
 item_date_selector = "p[fs-list-field='date']::text"
 item_description_selector = "p[fs-list-field='description']::text"
 
+# Ai2 dates items by month only ("August 2026"), which resolves to the first of
+# that month (see AGENTS.md). So the newest pubDate is always the 1st of the
+# current month and the measured age climbs past the global 21-day limit on the
+# 22nd of every month, whether or not Ai2 has published. 45 days never trips in
+# a month they publish in (worst case ~30) but still flags a missed month.
 [feeds.allenai-news]
+max_age_days = 45
 feed_title = "Ai2 News (Allen Institute for AI)"
 source_url = "https://allenai.org/news"
 item_container_selector = "div[class*='grid-tr_subgrid']"
@@ -85,18 +95,29 @@ item_link_selector = "a::attr(href)"
 item_date_selector = "footer div:first-child p ::text"
 item_description_selector = "h2 + p ::text"
 
-# Broken 2026-08-20: HBR rebuilt the topic page. It is now a faceted search
-# results page - CSS-module class names, 10 cards, no "Latest" stream - and,
-# decisively, the cards carry no publication date at all, only a magazine issue
-# name ("September-October 2026 Issue"). Every item needs a date, so there is
-# nothing valid to scrape from this URL. Marked broken so the run stays green
-# and flags automatically if the page regains dates; the selectors below are
-# kept as the record of what the old markup looked like.
+# HBR rebuilt this topic page on 2026-08-20. The new page is a faceted search
+# view whose cards carry no publication date at all - only a magazine issue name
+# - so it cannot yield a valid feed no matter which selectors are used.
+#
+# The pre-rebuild template is still served, though: any unrecognised suffix
+# under the topic path returns it (/feed, /rss and a nonsense suffix all return
+# the same 249 KB page), with the old stream markup and real dates, current to
+# yesterday. So source_url points at the /feed suffix and the selectors below
+# are unchanged - verified end to end on a runner: 15 items, correct titles,
+# dates and links.
+#
+# Be clear-eyed: this is a catch-all route rendering the legacy template, not a
+# supported endpoint, and it will stop working when HBR finishes the migration.
+# At that point the spider errors and the run emails, which is the intended
+# behaviour. The fallback is http://feeds.harvardbusiness.org/harvardbusiness/ -
+# HBR's own feed, but whole-site rather than AI-only, plaintext HTTP (their
+# https fails at the TLS handshake), and Atom rather than RSS 2.0, so
+# check_feeds.py would need to learn Atom before it could be carried.
 [feeds.hbr-ai]
-broken = true
 feed_title = "HBR AI and Machine Learning"
 feed_description = "AI and machine learning coverage from Harvard Business Review."
-source_url = "https://hbr.org/topic/subject/ai-and-machine-learning"
+source_url = "https://hbr.org/topic/subject/ai-and-machine-learning/feed"
+feed_link = "https://hbr.org/topic/subject/ai-and-machine-learning"
 item_container_selector = "stream-content[data-stream-name='Latest'] li.stream-entry"
 item_title_selector = "h2.hed a::text"
 item_link_selector = "h2.hed a::attr(href)"
