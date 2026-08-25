@@ -14,7 +14,10 @@
 - Use a single configurable spider class, with per-feed configuration in `feeds.toml`.
 - Each feed entry in TOML should define:
   - required fields like `feed_title`, `source_url`, `item_container_selector`, `item_title_selector`, and `item_link_selector`,
-  - optional fields like `feed_link`, `feed_description`, and `language`,
+  - optional fields like `feed_link`, `feed_description`, and `language`
+    (`feed_link` is the page a reader should land on, used for the feed's
+    `<link>` and its OPML `htmlUrl`; it defaults to `source_url`, so set it
+    only when the two differ),
   - fields like `item_container_selector` (CSS selector for the container for each item)
   - fields like `item_title_selector`, `item_link_selector` (CSS selectors for the title or link for a specific item, scoped to the container for the item, these can be scrapy's extended selectors with the suffixes like `::text` and `::attr(href)`)
   - other supported fields like `item_date_selector`, `item_description_selector`, `item_guid_is_permalink`, `min_item_count`, and `min_item_ratio_vs_previous`.
@@ -61,3 +64,4 @@
 - Both workflows email via `dawidd6/action-send-mail` using the `MAIL_USERNAME`/`MAIL_PASSWORD` secrets, and skip the email step when those are absent so GitHub's own failure notification still fires.
 - Thresholds, the recipient, and the published base URL are repo variables — see the README. Feeds that publish rarely belong in `FEED_HEALTH_AGE_OVERRIDES`, or in a per-feed `max_age_days` in `feeds.toml`, rather than having the global limit raised.
 - A source that dates items by month only ("August 2026") resolves to the *first* of that month. Taking the last day would date the current month in the future, and a feed whose newest date is always ahead of now can never be reported stale.
+- The flip side: such a feed's newest date is always the 1st of the current month, so its measured age crosses the default 21-day limit on the 22nd of every month whether or not the source published. Give month-only sources a `max_age_days` above ~31 (allenai-news uses 45) or they report stale for the last third of every month.

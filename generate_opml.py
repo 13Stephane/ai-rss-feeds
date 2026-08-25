@@ -31,7 +31,10 @@ def build_opml_tree() -> ET.ElementTree:
             site_url = config.get("site_url", feed_url)
         else:
             feed_url = f"{REPO_RAW_BASE_URL}/feeds/{feed_key}.xml"
-            site_url = config["source_url"]
+            # `feed_link` wins where the page a reader should land on is not the
+            # page we scrape - see hbr-ai, which scrapes a suffixed URL that
+            # happens to serve the old template.
+            site_url = config.get("feed_link", config["source_url"])
 
         ET.SubElement(
             body,
