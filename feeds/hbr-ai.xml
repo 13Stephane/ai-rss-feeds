@@ -7,14 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 25 Aug 2026 14:23:47 +0000</lastBuildDate>
-    <item>
-      <title>How to Recognize When Your Customers Want You to Act</title>
-      <link>https://hbr.org/2026/08/how-to-recognize-when-your-customers-want-you-to-act</link>
-      <description>Four actions companies can take to better understand critical cues about timing.</description>
-      <guid isPermaLink="true">https://hbr.org/2026/08/how-to-recognize-when-your-customers-want-you-to-act</guid>
-      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 26 Aug 2026 14:22:04 +0000</lastBuildDate>
     <item>
       <title>AI Experiments Need Domain Experts. Here’s How to Support Them.</title>
       <link>https://hbr.org/2026/08/ai-experiments-need-domain-experts-heres-how-to-support-them</link>
@@ -112,6 +105,13 @@
       <description>In the August 24 edition of The Insider newsletter, managing editor Gretchen Gavett writes on how AI can actually deepen human bottlenecks, becoming a conversation steward, and more.</description>
       <guid isPermaLink="true">https://hbr.org/2026/08/what-slows-innovation-down</guid>
       <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Inside McDonald’s New Strategy</title>
+      <link>https://hbr.org/2026/08/inside-mcdonalds-new-strategy</link>
+      <description>An HBR Executive Live conversation with McDonald’s Chairman and CEO Chris Kempczinski.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/08/inside-mcdonalds-new-strategy</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
