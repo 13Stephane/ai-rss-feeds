@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 24 Aug 2026 19:58:21 +0000</lastBuildDate>
-    <item>
-      <title>Muse Spark 1.2: Benchmarks and analysis</title>
-      <link>https://artificialanalysis.ai/articles/muse-spark-1-2</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/muse-spark-1-2</guid>
-      <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 28 Aug 2026 13:20:14 +0000</lastBuildDate>
     <item>
       <title>Launching v4.1.1 of the Artificial Analysis Intelligence Index</title>
       <link>https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-1-1</link>
@@ -79,6 +73,12 @@
       <link>https://artificialanalysis.ai/articles/mobile-phone-intelligence-inference</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/mobile-phone-intelligence-inference</guid>
       <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Agnes AI releases Agnes 2.5 Pro Beta</title>
+      <link>https://artificialanalysis.ai/articles/agnes-ai-releases-agnes-2-5-pro-beta</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/agnes-ai-releases-agnes-2-5-pro-beta</guid>
+      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
