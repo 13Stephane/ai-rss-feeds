@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 02 Sep 2026 17:17:30 +0000</lastBuildDate>
-    <item>
-      <title>Announcing AA-AnalystAgent: an agentic benchmark for quantitative analysis on real-world spreadsheets and documents</title>
-      <link>https://artificialanalysis.ai/articles/aa-analyst-agent</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/aa-analyst-agent</guid>
-      <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 03 Sep 2026 00:34:59 +0000</lastBuildDate>
     <item>
       <title>NVIDIA launches Nemotron 3.5 Lightning</title>
       <link>https://artificialanalysis.ai/articles/nemotron-3-5-lightning-launch</link>
@@ -78,6 +72,12 @@
       <title>Google has released Gemini 3.8 Flash, its fourth Flash model in under four months</title>
       <link>https://artificialanalysis.ai/articles/gemini-3-8-flash</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/gemini-3-8-flash</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Muse Spark 1.3: Meta reaches the frontier</title>
+      <link>https://artificialanalysis.ai/articles/muse-spark-1-3</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/muse-spark-1-3</guid>
       <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
