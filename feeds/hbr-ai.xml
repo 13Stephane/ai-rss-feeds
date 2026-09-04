@@ -7,14 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 03 Sep 2026 17:09:35 +0000</lastBuildDate>
-    <item>
-      <title>Driving Change When You Lack Authority</title>
-      <link>https://hbr.org/2026/08/driving-change-when-you-lack-authority</link>
-      <description>In the August 10 edition of The Insider newsletter, managing editor Gretchen Gavett writes on influencing others when you lack formal authority, board relationships, and the hidden labor of “botsitting.”</description>
-      <guid isPermaLink="true">https://hbr.org/2026/08/driving-change-when-you-lack-authority</guid>
-      <pubDate>Tue, 11 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 04 Sep 2026 17:02:04 +0000</lastBuildDate>
     <item>
       <title>AI Makes Building Easy. Choosing What to Build Is Harder.</title>
       <link>https://hbr.org/2026/08/ai-makes-building-easy-choosing-what-to-build-is-harder</link>
@@ -112,6 +105,13 @@
       <description>AI can lower the cost of producing work that looks acceptable. But a study of 3,000 U.S. consumers shows that it may be less effective than marketers might think.</description>
       <guid isPermaLink="true">https://hbr.org/2026/09/research-ai-generated-ads-perform-worse-than-human-made-ones-even-when-customers-cant-tell-them-apart</guid>
       <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>AI Is Blurring the Line Between Sales and Marketing</title>
+      <link>https://hbr.org/2026/09/ai-is-blurring-the-line-between-sales-and-marketing</link>
+      <description>How companies can create a more integrated customer journey.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/09/ai-is-blurring-the-line-between-sales-and-marketing</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
