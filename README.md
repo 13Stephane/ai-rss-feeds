@@ -44,6 +44,26 @@ publisher rather than at this repo.
 feeds even though they work in a reader. Marked `flaky = true`, so they warn
 instead of failing the run.
 
+## Weekly Newsletter via beehiiv
+
+beehiiv's RSS-to-Send turns one feed into a scheduled email issue. To send a
+weekly digest of new posts from a single source in the table above:
+
+1. In your beehiiv dashboard, go to **Settings → RSS-to-Send**.
+2. Paste that source's raw feed URL (the link in the **File** column, e.g.
+   `feeds/anthropic-news.xml`'s raw URL) — not `feeds.opml`, which lists every
+   feed for an RSS reader and isn't a single feed beehiiv can poll.
+3. Customize the email layout, set the schedule to weekly, and check the
+   preview.
+4. Enable the automation. beehiiv polls the feed on that schedule and sends
+   an issue when it finds items published since the last send.
+
+Feeds regenerate every 3 hours via `.github/workflows/generate-feeds.yml`, so
+new posts reach beehiiv well within a weekly cycle. Each row above is a
+separate feed for one source — to cover several sources in one weekly issue
+you'd need a combined feed merging their items, which this repo does not
+generate today.
+
 ## Developer Guide
 
 ### Generate Feeds
