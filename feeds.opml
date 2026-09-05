@@ -21,6 +21,7 @@
     <outline type="rss" text="Mistral News" title="Mistral News" xmlUrl="https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/mistral-news.xml" htmlUrl="https://mistral.ai/news/" />
     <outline type="rss" text="TechCrunch" title="TechCrunch" xmlUrl="https://techcrunch.com/feed/" htmlUrl="https://techcrunch.com/" />
     <outline type="rss" text="The AI Minute" title="The AI Minute" xmlUrl="https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/theaiminute-blog.xml" htmlUrl="https://www.theaiminute.blog" />
+    <outline type="rss" text="The AI Minute (beehiiv)" title="The AI Minute (beehiiv)" xmlUrl="https://rss.beehiiv.com/feeds/QsjeB9GXym.xml" htmlUrl="https://www.theaiminute.blog" />
     <outline type="rss" text="The Rundown AI" title="The Rundown AI" xmlUrl="https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml" htmlUrl="https://www.therundown.ai/" />
     <outline type="rss" text="Turing Blog (Alan Turing Institute)" title="Turing Blog (Alan Turing Institute)" xmlUrl="https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/turing-blog.xml" htmlUrl="https://www.turing.ac.uk/blog" />
   </body>

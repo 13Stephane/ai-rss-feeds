@@ -39,6 +39,7 @@ publisher rather than at this repo.
 | \*\* [Deep Phenotype](https://deepphenotype.substack.com/) | https://deepphenotype.substack.com/feed |
 | \*\* [Import AI (Jack Clark)](https://importai.substack.com/) | https://importai.substack.com/feed |
 | [TechCrunch](https://techcrunch.com/) | https://techcrunch.com/feed/ |
+| [The AI Minute (beehiiv)](https://www.theaiminute.blog) | https://rss.beehiiv.com/feeds/QsjeB9GXym.xml |
 | [The Rundown AI](https://www.therundown.ai/) | https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml |
 
 \*\* Substack refuses GitHub's runner IPs, so the health check cannot verify these
@@ -47,15 +48,17 @@ instead of failing the run.
 
 ## Weekly Newsletter via beehiiv
 
-beehiiv's RSS-to-Send turns one feed into a scheduled email issue. To send a
-weekly digest of new posts from a single source in the table above — for
-example, [The AI Minute](https://www.theaiminute.blog)'s own posts, to the
-subscribers already collected on beehiiv:
+beehiiv's RSS-to-Send turns one feed into a scheduled email issue by *importing*
+an outside feed — for example, pointing it at a feed from the table above so
+beehiiv drafts and sends an issue whenever that source publishes. **RSS-to-Send
+is a paid-plan feature**, though; it is not available on beehiiv's free tier.
+
+If you do have it:
 
 1. In your beehiiv dashboard, go to **Settings → RSS-to-Send**.
-2. Paste that source's raw feed URL (the link in the **File** column, e.g.
-   `feeds/theaiminute-blog.xml`'s raw URL) — not `feeds.opml`, which lists
-   every feed for an RSS reader and isn't a single feed beehiiv can poll.
+2. Paste the source feed's raw URL (the link in the **File** column above) —
+   not `feeds.opml`, which lists every feed for an RSS reader and isn't a
+   single feed beehiiv can poll.
 3. Customize the email layout, set the schedule to weekly, and check the
    preview.
 4. Enable the automation. beehiiv polls the feed on that schedule and sends
@@ -66,6 +69,13 @@ new posts reach beehiiv well within a weekly cycle. Each row above is a
 separate feed for one source — to cover several sources in one weekly issue
 you'd need a combined feed merging their items, which this repo does not
 generate today.
+
+Separately, and free on any plan: every beehiiv publication has its own
+outbound RSS feed of what it has already sent (e.g. `rss.beehiiv.com/feeds/...`,
+listed as an [external feed](#external-feeds) above for The AI Minute and The
+Rundown AI). That feed carries *out* of beehiiv into any RSS reader — it does
+not import an outside source *into* beehiiv, so it doesn't substitute for
+RSS-to-Send if the goal is auto-sending posts written elsewhere.
 
 ## Developer Guide
 

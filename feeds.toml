@@ -200,6 +200,14 @@ feed_title = "The Rundown AI"
 external_feed_url = "https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml"
 site_url = "https://www.therundown.ai/"
 
+# beehiiv gives every publication this free outbound feed of what it has sent,
+# regardless of plan (only importing an outside feed via RSS-to-Send is paid).
+# Distinct from feeds.theaiminute-blog, which scrapes the underlying blog site.
+[feeds.theaiminute-beehiiv]
+feed_title = "The AI Minute (beehiiv)"
+external_feed_url = "https://rss.beehiiv.com/feeds/QsjeB9GXym.xml"
+site_url = "https://www.theaiminute.blog"
+
 # Substack, so flaky for the same reason as import-ai: confirmed HTTP 403 from
 # a GitHub runner while the feed serves subscribers normally.
 [feeds.deep-phenotype]
