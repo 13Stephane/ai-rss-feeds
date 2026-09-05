@@ -66,3 +66,9 @@
 - Thresholds, the recipient, and the published base URL are repo variables — see the README. Feeds that publish rarely belong in `FEED_HEALTH_AGE_OVERRIDES`, or in a per-feed `max_age_days` in `feeds.toml`, rather than having the global limit raised.
 - A source that dates items by month only ("August 2026") resolves to the *first* of that month. Taking the last day would date the current month in the future, and a feed whose newest date is always ahead of now can never be reported stale.
 - The flip side: such a feed's newest date is always the 1st of the current month, so its measured age crosses the default 21-day limit on the 22nd of every month whether or not the source published. Give month-only sources a `max_age_days` above ~31 (allenai-news uses 45) or they report stale for the last third of every month.
+
+## Newsletter digest
+- `build_digest.py` renders a feed's recent posts as paste-ready HTML for a newsletter editor. Keep it standard-library only, like `check_feeds.py`, so it runs with `uv run --no-project`.
+- It emits no file when nothing falls in the window, which is what lets `.github/workflows/weekly-digest.yml` skip a quiet week rather than send an empty issue.
+- Deliberately unstyled: the destination publication's template supplies the look, and styling here would fight it.
+- beehiiv's automated sends are out of reach on the free plan (RSS-to-Send needs Max, the Send API is Enterprise-only), so the digest stops at the author's inbox and the last step is a manual paste. Don't add a beehiiv API send path without checking the plan actually has it.

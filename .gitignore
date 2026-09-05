@@ -19,3 +19,4 @@ logs/
 # health check / workflow run artifacts
 generate.log
 *-report.md
+digest.html

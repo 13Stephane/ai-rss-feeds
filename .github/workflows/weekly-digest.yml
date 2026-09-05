@@ -1,0 +1,80 @@
+name: Weekly newsletter digest
+
+on:
+  schedule:
+    - cron: "0 7 * * 1"
+  workflow_dispatch:
+    inputs:
+      feed:
+        description: "Feed key to digest"
+        type: string
+        default: "theaiminute-blog"
+      days:
+        description: "How many days back to include"
+        type: string
+        default: "7"
+
+permissions:
+  contents: read
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+
+    # Secrets are mapped to env because the `secrets` context is not available
+    # in step-level `if:` conditions — this is what lets the email step skip
+    # gracefully when the mail secrets have not been configured.
+    env:
+      MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+      MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+      FEED: ${{ inputs.feed || 'theaiminute-blog' }}
+      DAYS: ${{ inputs.days || 7 }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.14"
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+
+      # Best effort: the committed feed is at most a few hours old, so a failed
+      # scrape here costs freshness rather than the digest.
+      - name: Refresh the feed
+        continue-on-error: true
+        run: uv run python generate_feeds.py "$FEED"
+
+      # build_digest.py is standard-library only, so --no-project skips
+      # installing the scraping dependencies it does not need. It writes no
+      # file when nothing was published in the window, which is what makes the
+      # email step below skip a quiet week instead of sending an empty issue.
+      - name: Build the digest
+        run: uv run --no-project python build_digest.py --feed "$FEED" --days "$DAYS" --out digest.html
+
+      - name: Email the digest
+        if: hashFiles('digest.html') != '' && env.MAIL_USERNAME != '' && env.MAIL_PASSWORD != ''
+        uses: dawidd6/action-send-mail@v17
+        with:
+          server_address: ${{ vars.MAIL_SERVER || 'smtp.gmail.com' }}
+          server_port: ${{ vars.MAIL_PORT || 465 }}
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          from: Newsletter digest <${{ secrets.MAIL_USERNAME }}>
+          to: ${{ vars.ALERT_EMAIL_TO || 'guerraz.stephane@gmail.com' }}
+          subject: "Weekly digest ready to paste — ${{ env.FEED }}"
+          html_body: file://digest.html
+          attachments: digest.html
+          priority: normal
+
+      - name: Note nothing to send
+        if: hashFiles('digest.html') == ''
+        run: echo "::notice::No posts published in the last $DAYS days — no digest email sent."
+
+      - name: Note skipped email
+        if: hashFiles('digest.html') != '' && (env.MAIL_USERNAME == '' || env.MAIL_PASSWORD == '')
+        run: echo "::notice::MAIL_USERNAME/MAIL_PASSWORD are not set — built the digest but skipped the email."

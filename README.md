@@ -50,10 +50,22 @@ instead of failing the run.
 
 beehiiv's RSS-to-Send turns one feed into a scheduled email issue by *importing*
 an outside feed — for example, pointing it at a feed from the table above so
-beehiiv drafts and sends an issue whenever that source publishes. **RSS-to-Send
-is a paid-plan feature**, though; it is not available on beehiiv's free tier.
+beehiiv drafts and sends an issue whenever that source publishes.
 
-If you do have it:
+Both of beehiiv's automated-send routes are gated well above the free Launch
+plan, so neither is usable here:
+
+| Route | Plan required |
+|---|---|
+| RSS-to-Send (import a feed, beehiiv drafts and sends) | Max or Enterprise |
+| Send API / `POST /posts` (create a post programmatically) | Enterprise only (beta) |
+
+The free Launch plan does include API access, but explicitly *excluding* the
+Send API — so a script cannot create or send a post either. What this repo does
+instead is the [weekly digest](#weekly-digest-email) below: it assembles the
+issue and emails it to you, leaving one paste and one click in beehiiv.
+
+If you are on Max or above:
 
 1. In your beehiiv dashboard, go to **Settings → RSS-to-Send**.
 2. Paste the source feed's raw URL (the link in the **File** column above) —
@@ -76,6 +88,39 @@ listed as an [external feed](#external-feeds) above for The AI Minute and The
 Rundown AI). That feed carries *out* of beehiiv into any RSS reader — it does
 not import an outside source *into* beehiiv, so it doesn't substitute for
 RSS-to-Send if the goal is auto-sending posts written elsewhere.
+
+### Weekly Digest Email
+
+`build_digest.py` collects the posts a feed published in a recent window and
+renders them as plain semantic HTML — headings, dates, links, post bodies, no
+styling of its own — so it pastes into a beehiiv (or Substack) editor and picks
+up that publication's template.
+
+```bash
+uv run --no-project python build_digest.py                    # last 7 days of theaiminute-blog
+uv run --no-project python build_digest.py --days 14          # a wider window
+uv run --no-project python build_digest.py --feed mistral-news --out mistral.html
+```
+
+It writes nothing when no posts fall in the window, so a quiet week produces no
+output rather than an empty issue.
+
+The `.github/workflows/weekly-digest.yml` workflow runs this every Monday at
+07:00 UTC and emails the result to one address — `ALERT_EMAIL_TO`, the same
+repo variable the health check uses. It refreshes the feed first (best effort),
+builds the digest, and sends it only if there is something to send, using the
+same `MAIL_USERNAME`/`MAIL_PASSWORD` secrets as the other workflows.
+
+The email is the digest itself, with the HTML also attached. To publish: copy
+the email body, paste it into a new beehiiv post on your template, and send.
+
+**To test it end to end, only to yourself:** the workflow already sends to that
+single address and nothing reaches subscribers, since beehiiv is not in the
+loop until you paste. Run it on demand from the repository's **Actions** tab →
+**Weekly newsletter digest** → **Run workflow**, setting **days** wide enough to
+catch a recent post (e.g. `30`) so the run has something to send. Then, before
+publishing in beehiiv, use beehiiv's own **Send test email** on the draft to
+check how the pasted content renders in your template.
 
 ## Developer Guide
 
