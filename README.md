@@ -18,6 +18,7 @@ Or you can import selected feeds by copying the URL of the XML files in the belo
 | [HBR AI and Machine Learning](https://hbr.org/topic/subject/ai-and-machine-learning) | [feeds/hbr-ai.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/hbr-ai.xml) |
 | [Mila News (Quebec AI Institute)](https://mila.quebec/en/news) | [feeds/mila-news.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/mila-news.xml) |
 | [Mistral News](https://mistral.ai/news) | [feeds/mistral-news.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/mistral-news.xml) |
+| [The AI Minute](https://www.theaiminute.blog) | [feeds/theaiminute-blog.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/theaiminute-blog.xml) |
 | \* [Turing Blog (Alan Turing Institute)](https://www.turing.ac.uk/blog) | [feeds/turing-blog.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/turing-blog.xml) |
 
 \* These feeds come from a source that intermittently blocks automated access, so they update only when it is reachable.
@@ -47,12 +48,14 @@ instead of failing the run.
 ## Weekly Newsletter via beehiiv
 
 beehiiv's RSS-to-Send turns one feed into a scheduled email issue. To send a
-weekly digest of new posts from a single source in the table above:
+weekly digest of new posts from a single source in the table above — for
+example, [The AI Minute](https://www.theaiminute.blog)'s own posts, to the
+subscribers already collected on beehiiv:
 
 1. In your beehiiv dashboard, go to **Settings → RSS-to-Send**.
 2. Paste that source's raw feed URL (the link in the **File** column, e.g.
-   `feeds/anthropic-news.xml`'s raw URL) — not `feeds.opml`, which lists every
-   feed for an RSS reader and isn't a single feed beehiiv can poll.
+   `feeds/theaiminute-blog.xml`'s raw URL) — not `feeds.opml`, which lists
+   every feed for an RSS reader and isn't a single feed beehiiv can poll.
 3. Customize the email layout, set the schedule to weekly, and check the
    preview.
 4. Enable the automation. beehiiv polls the feed on that schedule and sends
@@ -202,6 +205,13 @@ rm -rf .scrapy/httpcache
 	- `format = "nextjs"`
 	- `item_container_selector` as a jq query that returns item objects (for example `.page.sections[] | select(._type == "publicationList") | .posts[]`)
 	- `item_title_selector`, `item_link_selector`, and optional `item_date_selector` / `item_description_selector` as jq queries scoped to each item
+3a. For sites whose posts load from a plain JSON API (e.g. a Supabase/PostgREST
+    backend) rather than being present in the page HTML, set:
+	- `format = "json"`
+	- `source_url` as the API endpoint itself (with any query params, e.g. `?select=*&order=published_at.desc`)
+	- `request_headers` as an inline TOML table if the API needs an API key or auth header, e.g. `{ apikey = "...", Authorization = "Bearer ..." }`
+	- `item_container_selector` as a jq query returning each item (usually `.[]` for a plain JSON array)
+	- `item_title_selector`, `item_link_selector`, and optional `item_date_selector` / `item_description_selector` as jq queries scoped to each item — `item_link_selector` can build an absolute URL directly, e.g. `"https://example.com/#post-" + .id`
 4. Set optional fields as needed:
 	- `item_date_selector`, `item_date_regex`, `item_description_selector`, `feed_description`, `language`
 	- `item_guid_is_permalink`, `min_item_count`, `min_item_ratio_vs_previous`

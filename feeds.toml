@@ -67,6 +67,24 @@ item_title_selector = "h2::text"
 item_link_selector = "a[href^='/blog/']::attr(href)"
 item_date_selector = "div.u-text-style-caption::text"
 
+# Posts render client-side: the page fetches published rows straight from a
+# Supabase REST API rather than baking them into the HTML or a Next.js data
+# blob, so this reads that API directly as JSON. The anon key below is the
+# same read-only key the site already ships to every visitor's browser (RLS
+# restricts it to status=eq.published), not a secret.
+[feeds.theaiminute-blog]
+feed_title = "The AI Minute"
+feed_description = "For leaders who need to know where value is moving - and how to position ahead of it."
+feed_link = "https://www.theaiminute.blog"
+format = "json"
+source_url = "https://kcobpakjfluuyfzswtoq.supabase.co/rest/v1/posts?select=*&status=eq.published&order=published_at.desc"
+request_headers = { apikey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtjb2JwYWtqZmx1dXlmenN3dG9xIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc0MTEyMTgsImV4cCI6MjA5Mjk4NzIxOH0.qSlZOSGMtfBWfNlrJrO-SWLRumLFZb0qVkZPWh1dRWM", Authorization = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtjb2JwYWtqZmx1dXlmenN3dG9xIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc0MTEyMTgsImV4cCI6MjA5Mjk4NzIxOH0.qSlZOSGMtfBWfNlrJrO-SWLRumLFZb0qVkZPWh1dRWM" }
+item_container_selector = ".[]"
+item_title_selector = ".title"
+item_link_selector = "\"https://www.theaiminute.blog/#post-\" + .id"
+item_date_selector = ".published_at"
+item_description_selector = ".body"
+
 [feeds.turing-blog]
 flaky = true
 feed_title = "Turing Blog (Alan Turing Institute)"

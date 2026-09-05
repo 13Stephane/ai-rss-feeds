@@ -74,7 +74,7 @@ class FeedSpider(scrapy.Spider):
     language: str = "en"
 
     # Format and extraction mode
-    format: str = "html"  # "html" or "nextjs"
+    format: str = "html"  # "html", "nextjs", or "json"
 
     # Item selectors (HTML mode)
     item_container_selector: Optional[str] = None
@@ -83,6 +83,9 @@ class FeedSpider(scrapy.Spider):
     item_date_selector: Optional[str] = None
     item_date_regex: Optional[str] = None
     item_description_selector: Optional[str] = None
+
+    # Extra request headers (json format only, e.g. an API key)
+    request_headers: Optional[dict] = None
 
     # Link handling
     item_guid_is_permalink: bool = True
@@ -120,6 +123,7 @@ class FeedSpider(scrapy.Spider):
             "item_guid_is_permalink",
             "min_item_count",
             "min_item_ratio_vs_previous",
+            "request_headers",
         ]
 
         for field in fields:
@@ -134,6 +138,7 @@ class FeedSpider(scrapy.Spider):
             self.source_url,
             callback=self.parse,
             dont_filter=True,
+            headers=self.request_headers,
             meta={"handle_httpstatus_all": True},
         )
 
@@ -147,6 +152,8 @@ class FeedSpider(scrapy.Spider):
             items = self._parse_nextjs(response)
         elif self.format == "html":
             items = self._parse_html(response)
+        elif self.format == "json":
+            items = self._parse_json(response)
         else:
             raise RuntimeError(f"Unknown format: {self.format!r}")
 
@@ -165,7 +172,7 @@ class FeedSpider(scrapy.Spider):
                 "item_title_selector": self.item_title_selector,
                 "item_link_selector": self.item_link_selector,
             })
-        elif self.format == "nextjs":
+        elif self.format in ("nextjs", "json"):
             required_fields.update({
                 "item_container_selector": self.item_container_selector,
                 "item_title_selector": self.item_title_selector,
@@ -288,7 +295,7 @@ class FeedSpider(scrapy.Spider):
 
         items = []
         for item_data in items_list:
-            item = self._extract_nextjs_item(item_data, response)
+            item = self._extract_jq_item(item_data, response)
             if item is None:
                 continue
 
@@ -312,6 +319,36 @@ class FeedSpider(scrapy.Spider):
         )
 
         return deduped_items
+
+    def _parse_json(self, response):
+        """Parse a plain JSON API response using jq selectors."""
+        self._validate_spider_config()
+
+        try:
+            parsed = json.loads(response.body)
+        except json.JSONDecodeError as exc:
+            raise RuntimeError(f"Failed to parse JSON response: {exc}") from exc
+
+        try:
+            matches = self._jq_values(self.item_container_selector, parsed)
+        except Exception as exc:
+            raise RuntimeError(
+                f"Failed to evaluate jq selector against JSON response: {exc}"
+            ) from exc
+
+        items_list = [value for value in matches if isinstance(value, dict)]
+        if not items_list:
+            raise RuntimeError(
+                f"No items matched item_container_selector={self.item_container_selector!r}"
+            )
+
+        items = []
+        for item_data in items_list:
+            item = self._extract_jq_item(item_data, response)
+            if item is not None:
+                items.append(item)
+
+        return items
 
     def _jq_values(self, query, obj):
         """Evaluate a jq query and return raw values."""
@@ -433,8 +470,8 @@ class FeedSpider(scrapy.Spider):
 
         return all_items
 
-    def _normalize_nextjs_link(self, link_val, response):
-        """Normalize Next.js item links from absolute, relative, or slug values."""
+    def _normalize_jq_link(self, link_val, response):
+        """Normalize a jq-extracted link from absolute, relative, or slug values."""
         link_val = str(link_val).strip()
         if not link_val:
             return None
@@ -461,8 +498,8 @@ class FeedSpider(scrapy.Spider):
                     return text
         return None
 
-    def _extract_nextjs_item(self, item_data, response):
-        """Extract a single item from Next.js JSON using jq selectors."""
+    def _extract_jq_item(self, item_data, response):
+        """Extract a single item from a JSON dict using jq selectors."""
         try:
             if not isinstance(item_data, dict):
                 return None
@@ -477,7 +514,7 @@ class FeedSpider(scrapy.Spider):
             if not link_raw:
                 return None
 
-            link = self._normalize_nextjs_link(link_raw, response)
+            link = self._normalize_jq_link(link_raw, response)
             if not link:
                 return None
 

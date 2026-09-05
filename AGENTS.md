@@ -29,6 +29,7 @@
 - If a new feed can't be scraped with the existing setup, suggest how to proceed and we can discuss before implementing new scraping methods.
 - If the feed uses nextjs, you can extract the nextjs data like `uv run python extract_nextjs.py snapshots/cohere-blog.html >snapshots/cohere-blog.nextjs.json`.
 - You can find where items are in nextjs like `uv run python json_grep.py snapshots/cohere-blog.nextjs.json "Part of the title"` if the user gives example titles (ask for some).
+- If a site's posts load from a plain JSON API (e.g. a Supabase/PostgREST backend) rather than being present in the HTML, use `format = "json"`: `source_url` is the API endpoint itself, `request_headers` (an inline TOML table) carries any required API key/auth header, and the item selectors are jq queries against each returned object, same as nextjs. See README's "Add A New Feed" for the full field list.
 
 ## Feed generation
 - Each site will correspond to one feed, e.g. the Anthropic News site will become a `anthropic-news.xml` feed.
