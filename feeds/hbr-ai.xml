@@ -7,14 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 04 Sep 2026 17:02:04 +0000</lastBuildDate>
-    <item>
-      <title>AI Makes Building Easy. Choosing What to Build Is Harder.</title>
-      <link>https://hbr.org/2026/08/ai-makes-building-easy-choosing-what-to-build-is-harder</link>
-      <description>If everyone has access to similar AI tools, your team’s advantage isn’t technical capability—it’s understanding the problem.</description>
-      <guid isPermaLink="true">https://hbr.org/2026/08/ai-makes-building-easy-choosing-what-to-build-is-harder</guid>
-      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Mon, 07 Sep 2026 13:39:32 +0000</lastBuildDate>
     <item>
       <title>Why Agentic AI Could Transform Procurement</title>
       <link>https://hbr.org/2026/08/why-agentic-ai-could-transform-procurement</link>
@@ -112,6 +105,13 @@
       <description>How companies can create a more integrated customer journey.</description>
       <guid isPermaLink="true">https://hbr.org/2026/09/ai-is-blurring-the-line-between-sales-and-marketing</guid>
       <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>AI Can Enhance Every Stage of Teamwork—Under Two Conditions</title>
+      <link>https://hbr.org/2026/09/ai-can-enhance-every-stage-of-teamwork-under-two-conditions</link>
+      <description>Intentionally incorporating AI before, during, and after meetings leads to better group outcomes, according to a new analysis.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/09/ai-can-enhance-every-stage-of-teamwork-under-two-conditions</guid>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
