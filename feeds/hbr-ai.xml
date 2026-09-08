@@ -7,21 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 07 Sep 2026 13:39:32 +0000</lastBuildDate>
-    <item>
-      <title>Why Agentic AI Could Transform Procurement</title>
-      <link>https://hbr.org/2026/08/why-agentic-ai-could-transform-procurement</link>
-      <description>The combination of economic visibility, process structure, and persistent friction make it a huge opportunity.</description>
-      <guid isPermaLink="true">https://hbr.org/2026/08/why-agentic-ai-could-transform-procurement</guid>
-      <pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Research: The Innovation Problems AI Can’t Solve</title>
-      <link>https://hbr.org/2026/08/research-the-innovation-problems-ai-cant-solve</link>
-      <description>Generative AI speeds innovation, but it can also narrow thinking, reinforce bias, and distance teams from customers.</description>
-      <guid isPermaLink="true">https://hbr.org/2026/08/research-the-innovation-problems-ai-cant-solve</guid>
-      <pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Tue, 08 Sep 2026 17:25:49 +0000</lastBuildDate>
     <item>
       <title>How to Respond to the Coming AI Cost Shock</title>
       <link>https://hbr.org/2026/08/how-to-respond-to-the-coming-ai-cost-shock</link>
@@ -112,6 +98,20 @@
       <description>Intentionally incorporating AI before, during, and after meetings leads to better group outcomes, according to a new analysis.</description>
       <guid isPermaLink="true">https://hbr.org/2026/09/ai-can-enhance-every-stage-of-teamwork-under-two-conditions</guid>
       <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Is Your AI Training the Competition?</title>
+      <link>https://hbr.org/2026/09/is-your-ai-training-the-competition</link>
+      <description>Standard AI safeguards may fail to protect one of your company’s most valuable assets.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/09/is-your-ai-training-the-competition</guid>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Welcome to AI Autumn</title>
+      <link>https://hbr.org/2026/09/welcome-to-ai-autumn</link>
+      <description>In the September 7 edition of The Insider newsletter, managing editor Gretchen Gavett writes on what’s next for HBR’s coverage of AI, shares new insights about blue ocean strategy, and more.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/09/welcome-to-ai-autumn</guid>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
