@@ -7,21 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 08 Sep 2026 21:59:53 +0000</lastBuildDate>
-    <item>
-      <title>Strategy Making Gets an AI Boost</title>
-      <link>https://hbr.org/2026/08/strategy-making-gets-an-ai-boost</link>
-      <description>In the August 17 edition of The Insider newsletter, managing editor Gretchen Gavett writes on how AI is changing strategy-making, the end of the traditional career arc, and more.</description>
-      <guid isPermaLink="true">https://hbr.org/2026/08/strategy-making-gets-an-ai-boost</guid>
-      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>AI Is Undermining Leaders’ Judgment. Here’s What to Do About It.</title>
-      <link>https://hbr.org/2026/08/ai-is-undermining-leaders-judgment-heres-what-to-do-about-it</link>
-      <description>The tools designed to augment your decision-making could end up making it weaker.</description>
-      <guid isPermaLink="true">https://hbr.org/2026/08/ai-is-undermining-leaders-judgment-heres-what-to-do-about-it</guid>
-      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 09 Sep 2026 17:15:02 +0000</lastBuildDate>
     <item>
       <title>4 Steps to Transform the “Middle Office” with AI</title>
       <link>https://hbr.org/2026/08/4-steps-to-transform-the-middle-office-with-ai</link>
@@ -112,6 +98,20 @@
       <description>Sponsored by Red Hat</description>
       <guid isPermaLink="true">https://hbr.org/sponsored/2026/09/establishing-digital-competitiveness-with-ai-sovereignty</guid>
       <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>AI Is Changing the Rules of Entrepreneurship</title>
+      <link>https://hbr.org/2026/09/ai-is-changing-the-rules-of-entrepreneurship</link>
+      <description>The era of lean start-ups is behind us. Abundance brings its own challenges.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/09/ai-is-changing-the-rules-of-entrepreneurship</guid>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>To Adopt AI at Scale, Employees Need to Trust Agents</title>
+      <link>https://hbr.org/2026/09/to-adopt-ai-at-scale-employees-need-to-trust-agents</link>
+      <description>Research suggests adoption improves when organizations are explicit about an agent’s capabilities—and limitations.</description>
+      <guid isPermaLink="true">https://hbr.org/2026/09/to-adopt-ai-at-scale-employees-need-to-trust-agents</guid>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
