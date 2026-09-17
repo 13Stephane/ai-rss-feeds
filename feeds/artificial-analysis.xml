@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 16 Sep 2026 17:43:05 +0000</lastBuildDate>
-    <item>
-      <title>Announcing the Artificial Analysis Search Index: Same Agent, Different Search</title>
-      <link>https://artificialanalysis.ai/articles/search-api</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/search-api</guid>
-      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 17 Sep 2026 06:36:23 +0000</lastBuildDate>
     <item>
       <title>Announcing the Speech Agent Arena: Compare Speech agents in real world conversations</title>
       <link>https://artificialanalysis.ai/articles/announcing-the-speech-agent-arena</link>
@@ -73,6 +67,12 @@
       <link>https://artificialanalysis.ai/articles/benchmarking-gpt-6-astra</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/benchmarking-gpt-6-astra</guid>
       <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Announcing Artificial Analysis Capability Indices v1.1</title>
+      <link>https://artificialanalysis.ai/articles/artificial-analysis-capability-indices-v1-1</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/artificial-analysis-capability-indices-v1-1</guid>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Ant Group releases finance-focused Ling-3.0-flash-Fin</title>
