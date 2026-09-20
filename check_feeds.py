@@ -376,7 +376,14 @@ def main() -> None:
                 body = fetch_feed(feed_url, args.timeout, args.retries)
             checked = check_feed(body, args.min_items, max_age_days, now)
         except FeedFailure as failure:
-            flaky = bool(config.get("flaky"))
+            # `flaky` means the source refuses the runner while serving readers
+            # normally, so it excuses a failure to *fetch* and nothing else. If
+            # the feed came back and parsed, the runner was plainly not blocked,
+            # and STALE or MALFORMED is a real finding. Downgrading those too is
+            # how a flaky feed that quietly dies stays invisible: turing-blog sat
+            # 26 days stale while the run reported "All 18 feeds passed".
+            fetch_failed = failure.kind == "UNREACHABLE" or failure.kind.startswith("HTTP_")
+            flaky = bool(config.get("flaky")) and fetch_failed
             print(f"{'WARN' if flaky else 'FAIL'}: {feed_key}: {failure.kind}: {failure.detail}")
             record = {
                 "feed_key": feed_key,
