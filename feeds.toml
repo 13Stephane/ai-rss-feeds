@@ -36,7 +36,17 @@ item_title_selector = "h2::text"
 item_date_selector = "h2 span:first-child::text"
 item_description_selector = "div > p::text"
 
+# Parked 2026-09-20: anthropic.com/news still answers 200, but its Next.js
+# payload no longer embeds the posts - the list is fetched client-side now. The
+# payload is 131 KB with a single publicationList and zero `post` objects, where
+# /research is 545 KB with 169 of them, so the same selector still works there
+# and this is a change to /news alone. No relocated index exists: /newsroom,
+# /news/all, /company/news, /press and /updates all 404.
+#
+# Not yet tried: whether Anthropic publishes RSS of its own, and what endpoint
+# the page now calls for the list. Either could bring this back.
 [feeds.anthropic-news]
+broken = true
 feed_title = "Anthropic News"
 source_url = "https://www.anthropic.com/news"
 format = "nextjs"

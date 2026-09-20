@@ -12,7 +12,7 @@ Or you can import selected feeds by copying the URL of the XML files in the belo
 |---|---|
 | [Ai2 News (Allen Institute for AI)](https://allenai.org/news) | [feeds/allenai-news.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/allenai-news.xml) |
 | [AISI Blog (AI Security Institute)](https://www.aisi.gov.uk/blog) | [feeds/aisi-blog.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/aisi-blog.xml) |
-| [Anthropic News](https://www.anthropic.com/news) | [feeds/anthropic-news.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/anthropic-news.xml) |
+| \* [Anthropic News](https://www.anthropic.com/news) | [feeds/anthropic-news.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/anthropic-news.xml) |
 | [Anthropic Research](https://www.anthropic.com/research) | [feeds/anthropic-research.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/anthropic-research.xml) |
 | [Claude Blog](https://claude.com/blog) | [feeds/claude-blog.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/claude-blog.xml) |
 | \* [HBR AI and Machine Learning](https://hbr.org/topic/subject/ai-and-machine-learning) | [feeds/hbr-ai.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/hbr-ai.xml) |
@@ -22,7 +22,8 @@ Or you can import selected feeds by copying the URL of the XML files in the belo
 
 \* Parked (`broken = true`): the source stopped being scrapable, so these feeds are
 frozen at their last good contents rather than updating. HBR removed the page
-layout this feed read and its replacement carries no dates; turing.ac.uk refuses
+layout this feed read and its replacement carries no dates; anthropic.com/news
+no longer embeds its posts in the page; turing.ac.uk refuses
 GitHub's runner IPs. Parking keeps the scheduled run green and flags automatically
 if either source becomes scrapable again.
 
