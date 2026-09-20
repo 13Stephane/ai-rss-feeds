@@ -42,10 +42,14 @@
 - Add them to `feeds.toml` with `external_feed_url` (and optional `site_url`) instead. They are passed through to `feeds.opml` and checked by `check_feeds.py`, but nothing is generated for them.
 - Setting a scraping field on an external feed is a hard error — see `src/feed_config.py`.
 - `flaky = true` applies to external feeds too. Some publishers (Substack) refuse GitHub's runner IPs while serving readers normally, so the health check warns instead of failing. Confirm the feed really is fine before reaching for this.
+- `flaky` excuses only a *fetch* failure (`UNREACHABLE`, `HTTP_<code>`). A feed that
+  fetched and parsed proves the runner was not blocked, so `STALE` and `MALFORMED`
+  fail the run even when the feed is flaky — otherwise a flaky source that quietly
+  dies is never reported.
 
 ## Broken feeds
 - If a feed stops working, it can be marked `broken = true` in `feeds.toml`. This will stop a known problem from failing the whole run, and will flag when it starts working again.
-- If a source is *flaky* (intermittently blocks the runner or serves no content, alternating between success and failure), mark it `flaky = true` instead. A flaky feed never fails the run — it warns when it errors and stays silent when it succeeds. Use this only for unreliable sources, not for genuinely-broken feeds (which should stay `broken = true` so they flag when fixed).
+- If a source is *flaky* (intermittently blocks the runner or serves no content, alternating between success and failure), mark it `flaky = true` instead. The word that matters is *alternating*: once a source has refused for weeks on end it is broken, not flaky, and belongs on `broken = true` so it is parked quietly and flags when it recovers. A flaky feed never fails the run — it warns when it errors and stays silent when it succeeds. Use this only for unreliable sources, not for genuinely-broken feeds (which should stay `broken = true` so they flag when fixed).
 - To fix a feed:
   - Grab a new snapshot (as above).
   - If it uses nextjs, extract the data (as above).

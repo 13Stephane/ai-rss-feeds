@@ -67,8 +67,16 @@ item_title_selector = "h2::text"
 item_link_selector = "a[href^='/blog/']::attr(href)"
 item_date_selector = "div.u-text-style-caption::text"
 
+# Parked 2026-09-20: turing.ac.uk has refused the runner since at least
+# 2026-09-16 - HTTP 403 to the bot User-Agent and to a browser one alike, so the
+# block is on GitHub's IPs, not on how we identify ourselves. The last
+# successful scrape was 2026-09-01 and the feed is frozen at its 2026-08-25
+# item. It was `flaky`, which is for a source that alternates between success
+# and failure; three weeks of refusal is not alternating. `broken` parks it
+# without failing the run and flags automatically the moment it scrapes again.
+# If the block turns out to be intermittent, put `flaky` back.
 [feeds.turing-blog]
-flaky = true
+broken = true
 feed_title = "Turing Blog (Alan Turing Institute)"
 source_url = "https://www.turing.ac.uk/blog"
 item_container_selector = "article.node--type-article"
@@ -95,25 +103,26 @@ item_link_selector = "a::attr(href)"
 item_date_selector = "footer div:first-child p ::text"
 item_description_selector = "h2 + p ::text"
 
-# HBR rebuilt this topic page on 2026-08-20. The new page is a faceted search
-# view whose cards carry no publication date at all - only a magazine issue name
-# - so it cannot yield a valid feed no matter which selectors are used.
+# Parked 2026-09-20: HBR finished the migration it began on 2026-08-20 and the
+# legacy template is gone. It used to be served under any unrecognised suffix of
+# the topic path, which is what this feed scraped; since 2026-09-16 /feed, /rss,
+# /latest, /all and a nonsense suffix all return the same 404 page, and the
+# generator has errored on every run since.
 #
-# The pre-rebuild template is still served, though: any unrecognised suffix
-# under the topic path returns it (/feed, /rss and a nonsense suffix all return
-# the same 249 KB page), with the old stream markup and real dates, current to
-# yesterday. So source_url points at the /feed suffix and the selectors below
-# are unchanged - verified end to end on a runner: 15 items, correct titles,
-# dates and links.
+# The rebuilt topic page is still unscrapable: 10 cards, no <time>, no ld+json,
+# no date of any kind, so no selector can produce a valid item.
 #
-# Be clear-eyed: this is a catch-all route rendering the legacy template, not a
-# supported endpoint, and it will stop working when HBR finishes the migration.
-# At that point the spider errors and the run emails, which is the intended
-# behaviour. The fallback is http://feeds.harvardbusiness.org/harvardbusiness/ -
-# HBR's own feed, but whole-site rather than AI-only, plaintext HTTP (their
-# https fails at the TLS handshake), and Atom rather than RSS 2.0, so
-# check_feeds.py would need to learn Atom before it could be carried.
+# Probed alternatives, neither AI-scoped:
+#   - http://feeds.harvardbusiness.org/harvardbusiness/ - HBR's own feed, live
+#     (100 entries, current), but whole-site, plaintext HTTP, and Atom rather
+#     than RSS 2.0, so check_feeds.py would need to learn Atom first.
+#   - https://hbr.org/the-latest - whole-site too, but it does carry <time>
+#     elements with real dates, so it is scrapable if a firehose is acceptable.
+#
+# Parked rather than removed so the decision stays open and the selectors below
+# remain the record of the markup that worked.
 [feeds.hbr-ai]
+broken = true
 feed_title = "HBR AI and Machine Learning"
 feed_description = "AI and machine learning coverage from Harvard Business Review."
 source_url = "https://hbr.org/topic/subject/ai-and-machine-learning/feed"
