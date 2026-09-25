@@ -77,23 +77,6 @@ item_title_selector = "h2::text"
 item_link_selector = "a[href^='/blog/']::attr(href)"
 item_date_selector = "div.u-text-style-caption::text"
 
-# Parked 2026-09-20: turing.ac.uk has refused the runner since at least
-# 2026-09-16 - HTTP 403 to the bot User-Agent and to a browser one alike, so the
-# block is on GitHub's IPs, not on how we identify ourselves. The last
-# successful scrape was 2026-09-01 and the feed is frozen at its 2026-08-25
-# item. It was `flaky`, which is for a source that alternates between success
-# and failure; three weeks of refusal is not alternating. `broken` parks it
-# without failing the run and flags automatically the moment it scrapes again.
-# If the block turns out to be intermittent, put `flaky` back.
-[feeds.turing-blog]
-broken = true
-feed_title = "Turing Blog (Alan Turing Institute)"
-source_url = "https://www.turing.ac.uk/blog"
-item_container_selector = "article.node--type-article"
-item_title_selector = "h3 a[href^='/blog/'] span::text"
-item_link_selector = "h3 a[href^='/blog/']::attr(href)"
-item_date_selector = "div.field-published-date span::text"
-
 [feeds.mila-news]
 feed_title = "Mila News (Quebec AI Institute)"
 feed_description = "News and announcements from Mila - Quebec AI Institute."
@@ -181,6 +164,25 @@ site_url = "https://news.google.com/search?hl=en-US&gl=US&ceid=US:en&q=AI%20corp
 feed_title = "AI, Culture and Workforce (Google News)"
 external_feed_url = "https://news.google.com/rss/search?hl=en-US&gl=US&ceid=US:en&q=AI%20culture%20OR%20talent%20OR%20workforce"
 site_url = "https://news.google.com/search?hl=en-US&gl=US&ceid=US:en&q=AI%20culture%20OR%20talent%20OR%20workforce"
+
+# Anthropic publishes no feed of its own - probed 2026-09-25: rss.xml, /feed,
+# /feed.xml, /rss, /atom.xml, /news/rss.xml, /news/feed, /index.xml all 404, no
+# alternate link tags, and /news stopped embedding its posts (see anthropic-news,
+# parked). So this stands in, the same way the Google News feeds stand in for the
+# Google Alerts.
+#
+# Measured across four phrasings from a runner: `site:anthropic.com/news` is
+# exactly the right scope but relevance-ranked and useless as a monitor (median
+# 241 days old, 8 of 100 items within 30 days). This loose phrasing is
+# recency-ranked instead - median 1 day, 101 of 102 items within 30 days, 91 of
+# 102 naming Anthropic.
+#
+# Note what this is: coverage OF Anthropic, which includes their own posts but
+# also third-party reporting. It is not a first-party feed, and the title says so.
+[feeds.anthropic-google-news]
+feed_title = "Anthropic News and Coverage (Google News)"
+external_feed_url = "https://news.google.com/rss/search?hl=en-US&gl=US&ceid=US:en&q=Anthropic%20Claude"
+site_url = "https://news.google.com/search?hl=en-US&gl=US&ceid=US:en&q=Anthropic%20Claude"
 
 [feeds.techcrunch]
 feed_title = "TechCrunch"

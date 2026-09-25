@@ -18,14 +18,12 @@ Or you can import selected feeds by copying the URL of the XML files in the belo
 | \* [HBR AI and Machine Learning](https://hbr.org/topic/subject/ai-and-machine-learning) | [feeds/hbr-ai.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/hbr-ai.xml) |
 | [Mila News (Quebec AI Institute)](https://mila.quebec/en/news) | [feeds/mila-news.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/mila-news.xml) |
 | [Mistral News](https://mistral.ai/news) | [feeds/mistral-news.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/mistral-news.xml) |
-| \* [Turing Blog (Alan Turing Institute)](https://www.turing.ac.uk/blog) | [feeds/turing-blog.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/turing-blog.xml) |
 
 \* Parked (`broken = true`): the source stopped being scrapable, so these feeds are
 frozen at their last good contents rather than updating. HBR removed the page
-layout this feed read and its replacement carries no dates; anthropic.com/news
-no longer embeds its posts in the page; turing.ac.uk refuses
-GitHub's runner IPs. Parking keeps the scheduled run green and flags automatically
-if either source becomes scrapable again.
+layout this feed read and its replacement carries no dates, and anthropic.com/news
+no longer embeds its posts in the page. Parking keeps the scheduled run green and
+flags automatically if either source becomes scrapable again.
 
 ### External Feeds
 
@@ -39,6 +37,7 @@ publisher rather than at this repo.
 | [AI and Corporate Innovation (Google News)](https://news.google.com/search?hl=en-US&gl=US&ceid=US:en&q=AI%20corporate%20innovation%20OR%20enterprise%20innovation%20OR%20business%20innovation) | https://news.google.com/rss/search?hl=en-US&gl=US&ceid=US:en&q=AI%20corporate%20innovation%20OR%20enterprise%20innovation%20OR%20business%20innovation |
 | [AI, Culture and Workforce (Google News)](https://news.google.com/search?hl=en-US&gl=US&ceid=US:en&q=AI%20culture%20OR%20talent%20OR%20workforce) | https://news.google.com/rss/search?hl=en-US&gl=US&ceid=US:en&q=AI%20culture%20OR%20talent%20OR%20workforce |
 | [AI Productivity, Growth and Value (Google News)](https://news.google.com/search?hl=en-US&gl=US&ceid=US:en&q=AI%20productivity%20OR%20growth%20OR%20value) | https://news.google.com/rss/search?hl=en-US&gl=US&ceid=US:en&q=AI%20productivity%20OR%20growth%20OR%20value |
+| [Anthropic News and Coverage (Google News)](https://news.google.com/search?hl=en-US&gl=US&ceid=US:en&q=Anthropic%20Claude) | https://news.google.com/rss/search?hl=en-US&gl=US&ceid=US:en&q=Anthropic%20Claude |
 | \*\* [Clouded Judgement](https://cloudedjudgement.substack.com/) | https://cloudedjudgement.substack.com/feed |
 | \*\* [Deep Phenotype](https://deepphenotype.substack.com/) | https://deepphenotype.substack.com/feed |
 | \*\* [Import AI (Jack Clark)](https://importai.substack.com/) | https://importai.substack.com/feed |
@@ -147,7 +146,7 @@ Repository **variables**, all optional:
 | `FEED_HEALTH_BASE_URL` | this repo's raw default branch | where the feeds are published |
 | `FEED_HEALTH_MAX_AGE_DAYS` | `21` | staleness limit in days |
 | `FEED_HEALTH_MIN_ITEMS` | `1` | minimum items per feed |
-| `FEED_HEALTH_AGE_OVERRIDES` | none | JSON per-feed age limits, e.g. `{"turing-blog": 90}` |
+| `FEED_HEALTH_AGE_OVERRIDES` | none | JSON per-feed age limits, e.g. `{"claude-blog": 90}` |
 | `FEED_HEALTH_SKIP` | none | comma-separated feed keys to exclude |
 
 Use `FEED_HEALTH_AGE_OVERRIDES` for sources that genuinely publish rarely, so

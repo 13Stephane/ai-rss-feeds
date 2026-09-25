@@ -10,6 +10,7 @@
     <outline type="rss" text="Ai2 News (Allen Institute for AI)" title="Ai2 News (Allen Institute for AI)" xmlUrl="https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/allenai-news.xml" htmlUrl="https://allenai.org/news" />
     <outline type="rss" text="AISI Blog (AI Security Institute)" title="AISI Blog (AI Security Institute)" xmlUrl="https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/aisi-blog.xml" htmlUrl="https://www.aisi.gov.uk/blog" />
     <outline type="rss" text="Anthropic News" title="Anthropic News" xmlUrl="https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/anthropic-news.xml" htmlUrl="https://www.anthropic.com/news" />
+    <outline type="rss" text="Anthropic News and Coverage (Google News)" title="Anthropic News and Coverage (Google News)" xmlUrl="https://news.google.com/rss/search?hl=en-US&amp;gl=US&amp;ceid=US:en&amp;q=Anthropic%20Claude" htmlUrl="https://news.google.com/search?hl=en-US&amp;gl=US&amp;ceid=US:en&amp;q=Anthropic%20Claude" />
     <outline type="rss" text="Anthropic Research" title="Anthropic Research" xmlUrl="https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/anthropic-research.xml" htmlUrl="https://www.anthropic.com/research" />
     <outline type="rss" text="Artificial Analysis Articles" title="Artificial Analysis Articles" xmlUrl="https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/artificial-analysis.xml" htmlUrl="https://artificialanalysis.ai/articles" />
     <outline type="rss" text="Claude Blog" title="Claude Blog" xmlUrl="https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/claude-blog.xml" htmlUrl="https://claude.com/blog" />
@@ -21,6 +22,5 @@
     <outline type="rss" text="Mistral News" title="Mistral News" xmlUrl="https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/mistral-news.xml" htmlUrl="https://mistral.ai/news/" />
     <outline type="rss" text="TechCrunch" title="TechCrunch" xmlUrl="https://techcrunch.com/feed/" htmlUrl="https://techcrunch.com/" />
     <outline type="rss" text="The Rundown AI" title="The Rundown AI" xmlUrl="https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml" htmlUrl="https://www.therundown.ai/" />
-    <outline type="rss" text="Turing Blog (Alan Turing Institute)" title="Turing Blog (Alan Turing Institute)" xmlUrl="https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/turing-blog.xml" htmlUrl="https://www.turing.ac.uk/blog" />
   </body>
 </opml>
