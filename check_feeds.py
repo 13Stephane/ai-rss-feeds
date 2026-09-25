@@ -35,7 +35,10 @@ DEFAULT_BASE_URL = (
 DEFAULT_MAX_AGE_DAYS = 21
 DEFAULT_MIN_ITEMS = 1
 DEFAULT_TIMEOUT_SECONDS = 30
-DEFAULT_RETRIES = 3
+# 5 rather than 3: Google News answered 503 to all three of its feeds at once on
+# 2026-09-09 and exhausted 3 attempts (~6s of backoff). The backoff doubles per
+# attempt, so 5 spans ~30s - long enough to ride out that kind of blip.
+DEFAULT_RETRIES = 5
 
 FEEDS_DIR = Path(__file__).resolve().parent / "feeds"
 
