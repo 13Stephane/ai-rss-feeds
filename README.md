@@ -2,7 +2,9 @@
 
 This project generates RSS 2.0 feeds for AI news/blog sites that do not publish feeds directly.
 
-You can import all of these feeds into your RSS reader with this [feeds.opml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds.opml) file.
+You can import these feeds into your RSS reader with this [feeds.opml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds.opml) file.
+Parked feeds (marked \* below) are left out of it, so importing never subscribes
+you to something that will never update.
 
 Or you can import selected feeds by copying the URL of the XML files in the below table.
 
@@ -19,9 +21,12 @@ Or you can import selected feeds by copying the URL of the XML files in the belo
 | [Mistral News](https://mistral.ai/news) | [feeds/mistral-news.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/mistral-news.xml) |
 
 \* Parked (`broken = true`): anthropic.com/news no longer embeds its posts in the
-page, so this feed is frozen at its last good contents rather than updating.
-Parking keeps the scheduled run green and flags automatically if the source
-becomes scrapable again.
+page, so this feed is frozen at its last good contents rather than updating. The
+file stays published, so an existing subscription keeps resolving, but parked
+feeds are left out of `feeds.opml` — a subscription that silently never updates
+is the very thing the health check exists to catch. Parking keeps the scheduled
+run green and flags automatically if the source becomes scrapable again; re-import
+the OPML once a feed is unparked to pick it up.
 
 ### External Feeds
 

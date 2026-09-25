@@ -22,6 +22,14 @@ def build_opml_tree() -> ET.ElementTree:
     body = ET.SubElement(root, "body")
 
     for feed_key, config in sorted(feeds.items(), key=lambda item: (item[1]["feed_title"].lower(), item[0])):
+        # A parked feed still resolves - the file stays published at its last
+        # good contents - so a reader would show it as an ordinary subscription
+        # that silently never updates. That is the confusion the health check
+        # exists to prevent, so leave parked feeds out and let them reappear
+        # when they are unparked. Re-import after that to pick them up again.
+        if config.get("broken"):
+            continue
+
         feed_title = config["feed_title"]
 
         # External feeds already publish RSS, so point subscribers straight at
@@ -31,9 +39,9 @@ def build_opml_tree() -> ET.ElementTree:
             site_url = config.get("site_url", feed_url)
         else:
             feed_url = f"{REPO_RAW_BASE_URL}/feeds/{feed_key}.xml"
-            # `feed_link` wins where the page a reader should land on is not the
-            # page we scrape - see hbr-ai, which scrapes a suffixed URL that
-            # happens to serve the old template.
+            # `feed_link` wins where the page a reader should land on is not
+            # the page we scrape. Nothing needs it today; it earned its keep
+            # when hbr-ai scraped a suffixed URL that served an old template.
             site_url = config.get("feed_link", config["source_url"])
 
         ET.SubElement(
