@@ -96,37 +96,6 @@ item_link_selector = "a::attr(href)"
 item_date_selector = "footer div:first-child p ::text"
 item_description_selector = "h2 + p ::text"
 
-# Parked 2026-09-20: HBR finished the migration it began on 2026-08-20 and the
-# legacy template is gone. It used to be served under any unrecognised suffix of
-# the topic path, which is what this feed scraped; since 2026-09-16 /feed, /rss,
-# /latest, /all and a nonsense suffix all return the same 404 page, and the
-# generator has errored on every run since.
-#
-# The rebuilt topic page is still unscrapable: 10 cards, no <time>, no ld+json,
-# no date of any kind, so no selector can produce a valid item.
-#
-# Probed alternatives, neither AI-scoped:
-#   - http://feeds.harvardbusiness.org/harvardbusiness/ - HBR's own feed, live
-#     (100 entries, current), but whole-site, plaintext HTTP, and Atom rather
-#     than RSS 2.0, so check_feeds.py would need to learn Atom first.
-#   - https://hbr.org/the-latest - whole-site too, but it does carry <time>
-#     elements with real dates, so it is scrapable if a firehose is acceptable.
-#
-# Parked rather than removed so the decision stays open and the selectors below
-# remain the record of the markup that worked.
-[feeds.hbr-ai]
-broken = true
-feed_title = "HBR AI and Machine Learning"
-feed_description = "AI and machine learning coverage from Harvard Business Review."
-source_url = "https://hbr.org/topic/subject/ai-and-machine-learning/feed"
-feed_link = "https://hbr.org/topic/subject/ai-and-machine-learning"
-item_container_selector = "stream-content[data-stream-name='Latest'] li.stream-entry"
-item_title_selector = "h2.hed a::text"
-item_link_selector = "h2.hed a::attr(href)"
-item_date_selector = "div.utility.pubdate time::text"
-item_description_selector = "div.dek ::text"
-min_item_count = 5
-
 
 # --- External feeds -----------------------------------------------------
 # These publishers already provide RSS, so nothing is scraped or generated for
@@ -183,6 +152,32 @@ site_url = "https://news.google.com/search?hl=en-US&gl=US&ceid=US:en&q=AI%20cult
 feed_title = "Anthropic News and Coverage (Google News)"
 external_feed_url = "https://news.google.com/rss/search?hl=en-US&gl=US&ceid=US:en&q=Anthropic%20Claude"
 site_url = "https://news.google.com/search?hl=en-US&gl=US&ceid=US:en&q=Anthropic%20Claude"
+
+# HBR's only feed, and the one HBR itself links to from its homepage, from
+# /the-latest and from the AI topic page. It replaces the hbr-ai scrape, which
+# died when HBR rebuilt that topic page: the replacement carries no dates at all,
+# and the pre-rebuild template that was briefly still served under any
+# unrecognised suffix of the topic path stopped answering on 2026-09-16.
+#
+# Three things to know about it:
+#   - Whole-site, not AI-scoped. There is no topic feed: /technology,
+#     /innovation and /hbr all 404, and hbr.org has no feeds index page. It is
+#     AI-dense even so - 34 of 100 entry titles named AI, ML, agents or LLMs
+#     when measured on 2026-09-25.
+#   - Plain HTTP. HBR advertises the https:// form, but https fails the TLS
+#     handshake from GitHub's runners on both feeds.harvardbusiness.org and
+#     feeds.hbr.org (SSL_ERROR_SYSCALL), reproduced on three separate days. Only
+#     http answers, so that is what is configured; the feed carries no
+#     credentials, so the exposure is that a network observer sees which public
+#     feed was fetched.
+#   - Atom 1.0, not RSS 2.0, which is why check_feeds.py learned Atom.
+#
+# If HBR ever restores dates to the AI topic page, an AI-scoped scrape becomes
+# possible again and would be the better feed.
+[feeds.hbr]
+feed_title = "Harvard Business Review"
+external_feed_url = "http://feeds.harvardbusiness.org/harvardbusiness/"
+site_url = "https://hbr.org/"
 
 [feeds.techcrunch]
 feed_title = "TechCrunch"

@@ -15,15 +15,13 @@ Or you can import selected feeds by copying the URL of the XML files in the belo
 | \* [Anthropic News](https://www.anthropic.com/news) | [feeds/anthropic-news.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/anthropic-news.xml) |
 | [Anthropic Research](https://www.anthropic.com/research) | [feeds/anthropic-research.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/anthropic-research.xml) |
 | [Claude Blog](https://claude.com/blog) | [feeds/claude-blog.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/claude-blog.xml) |
-| \* [HBR AI and Machine Learning](https://hbr.org/topic/subject/ai-and-machine-learning) | [feeds/hbr-ai.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/hbr-ai.xml) |
 | [Mila News (Quebec AI Institute)](https://mila.quebec/en/news) | [feeds/mila-news.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/mila-news.xml) |
 | [Mistral News](https://mistral.ai/news) | [feeds/mistral-news.xml](https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/mistral-news.xml) |
 
-\* Parked (`broken = true`): the source stopped being scrapable, so these feeds are
-frozen at their last good contents rather than updating. HBR removed the page
-layout this feed read and its replacement carries no dates, and anthropic.com/news
-no longer embeds its posts in the page. Parking keeps the scheduled run green and
-flags automatically if either source becomes scrapable again.
+\* Parked (`broken = true`): anthropic.com/news no longer embeds its posts in the
+page, so this feed is frozen at its last good contents rather than updating.
+Parking keeps the scheduled run green and flags automatically if the source
+becomes scrapable again.
 
 ### External Feeds
 
@@ -40,6 +38,7 @@ publisher rather than at this repo.
 | [Anthropic News and Coverage (Google News)](https://news.google.com/search?hl=en-US&gl=US&ceid=US:en&q=Anthropic%20Claude) | https://news.google.com/rss/search?hl=en-US&gl=US&ceid=US:en&q=Anthropic%20Claude |
 | \*\* [Clouded Judgement](https://cloudedjudgement.substack.com/) | https://cloudedjudgement.substack.com/feed |
 | \*\* [Deep Phenotype](https://deepphenotype.substack.com/) | https://deepphenotype.substack.com/feed |
+| \*\*\* [Harvard Business Review](https://hbr.org/) | http://feeds.harvardbusiness.org/harvardbusiness/ |
 | \*\* [Import AI (Jack Clark)](https://importai.substack.com/) | https://importai.substack.com/feed |
 | [TechCrunch](https://techcrunch.com/) | https://techcrunch.com/feed/ |
 | [The Rundown AI](https://www.therundown.ai/) | https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml |
@@ -47,6 +46,11 @@ publisher rather than at this repo.
 \*\* Substack refuses GitHub's runner IPs, so the health check cannot verify these
 feeds even though they work in a reader. Marked `flaky = true`, so they warn
 instead of failing the run.
+
+\*\*\* HBR's only feed is whole-site rather than AI-scoped, is Atom 1.0 rather than
+RSS 2.0, and is reachable over plain HTTP only — HBR advertises the `https://`
+form but it fails the TLS handshake from GitHub's runners. See the notes above
+`[feeds.hbr]` in `feeds.toml`.
 
 ## Developer Guide
 
@@ -109,7 +113,7 @@ Each feed fails on one of:
 |---|---|
 | `UNREACHABLE` | connection failed or timed out after retries |
 | `HTTP_<code>` | the URL returned a non-200 status. 4xx fails at once; 5xx and 429 are retried first, since those mean "not now" rather than "no" |
-| `MALFORMED` | not well-formed XML, not RSS 2.0, or fewer items than the minimum |
+| `MALFORMED` | not well-formed XML, neither RSS 2.0 nor Atom 1.0, or fewer items than the minimum |
 | `STALE` | no new item within the age limit (newest `pubDate`, falling back to `lastBuildDate`) |
 
 Feeds marked `broken = true` are skipped unless `--include-broken` is passed.
