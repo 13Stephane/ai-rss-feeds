@@ -25,6 +25,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
+from typing import NamedTuple
 
 from src.feed_config import is_external, load_all_feeds
 
@@ -192,62 +193,104 @@ def read_local_feed(feed_key: str) -> bytes:
         raise FeedFailure("MISSING", f"no feed file at {path}")
 
 
-def parse_channel(body: bytes) -> ET.Element:
-    """Return the RSS <channel> element, raising FeedFailure if malformed."""
+ATOM = "{http://www.w3.org/2005/Atom}"
+
+
+class ParsedFeed(NamedTuple):
+    """A feed reduced to what the checks need, whatever format it arrived in."""
+
+    kind: str  # "rss" or "atom"
+    entries: list[ET.Element]
+    container: ET.Element  # <channel> for RSS, <feed> for Atom
+
+
+def parse_feed(body: bytes) -> ParsedFeed:
+    """Parse RSS 2.0 or Atom 1.0, raising FeedFailure if malformed.
+
+    Atom is here for publishers that offer nothing else - HBR's only feed is
+    Atom - not because this repo generates it. Everything it generates is RSS.
+    """
     try:
         root = ET.fromstring(body)
     except ET.ParseError as exc:
         raise FeedFailure("MALFORMED", f"is not well-formed XML: {exc}")
 
-    if root.tag != "rss":
-        raise FeedFailure("MALFORMED", f"root element is <{root.tag}>, expected <rss>")
+    if root.tag == "rss":
+        channel = root.find("channel")
+        if channel is None:
+            raise FeedFailure("MALFORMED", "has no <channel> element")
+        if not (channel.findtext("title") or "").strip():
+            raise FeedFailure("MALFORMED", "has no channel <title>")
+        return ParsedFeed("rss", channel.findall("item"), channel)
 
-    channel = root.find("channel")
-    if channel is None:
-        raise FeedFailure("MALFORMED", "has no <channel> element")
+    if root.tag == f"{ATOM}feed":
+        if not (root.findtext(f"{ATOM}title") or "").strip():
+            raise FeedFailure("MALFORMED", "has no feed <title>")
+        return ParsedFeed("atom", root.findall(f"{ATOM}entry"), root)
 
-    if not (channel.findtext("title") or "").strip():
-        raise FeedFailure("MALFORMED", "has no channel <title>")
+    raise FeedFailure(
+        "MALFORMED",
+        f"root element is <{root.tag}>, expected <rss> or an Atom <feed>",
+    )
 
-    return channel
+
+def parse_timestamp(kind: str, raw: str) -> datetime | None:
+    """RSS dates are RFC 822; Atom dates are RFC 3339. Return None if unparseable."""
+    try:
+        if kind == "rss":
+            return parsedate_to_datetime(raw)
+        return datetime.fromisoformat(raw)
+    except (TypeError, ValueError):
+        return None
 
 
-def newest_entry_date(channel: ET.Element) -> tuple[datetime | None, str]:
-    """Return the newest item pubDate, falling back to lastBuildDate."""
-    item_dates = []
-    for item in channel.findall("item"):
-        raw_date = item.findtext("pubDate")
-        if not raw_date:
-            continue
-        try:
-            item_dates.append(parsedate_to_datetime(raw_date))
-        except (TypeError, ValueError):
-            continue
+def newest_entry_date(feed: ParsedFeed) -> tuple[datetime | None, str]:
+    """Return the newest entry date, falling back to the feed-level date."""
+    if feed.kind == "rss":
+        entry_tags = ("pubDate",)
+        feed_tag, feed_label = "lastBuildDate", "lastBuildDate"
+    else:
+        # published is the real publication date; updated is the fallback an
+        # entry always carries.
+        entry_tags = (f"{ATOM}published", f"{ATOM}updated")
+        feed_tag, feed_label = f"{ATOM}updated", "feed updated"
 
-    if item_dates:
-        return max(item_dates), "newest item"
+    entry_dates = []
+    for entry in feed.entries:
+        for tag in entry_tags:
+            raw_date = entry.findtext(tag)
+            if not raw_date:
+                continue
+            parsed = parse_timestamp(feed.kind, raw_date)
+            if parsed is not None:
+                entry_dates.append(parsed)
+                break
 
-    raw_build_date = channel.findtext("lastBuildDate")
-    if raw_build_date:
-        try:
-            return parsedate_to_datetime(raw_build_date), "lastBuildDate"
-        except (TypeError, ValueError):
-            pass
+    if entry_dates:
+        return max(entry_dates), "newest item"
+
+    # findtext matches direct children only, so this cannot pick up an entry's
+    # own date by accident.
+    raw_feed_date = feed.container.findtext(feed_tag)
+    if raw_feed_date:
+        parsed = parse_timestamp(feed.kind, raw_feed_date)
+        if parsed is not None:
+            return parsed, feed_label
 
     return None, "no date"
 
 
 def check_feed(body: bytes, min_items: int, max_age_days: float, now: datetime) -> dict:
     """Validate a feed body, raising FeedFailure on the first problem found."""
-    channel = parse_channel(body)
+    feed = parse_feed(body)
 
-    item_count = len(channel.findall("item"))
+    item_count = len(feed.entries)
     if item_count < min_items:
         raise FeedFailure("MALFORMED", f"has {item_count} items, expected at least {min_items}")
 
-    newest, date_source = newest_entry_date(channel)
+    newest, date_source = newest_entry_date(feed)
     if newest is None:
-        raise FeedFailure("MALFORMED", "has no parseable pubDate or lastBuildDate")
+        raise FeedFailure("MALFORMED", "has no parseable item or feed-level date")
 
     if newest.tzinfo is None:
         newest = newest.replace(tzinfo=timezone.utc)

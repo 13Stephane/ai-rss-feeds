@@ -63,7 +63,8 @@
 - Can also trigger it manually.
 
 ## Health checks
-- `check_feeds.py` checks the *published* feeds are reachable, valid RSS, and fresh. Keep it standard-library only so it can run with `uv run --no-project`.
+- `check_feeds.py` checks the *published* feeds are reachable, valid, and fresh. Keep it standard-library only so it can run with `uv run --no-project`.
+- It accepts RSS 2.0 and Atom 1.0. Everything this repo *generates* is RSS 2.0; Atom is only there for external feeds from publishers that offer nothing else, such as HBR. RSS dates are RFC 822 and Atom dates RFC 3339, so they parse differently — see `parse_timestamp`.
 - A github workflow (`.github/workflows/feed-health.yml`) runs it daily and emails a report on failure.
 - Both workflows email via `dawidd6/action-send-mail` using the `MAIL_USERNAME`/`MAIL_PASSWORD` secrets, and skip the email step when those are absent so GitHub's own failure notification still fires.
 - Thresholds, the recipient, and the published base URL are repo variables — see the README. Feeds that publish rarely belong in `FEED_HEALTH_AGE_OVERRIDES`, or in a per-feed `max_age_days` in `feeds.toml`, rather than having the global limit raised.

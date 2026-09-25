@@ -16,7 +16,7 @@
     <outline type="rss" text="Claude Blog" title="Claude Blog" xmlUrl="https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/claude-blog.xml" htmlUrl="https://claude.com/blog" />
     <outline type="rss" text="Clouded Judgement" title="Clouded Judgement" xmlUrl="https://cloudedjudgement.substack.com/feed" htmlUrl="https://cloudedjudgement.substack.com/" />
     <outline type="rss" text="Deep Phenotype" title="Deep Phenotype" xmlUrl="https://deepphenotype.substack.com/feed" htmlUrl="https://deepphenotype.substack.com/" />
-    <outline type="rss" text="HBR AI and Machine Learning" title="HBR AI and Machine Learning" xmlUrl="https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/hbr-ai.xml" htmlUrl="https://hbr.org/topic/subject/ai-and-machine-learning" />
+    <outline type="rss" text="Harvard Business Review" title="Harvard Business Review" xmlUrl="http://feeds.harvardbusiness.org/harvardbusiness/" htmlUrl="https://hbr.org/" />
     <outline type="rss" text="Import AI (Jack Clark)" title="Import AI (Jack Clark)" xmlUrl="https://importai.substack.com/feed" htmlUrl="https://importai.substack.com/" />
     <outline type="rss" text="Mila News (Quebec AI Institute)" title="Mila News (Quebec AI Institute)" xmlUrl="https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/mila-news.xml" htmlUrl="https://mila.quebec/en/news" />
     <outline type="rss" text="Mistral News" title="Mistral News" xmlUrl="https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/mistral-news.xml" htmlUrl="https://mistral.ai/news/" />
