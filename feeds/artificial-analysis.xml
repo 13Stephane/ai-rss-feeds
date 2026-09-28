@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 22 Sep 2026 22:23:30 +0000</lastBuildDate>
-    <item>
-      <title>Claude Fable 5.1 tops the Artificial Analysis Intelligence Index</title>
-      <link>https://artificialanalysis.ai/articles/claude-fable-5-1</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/claude-fable-5-1</guid>
-      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Mon, 28 Sep 2026 15:52:23 +0000</lastBuildDate>
     <item>
       <title>Google has released Gemini 3.8 Flash, its fourth Flash model in under four months</title>
       <link>https://artificialanalysis.ai/articles/gemini-3-8-flash</link>
@@ -79,6 +73,12 @@
       <link>https://artificialanalysis.ai/articles/gpt-6-sol-and-luna-push-the-cost-efficiency-frontier</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/gpt-6-sol-and-luna-push-the-cost-efficiency-frontier</guid>
       <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Announcing the Artificial Analysis Cyber Index Alliance</title>
+      <link>https://artificialanalysis.ai/articles/artificial-analysis-cyber-index</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/artificial-analysis-cyber-index</guid>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
