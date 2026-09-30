@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Sep 2026 23:09:43 +0000</lastBuildDate>
-    <item>
-      <title>Announcing Artificial Analysis Intelligence Index v4.2</title>
-      <link>https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-2</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-2</guid>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 30 Sep 2026 07:20:19 +0000</lastBuildDate>
     <item>
       <title>OpenBMB releases MiniCPM5-2B</title>
       <link>https://artificialanalysis.ai/articles/openbmb-releases-minicpm5-2b</link>
@@ -78,6 +72,12 @@
       <title>GPT-6.1 Sol replaces GPT-6 Sol after just 7 days, with near-Astra intelligence</title>
       <link>https://artificialanalysis.ai/articles/gpt-6-1-sol-replaces-gpt-6-sol-after-just-7-days-with-near-astra-intelligence</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/gpt-6-1-sol-replaces-gpt-6-sol-after-just-7-days-with-near-astra-intelligence</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>AA-AgentPerf-Local: Benchmarking local AI agents on laptops and workstations</title>
+      <link>https://artificialanalysis.ai/articles/aa-agentperf-local</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/aa-agentperf-local</guid>
       <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
