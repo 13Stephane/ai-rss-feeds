@@ -7,19 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 30 Sep 2026 07:20:19 +0000</lastBuildDate>
-    <item>
-      <title>OpenBMB releases MiniCPM5-2B</title>
-      <link>https://artificialanalysis.ai/articles/openbmb-releases-minicpm5-2b</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/openbmb-releases-minicpm5-2b</guid>
-      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Announcing the Artificial Analysis Intelligence Index v4.3</title>
-      <link>https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-3</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-3</guid>
-      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 01 Oct 2026 01:30:26 +0000</lastBuildDate>
     <item>
       <title>Benchmarking GPT-6 Astra</title>
       <link>https://artificialanalysis.ai/articles/benchmarking-gpt-6-astra</link>
@@ -79,6 +67,18 @@
       <link>https://artificialanalysis.ai/articles/aa-agentperf-local</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/aa-agentperf-local</guid>
       <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Gemini 4 Argon: Google is back as one of the top three labs in intelligence achieved</title>
+      <link>https://artificialanalysis.ai/articles/gemini-4-argon-google-top-three-labs</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/gemini-4-argon-google-top-three-labs</guid>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Korean AI Lab Upstage releases Solar Mini 4</title>
+      <link>https://artificialanalysis.ai/articles/korean-ai-lab-upstage-releases-solar-mini-4</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/korean-ai-lab-upstage-releases-solar-mini-4</guid>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
