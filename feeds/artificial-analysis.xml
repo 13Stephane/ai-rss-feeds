@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Oct 2026 01:30:26 +0000</lastBuildDate>
-    <item>
-      <title>Benchmarking GPT-6 Astra</title>
-      <link>https://artificialanalysis.ai/articles/benchmarking-gpt-6-astra</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/benchmarking-gpt-6-astra</guid>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Tue, 06 Oct 2026 23:12:55 +0000</lastBuildDate>
     <item>
       <title>Announcing Artificial Analysis Capability Indices v1.1</title>
       <link>https://artificialanalysis.ai/articles/artificial-analysis-capability-indices-v1-1</link>
@@ -79,6 +73,12 @@
       <link>https://artificialanalysis.ai/articles/korean-ai-lab-upstage-releases-solar-mini-4</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/korean-ai-lab-upstage-releases-solar-mini-4</guid>
       <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mistral has released Mistral Large 4, making France home to the most intelligent model outside the US and China</title>
+      <link>https://artificialanalysis.ai/articles/mistral-large-4-france-ai</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/mistral-large-4-france-ai</guid>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
