@@ -66,16 +66,35 @@ item_link_selector = ".url // .slug.current"
 item_date_selector = ".date // .publishedOn"
 item_description_selector = ".summary"
 
-# Publishes in bursts with long gaps — nothing since 2026-06-18, but the scrape
-# is healthy, so a longer limit is the honest signal rather than broken=true.
+# Moved 2026-10-06: claude.com/blog now answers 308 to /resources/articles, and
+# every /blog/<slug> redirects to /resources/articles/<same slug>, so links
+# already in readers keep working. The new page is a Next.js build whose class
+# names carry a build hash (ResourceCard-module-scss-module__q33Tuq__card) that
+# changes on redeploy, so nothing here selects on the hash: a card IS its link,
+# found by the href prefix; the date span by the stable "__meta" part of its
+# class, confirmed by a date regex; title and excerpt by element.
+#
+# The page shows its six newest articles only (the newest twice — once in a
+# featured carousel; the spider keeps one item per link). The old blog feed held
+# 20, so the default min_item_ratio_vs_previous (0.6, i.e. 12 of 20) would fail
+# the first run, and after that the page size is fixed by the site, not by how
+# much was scraped. An absolute floor fits a fixed-size page better: fewer than
+# five means a partial scrape.
+#
+# The old 90-day limit was for a blog that published in rare bursts. The
+# articles hub publishes several times a week, so the default limit applies,
+# which would have flagged this move within three weeks instead of three months.
 [feeds.claude-blog]
-max_age_days = 90
 feed_title = "Claude Blog"
-source_url = "https://claude.com/blog"
-item_container_selector = "div.marquee_cms_blog_list_item"
-item_title_selector = "h2::text"
-item_link_selector = "a[href^='/blog/']::attr(href)"
-item_date_selector = "div.u-text-style-caption::text"
+source_url = "https://claude.com/resources/articles"
+item_container_selector = "a[href^='/resources/articles/']"
+item_title_selector = "h3::text"
+item_link_selector = "a::attr(href)"
+item_date_selector = "span[class*='__meta']::text"
+item_date_regex = "[A-Z][a-z]{2,8} \\d{1,2}, \\d{4}"
+item_description_selector = "p::text"
+min_item_count = 5
+min_item_ratio_vs_previous = 0
 
 [feeds.mila-news]
 feed_title = "Mila News (Quebec AI Institute)"

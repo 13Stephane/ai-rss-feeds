@@ -274,7 +274,25 @@ class FeedSpider(scrapy.Spider):
                 container_count,
             )
 
-        return items
+        # One page can list the same link twice: claude.com/resources/articles
+        # repeats its newest article in a featured carousel above the index grid.
+        # A feed must not carry one link twice, so keep one item per link — the
+        # newest-dated if they differ, the same rule _parse_nextjs applies — in
+        # the order the page first shows them.
+        newest_by_link = {}
+        for item in items:
+            kept = newest_by_link.get(item["link"])
+            if kept is None or item["date"] > kept["date"]:
+                newest_by_link[item["link"]] = item
+
+        duplicate_count = len(items) - len(newest_by_link)
+        if duplicate_count:
+            self.logger.info(
+                "Dropped %s item(s) whose link already appeared on the page",
+                duplicate_count,
+            )
+
+        return list(newest_by_link.values())
 
     def _parse_nextjs(self, response):
         """Parse Next.js Flight stream format using jq selectors."""

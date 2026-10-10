@@ -12,7 +12,7 @@
     <outline type="rss" text="Anthropic News and Coverage (Google News)" title="Anthropic News and Coverage (Google News)" xmlUrl="https://news.google.com/rss/search?hl=en-US&amp;gl=US&amp;ceid=US:en&amp;q=Anthropic%20Claude" htmlUrl="https://news.google.com/search?hl=en-US&amp;gl=US&amp;ceid=US:en&amp;q=Anthropic%20Claude" />
     <outline type="rss" text="Anthropic Research" title="Anthropic Research" xmlUrl="https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/anthropic-research.xml" htmlUrl="https://www.anthropic.com/research" />
     <outline type="rss" text="Artificial Analysis Articles" title="Artificial Analysis Articles" xmlUrl="https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/artificial-analysis.xml" htmlUrl="https://artificialanalysis.ai/articles" />
-    <outline type="rss" text="Claude Blog" title="Claude Blog" xmlUrl="https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/claude-blog.xml" htmlUrl="https://claude.com/blog" />
+    <outline type="rss" text="Claude Blog" title="Claude Blog" xmlUrl="https://raw.githubusercontent.com/13Stephane/ai-rss-feeds/refs/heads/main/feeds/claude-blog.xml" htmlUrl="https://claude.com/resources/articles" />
     <outline type="rss" text="Clouded Judgement" title="Clouded Judgement" xmlUrl="https://cloudedjudgement.substack.com/feed" htmlUrl="https://cloudedjudgement.substack.com/" />
     <outline type="rss" text="Deep Phenotype" title="Deep Phenotype" xmlUrl="https://deepphenotype.substack.com/feed" htmlUrl="https://deepphenotype.substack.com/" />
     <outline type="rss" text="Harvard Business Review" title="Harvard Business Review" xmlUrl="http://feeds.harvardbusiness.org/harvardbusiness/" htmlUrl="https://hbr.org/" />
