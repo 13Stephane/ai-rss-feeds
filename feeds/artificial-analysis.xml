@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 15 Oct 2026 22:39:02 +0000</lastBuildDate>
-    <item>
-      <title>Korean AI Lab Upstage releases Solar Mini 4</title>
-      <link>https://artificialanalysis.ai/articles/korean-ai-lab-upstage-releases-solar-mini-4</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/korean-ai-lab-upstage-releases-solar-mini-4</guid>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 16 Oct 2026 06:18:54 +0000</lastBuildDate>
     <item>
       <title>Mistral has released Mistral Large 4, making France home to the most intelligent model outside the US and China</title>
       <link>https://artificialanalysis.ai/articles/mistral-large-4-france-ai</link>
@@ -78,6 +72,12 @@
       <title>First AA-AgentPerf-Local results for an NVIDIA RTX Spark N1X laptop</title>
       <link>https://artificialanalysis.ai/articles/nvidia-rtx-spark-agentperf-local</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/nvidia-rtx-spark-agentperf-local</guid>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>First AA-AgentPerf results for NVIDIA Vera Rubin NVL72</title>
+      <link>https://artificialanalysis.ai/articles/vera-rubin-nvl72-agentperf</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/vera-rubin-nvl72-agentperf</guid>
       <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
