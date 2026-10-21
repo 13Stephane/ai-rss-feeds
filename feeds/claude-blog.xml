@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 21 Oct 2026 18:14:05 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 22:41:04 +0000</lastBuildDate>
     <item>
       <title>How Block orchestrates Claude Fable across thousands of pull requests</title>
       <link>https://claude.com/resources/articles/how-block-orchestrates-claude-fable-across-thousands-of-pull-requests</link>
@@ -51,11 +51,18 @@
       <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Build live dashboards and animate explainers with Claude</title>
-      <link>https://claude.com/resources/articles/dashboards-and-motion</link>
-      <description>Claude Dashboards and Claude Motion are now in beta. Docs, Slides, and Design are out of beta and on every Claude plan, including Free.</description>
-      <guid isPermaLink="true">https://claude.com/resources/articles/dashboards-and-motion</guid>
-      <pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+      <title>HCLTech joins the Claude Partner Network as a Global Premier partner</title>
+      <link>https://claude.com/resources/articles/hcltech-joins-claude-partner-network</link>
+      <description>HCLTech will bring Claude into the solutions it provides for banks, hospitals, telecom companies, and manufacturers.</description>
+      <guid isPermaLink="true">https://claude.com/resources/articles/hcltech-joins-claude-partner-network</guid>
+      <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Introducing Claude Duet</title>
+      <link>https://claude.com/resources/articles/claude-duet</link>
+      <description>A research preview is available by waitlist today, starting with US Pro and Max subscribers.</description>
+      <guid isPermaLink="true">https://claude.com/resources/articles/claude-duet</guid>
+      <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
