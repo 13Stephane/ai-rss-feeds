@@ -36,35 +36,67 @@ item_title_selector = "h2::text"
 item_date_selector = "h2 span:first-child::text"
 item_description_selector = "div > p::text"
 
-# Parked 2026-09-20: anthropic.com/news still answers 200, but its Next.js
-# payload no longer embeds the posts - the list is fetched client-side now. The
-# payload is 131 KB with a single publicationList and zero `post` objects, where
-# /research is 545 KB with 169 of them, so the same selector still works there
-# and this is a change to /news alone. No relocated index exists: /newsroom,
-# /news/all, /company/news, /press and /updates all 404.
+# Anthropic's two indexes. Both are Next.js pages whose item list arrives in the
+# Flight payload, and both broke the same way, a month apart:
 #
-# Not yet tried: whether Anthropic publishes RSS of its own, and what endpoint
-# the page now calls for the list. Either could bring this back.
+#   - /news, 2026-09-20: the payload stopped embedding the list (131 KB, zero
+#     items, fetched client-side). Parked. It embeds them again as of 2026-10-24
+#     (425 KB, 37 articles), so it is unparked.
+#   - /research, 2026-10-20 18:05 UTC: the CMS renamed the item type from `post`
+#     to `article`. Every run failed "No items matched" from then on.
+#
+# What the `article` objects look like now, read from both pages on 2026-10-24:
+# _id, title, slug.current, publishedOn, articleType ("news" | "research"),
+# category, and on two of them linkedUrl. No summary, so these feeds carry no
+# descriptions any more.
+#
+# The two pages now cross-list: /research shows 10 research and 8 news
+# articles, /news shows 24 news and 13 research. A link built as <this
+# page>/<slug> is therefore wrong for every cross-listed item. Anthropic
+# 308-redirects most of them, but a canonical URL that differs between the two
+# feeds defeats any reader that de-duplicates by link, and an article with a
+# linkedUrl (e.g. "Introducing Claude Mythos and Fable 5.1", which lives at
+# /claude-fable-and-mythos-5-1) has no working /research/ or /news/ address at
+# all — both 404 or bounce. So the link comes from the article itself:
+# linkedUrl when set, otherwise the path its articleType says it lives under.
+#
+# Each feed mirrors its page. Research keeps articleType "research", which is
+# what /research is about. News keeps everything /news lists, research-type
+# included: Anthropic leads its news page with research-type pieces now (on
+# 2026-10-24 the newest news-type article was from 2026-09-15, the six newer
+# items on /news all research-type), so a type filter there would drop what the
+# page shows first and leave the feed reading STALE every day. A piece that
+# appears in both feeds carries the same canonical link in both, so readers
+# that de-duplicate by link see it once.
+#
+# Both pages list far fewer items than the feeds held (research 182, news 266),
+# so the default min_item_ratio_vs_previous (0.6) would reject the first good
+# run; and the page size is set by the site from then on. An absolute floor
+# replaces it, at roughly half of what each page lists today. Readers keep the
+# items they have already fetched, so nothing already delivered is lost.
 [feeds.anthropic-news]
-broken = true
 feed_title = "Anthropic News"
 source_url = "https://www.anthropic.com/news"
 format = "nextjs"
-item_container_selector = ".. | objects | select(._type == \"post\" or ._type == \"featuredGridLink\")"
+item_container_selector = ".. | objects | select(._type == \"article\")"
 item_title_selector = ".title"
-item_link_selector = ".url // .slug.current"
-item_date_selector = ".date // .publishedOn"
+item_link_selector = ".linkedUrl // (if .slug.current == null then null elif .articleType == \"research\" then \"/research/\" + .slug.current else \"/news/\" + .slug.current end)"
+item_date_selector = ".publishedOn // .date"
 item_description_selector = ".summary"
+min_item_count = 15
+min_item_ratio_vs_previous = 0
 
 [feeds.anthropic-research]
 feed_title = "Anthropic Research"
 source_url = "https://www.anthropic.com/research"
 format = "nextjs"
-item_container_selector = ".. | objects | select(._type == \"post\" or ._type == \"featuredGridLink\")"
+item_container_selector = ".. | objects | select(._type == \"article\" and .articleType == \"research\")"
 item_title_selector = ".title"
-item_link_selector = ".url // .slug.current"
-item_date_selector = ".date // .publishedOn"
+item_link_selector = ".linkedUrl // (if .slug.current == null then null else \"/research/\" + .slug.current end)"
+item_date_selector = ".publishedOn // .date"
 item_description_selector = ".summary"
+min_item_count = 5
+min_item_ratio_vs_previous = 0
 
 # Moved 2026-10-06: claude.com/blog now answers 308 to /resources/articles, and
 # every /blog/<slug> redirects to /resources/articles/<same slug>, so links
