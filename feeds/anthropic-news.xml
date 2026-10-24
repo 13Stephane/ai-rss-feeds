@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 24 Oct 2026 10:39:06 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 12:12:04 +0000</lastBuildDate>
     <item>
       <title>Introducing 100K context windows</title>
       <link>https://www.anthropic.com/news/100k-context-windows</link>
@@ -165,15 +165,15 @@
       <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>UST is bringing Claude to physical AI</title>
-      <link>https://www.anthropic.com/news/ust-claude</link>
-      <guid isPermaLink="true">https://www.anthropic.com/news/ust-claude</guid>
-      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Ben Bernanke appointed to Anthropic’s Long-Term Benefit Trust</title>
       <link>https://www.anthropic.com/news/ben-bernanke</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/ben-bernanke</guid>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>UST is bringing Claude to physical AI</title>
+      <link>https://www.anthropic.com/news/ust-claude</link>
+      <guid isPermaLink="true">https://www.anthropic.com/news/ust-claude</guid>
       <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -207,6 +207,12 @@
       <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Designing more efficient quantum circuits with Claude</title>
+      <link>https://www.anthropic.com/research/designing-efficient-quantum-circuits</link>
+      <guid isPermaLink="true">https://www.anthropic.com/research/designing-efficient-quantum-circuits</guid>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Working at the frontier shapes expectations for the future</title>
       <link>https://www.anthropic.com/research/expectations-for-the-future</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/expectations-for-the-future</guid>
@@ -222,12 +228,6 @@
       <title>The AI expectations gap</title>
       <link>https://www.anthropic.com/research/ai-expectations-gap</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/ai-expectations-gap</guid>
-      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Designing more efficient quantum circuits with Claude</title>
-      <link>https://www.anthropic.com/research/designing-efficient-quantum-circuits</link>
-      <guid isPermaLink="true">https://www.anthropic.com/research/designing-efficient-quantum-circuits</guid>
       <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
