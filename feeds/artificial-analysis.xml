@@ -7,19 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Oct 2026 07:19:24 +0000</lastBuildDate>
-    <item>
-      <title>Artificial Analysis Decision Index v1.0</title>
-      <link>https://artificialanalysis.ai/articles/artificial-analysis-decision-index</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/artificial-analysis-decision-index</guid>
-      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Welcome to the era of embodied AI: Introducing AA-Robotics v0.1</title>
-      <link>https://artificialanalysis.ai/articles/aa-robotics</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/aa-robotics</guid>
-      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 28 Oct 2026 21:16:54 +0000</lastBuildDate>
     <item>
       <title>First AA-AgentPerf-Local results for an NVIDIA RTX Spark N1X laptop</title>
       <link>https://artificialanalysis.ai/articles/nvidia-rtx-spark-agentperf-local</link>
@@ -79,6 +67,18 @@
       <link>https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v5</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v5</guid>
       <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GitHub Copilot Fusion orchestrates Anthropic and OpenAI models to balance performance and cost</title>
+      <link>https://artificialanalysis.ai/articles/github-copilot-fusion-orchestrates-anthropic-and-openai-models-to-balance-performance-and-cost</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/github-copilot-fusion-orchestrates-anthropic-and-openai-models-to-balance-performance-and-cost</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Gemini 4 Carbon is the new #1 on the Artificial Analysis Intelligence Index v5</title>
+      <link>https://artificialanalysis.ai/articles/gemini-4-carbon-new-number-1</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/gemini-4-carbon-new-number-1</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
