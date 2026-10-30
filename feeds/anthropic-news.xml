@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 29 Oct 2026 19:10:32 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 16:48:16 +0000</lastBuildDate>
     <item>
       <title>Introducing 100K context windows</title>
       <link>https://www.anthropic.com/news/100k-context-windows</link>
@@ -183,6 +183,12 @@
       <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Designing more efficient quantum circuits with Claude</title>
+      <link>https://www.anthropic.com/research/designing-efficient-quantum-circuits</link>
+      <guid isPermaLink="true">https://www.anthropic.com/research/designing-efficient-quantum-circuits</guid>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Working at the frontier shapes expectations for the future</title>
       <link>https://www.anthropic.com/research/expectations-for-the-future</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/expectations-for-the-future</guid>
@@ -198,12 +204,6 @@
       <title>The AI expectations gap</title>
       <link>https://www.anthropic.com/research/ai-expectations-gap</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/ai-expectations-gap</guid>
-      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Designing more efficient quantum circuits with Claude</title>
-      <link>https://www.anthropic.com/research/designing-efficient-quantum-circuits</link>
-      <guid isPermaLink="true">https://www.anthropic.com/research/designing-efficient-quantum-circuits</guid>
       <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
