@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 24 Oct 2026 10:39:06 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 20:29:12 +0000</lastBuildDate>
     <item>
       <title>Predictability and Surprise in Large Generative Models</title>
       <link>https://www.anthropic.com/research/predictability-and-surprise-in-large-generative-models</link>
@@ -27,10 +27,16 @@
       <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>How scientists are using Claude to accelerate research and discovery</title>
-      <link>https://www.anthropic.com/research/accelerating-scientific-research</link>
-      <guid isPermaLink="true">https://www.anthropic.com/research/accelerating-scientific-research</guid>
-      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <title>Measuring AI agent autonomy in practice</title>
+      <link>https://www.anthropic.com/research/measuring-agent-autonomy</link>
+      <guid isPermaLink="true">https://www.anthropic.com/research/measuring-agent-autonomy</guid>
+      <pubDate>Wed, 18 Feb 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>How we built Claude Code auto mode: a safer way to skip permissions</title>
+      <link>https://www.anthropic.com/research/claude-code-auto-mode</link>
+      <guid isPermaLink="true">https://www.anthropic.com/research/claude-code-auto-mode</guid>
+      <pubDate>Wed, 25 Mar 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Project Deal: our Claude-run marketplace experiment</title>
@@ -43,6 +49,12 @@
       <link>https://www.anthropic.com/research/Evaluating-Claude-For-Bioinformatics-With-BioMysteryBench</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/Evaluating-Claude-For-Bioinformatics-With-BioMysteryBench</guid>
       <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Agentic coding and persistent returns to expertise</title>
+      <link>https://www.anthropic.com/research/claude-code-expertise</link>
+      <guid isPermaLink="true">https://www.anthropic.com/research/claude-code-expertise</guid>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Claude discovers a novel enzyme system with CRISPR-like repeats</title>
