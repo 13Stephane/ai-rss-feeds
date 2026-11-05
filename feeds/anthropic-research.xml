@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 02:43:53 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 12:41:38 +0000</lastBuildDate>
     <item>
       <title>Predictability and Surprise in Large Generative Models</title>
       <link>https://www.anthropic.com/research/predictability-and-surprise-in-large-generative-models</link>
@@ -25,6 +25,12 @@
       <link>https://www.anthropic.com/research/exploring-model-welfare</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/exploring-model-welfare</guid>
       <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>How scientists are using Claude to accelerate research and discovery</title>
+      <link>https://www.anthropic.com/research/accelerating-scientific-research</link>
+      <guid isPermaLink="true">https://www.anthropic.com/research/accelerating-scientific-research</guid>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Measuring AI agent autonomy in practice</title>
@@ -57,6 +63,12 @@
       <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Claude discovers a novel enzyme system with CRISPR-like repeats</title>
+      <link>https://www.anthropic.com/research/claude-discovers-novel-enzyme-system</link>
+      <guid isPermaLink="true">https://www.anthropic.com/research/claude-discovers-novel-enzyme-system</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Working at the frontier shapes expectations for the future</title>
       <link>https://www.anthropic.com/research/expectations-for-the-future</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/expectations-for-the-future</guid>
@@ -75,10 +87,10 @@
       <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Investigating vault particles with Claude</title>
-      <link>https://www.anthropic.com/research/investigating-vault-particles-with-claude</link>
-      <guid isPermaLink="true">https://www.anthropic.com/research/investigating-vault-particles-with-claude</guid>
-      <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+      <title>How Claude designed protein binders against scorpion neurotoxins</title>
+      <link>https://www.anthropic.com/research/claude-scorpion-toxin-binder-design</link>
+      <guid isPermaLink="true">https://www.anthropic.com/research/claude-scorpion-toxin-binder-design</guid>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
