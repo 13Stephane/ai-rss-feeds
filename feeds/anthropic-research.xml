@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 12:41:38 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 20:47:46 +0000</lastBuildDate>
     <item>
       <title>Predictability and Surprise in Large Generative Models</title>
       <link>https://www.anthropic.com/research/predictability-and-surprise-in-large-generative-models</link>
@@ -21,10 +21,16 @@
       <pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Exploring model welfare</title>
-      <link>https://www.anthropic.com/research/exploring-model-welfare</link>
-      <guid isPermaLink="true">https://www.anthropic.com/research/exploring-model-welfare</guid>
-      <pubDate>Thu, 24 Apr 2025 00:00:00 +0000</pubDate>
+      <title>The Anthropic Economic Index</title>
+      <link>https://www.anthropic.com/research/the-anthropic-economic-index</link>
+      <guid isPermaLink="true">https://www.anthropic.com/research/the-anthropic-economic-index</guid>
+      <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Estimating AI productivity gains from Claude conversations</title>
+      <link>https://www.anthropic.com/research/estimating-productivity-gains</link>
+      <guid isPermaLink="true">https://www.anthropic.com/research/estimating-productivity-gains</guid>
+      <pubDate>Tue, 25 Nov 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>How scientists are using Claude to accelerate research and discovery</title>
@@ -39,22 +45,28 @@
       <pubDate>Wed, 18 Feb 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Anthropic Economic Index report: Learning curves</title>
+      <link>https://www.anthropic.com/research/economic-index-march-2026-report</link>
+      <guid isPermaLink="true">https://www.anthropic.com/research/economic-index-march-2026-report</guid>
+      <pubDate>Tue, 24 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>How we built Claude Code auto mode: a safer way to skip permissions</title>
       <link>https://www.anthropic.com/research/claude-code-auto-mode</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/claude-code-auto-mode</guid>
       <pubDate>Wed, 25 Mar 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Project Deal: our Claude-run marketplace experiment</title>
-      <link>https://www.anthropic.com/features/project-deal</link>
-      <guid isPermaLink="true">https://www.anthropic.com/features/project-deal</guid>
-      <pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Evaluating Claude’s bioinformatics research capabilities with BioMysteryBench</title>
       <link>https://www.anthropic.com/research/Evaluating-Claude-For-Bioinformatics-With-BioMysteryBench</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/Evaluating-Claude-For-Bioinformatics-With-BioMysteryBench</guid>
       <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Coding agents in the social sciences</title>
+      <link>https://www.anthropic.com/research/coding-agents-social-sciences</link>
+      <guid isPermaLink="true">https://www.anthropic.com/research/coding-agents-social-sciences</guid>
+      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Agentic coding and persistent returns to expertise</title>
@@ -67,18 +79,6 @@
       <link>https://www.anthropic.com/research/claude-discovers-novel-enzyme-system</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/claude-discovers-novel-enzyme-system</guid>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Working at the frontier shapes expectations for the future</title>
-      <link>https://www.anthropic.com/research/expectations-for-the-future</link>
-      <guid isPermaLink="true">https://www.anthropic.com/research/expectations-for-the-future</guid>
-      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>How employment is changing at Anthropic</title>
-      <link>https://www.anthropic.com/research/employment-at-anthropic</link>
-      <guid isPermaLink="true">https://www.anthropic.com/research/employment-at-anthropic</guid>
-      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>The AI expectations gap</title>

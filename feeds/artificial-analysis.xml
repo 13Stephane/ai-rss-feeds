@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Oct 2026 21:16:54 +0000</lastBuildDate>
-    <item>
-      <title>First AA-AgentPerf-Local results for an NVIDIA RTX Spark N1X laptop</title>
-      <link>https://artificialanalysis.ai/articles/nvidia-rtx-spark-agentperf-local</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/nvidia-rtx-spark-agentperf-local</guid>
-      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 05 Nov 2026 20:47:46 +0000</lastBuildDate>
     <item>
       <title>First AA-AgentPerf results for NVIDIA Vera Rubin NVL72</title>
       <link>https://artificialanalysis.ai/articles/vera-rubin-nvl72-agentperf</link>
@@ -79,6 +73,12 @@
       <link>https://artificialanalysis.ai/articles/gemini-4-carbon-new-number-1</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/gemini-4-carbon-new-number-1</guid>
       <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Nanbeige has released Nanbeige4.3-33B scoring 20 on the Intelligence Index</title>
+      <link>https://artificialanalysis.ai/articles/nanbeige-has-released-nanbeige4-3-33b-scoring-20-on-the-intelligence-index</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/nanbeige-has-released-nanbeige4-3-33b-scoring-20-on-the-intelligence-index</guid>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
