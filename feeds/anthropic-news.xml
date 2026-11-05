@@ -7,12 +7,18 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Nov 2026 20:31:02 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 02:43:54 +0000</lastBuildDate>
     <item>
       <title>Introducing 100K context windows</title>
       <link>https://www.anthropic.com/news/100k-context-windows</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/100k-context-windows</guid>
       <pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Krishna Rao joins Anthropic as Chief Financial Officer</title>
+      <link>https://www.anthropic.com/news/krishna-rao-joins-anthropic</link>
+      <guid isPermaLink="true">https://www.anthropic.com/news/krishna-rao-joins-anthropic</guid>
+      <pubDate>Tue, 21 May 2024 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Introducing Contextual Retrieval</title>
@@ -55,6 +61,12 @@
       <link>https://www.anthropic.com/news/claude-opus-4-1</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/claude-opus-4-1</guid>
       <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Anthropic raises $13B Series F at $183B post-money valuation</title>
+      <link>https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation</link>
+      <guid isPermaLink="true">https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation</guid>
+      <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>A postmortem of three recent issues</title>
@@ -105,6 +117,12 @@
       <pubDate>Wed, 25 Feb 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Anthropic invests $100 million into the Claude Partner Network</title>
+      <link>https://www.anthropic.com/news/claude-partner-network</link>
+      <guid isPermaLink="true">https://www.anthropic.com/news/claude-partner-network</guid>
+      <pubDate>Thu, 12 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Introducing our Science Blog</title>
       <link>https://www.anthropic.com/research/introducing-anthropic-science</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/introducing-anthropic-science</guid>
@@ -121,6 +139,12 @@
       <link>https://www.anthropic.com/news/glasswing-initial-update</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/glasswing-initial-update</guid>
       <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Anthropic confidentially submits draft S-1 to the SEC</title>
+      <link>https://www.anthropic.com/news/confidential-draft-s1-sec</link>
+      <guid isPermaLink="true">https://www.anthropic.com/news/confidential-draft-s1-sec</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Introducing Claude Corps</title>
@@ -183,12 +207,6 @@
       <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Designing more efficient quantum circuits with Claude</title>
-      <link>https://www.anthropic.com/research/designing-efficient-quantum-circuits</link>
-      <guid isPermaLink="true">https://www.anthropic.com/research/designing-efficient-quantum-circuits</guid>
-      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Working at the frontier shapes expectations for the future</title>
       <link>https://www.anthropic.com/research/expectations-for-the-future</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/expectations-for-the-future</guid>
@@ -204,6 +222,12 @@
       <title>The AI expectations gap</title>
       <link>https://www.anthropic.com/research/ai-expectations-gap</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/ai-expectations-gap</guid>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Designing more efficient quantum circuits with Claude</title>
+      <link>https://www.anthropic.com/research/designing-efficient-quantum-circuits</link>
+      <guid isPermaLink="true">https://www.anthropic.com/research/designing-efficient-quantum-circuits</guid>
       <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
