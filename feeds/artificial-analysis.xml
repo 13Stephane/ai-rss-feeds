@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Nov 2026 02:46:40 +0000</lastBuildDate>
-    <item>
-      <title>NVIDIA Releases Nemotron 3.5 Super VL and Nemotron 3.5 Bolt 74B A9B</title>
-      <link>https://artificialanalysis.ai/articles/nemotron-3-5-super-and-bolt</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/nemotron-3-5-super-and-bolt</guid>
-      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 06 Nov 2026 12:24:19 +0000</lastBuildDate>
     <item>
       <title>Reflection has released Beam, their first model launch</title>
       <link>https://artificialanalysis.ai/articles/reflection-beam</link>
@@ -79,6 +73,12 @@
       <link>https://artificialanalysis.ai/articles/thinking-machines-releases-inkling-2-small-highest-scoring-open-weights-model-outside-of-chinia-upon-weights-release-it</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/thinking-machines-releases-inkling-2-small-highest-scoring-open-weights-model-outside-of-chinia-upon-weights-release-it</guid>
       <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>VIALS-AA: different paths to scientific image reasoning</title>
+      <link>https://artificialanalysis.ai/articles/vials-aa</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/vials-aa</guid>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
