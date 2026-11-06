@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 02:43:54 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 02:46:40 +0000</lastBuildDate>
     <item>
       <title>Introducing 100K context windows</title>
       <link>https://www.anthropic.com/news/100k-context-windows</link>
@@ -19,6 +19,12 @@
       <link>https://www.anthropic.com/news/krishna-rao-joins-anthropic</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/krishna-rao-joins-anthropic</guid>
       <pubDate>Tue, 21 May 2024 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Anthropic partners with Menlo Ventures to launch Anthology Fund</title>
+      <link>https://www.anthropic.com/news/anthropic-partners-with-menlo-ventures-to-launch-anthology-fund</link>
+      <guid isPermaLink="true">https://www.anthropic.com/news/anthropic-partners-with-menlo-ventures-to-launch-anthology-fund</guid>
+      <pubDate>Wed, 17 Jul 2024 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Introducing Contextual Retrieval</title>
@@ -85,6 +91,12 @@
       <link>https://www.anthropic.com/news/claude-haiku-4-5</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/claude-haiku-4-5</guid>
       <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The first AI-planned drive on Mars</title>
+      <link>https://www.anthropic.com/features/claude-on-mars</link>
+      <guid isPermaLink="true">https://www.anthropic.com/features/claude-on-mars</guid>
+      <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Anthropic partners with Allen Institute and Howard Hughes Medical Institute to accelerate scientific discovery</title>
