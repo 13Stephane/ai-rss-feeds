@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Nov 2026 08:37:20 +0000</lastBuildDate>
-    <item>
-      <title>Introducing 100K context windows</title>
-      <link>https://www.anthropic.com/news/100k-context-windows</link>
-      <guid isPermaLink="true">https://www.anthropic.com/news/100k-context-windows</guid>
-      <pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Mon, 09 Nov 2026 21:01:04 +0000</lastBuildDate>
     <item>
       <title>Krishna Rao joins Anthropic as Chief Financial Officer</title>
       <link>https://www.anthropic.com/news/krishna-rao-joins-anthropic</link>
@@ -25,12 +19,6 @@
       <link>https://www.anthropic.com/news/anthropic-partners-with-menlo-ventures-to-launch-anthology-fund</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/anthropic-partners-with-menlo-ventures-to-launch-anthology-fund</guid>
       <pubDate>Wed, 17 Jul 2024 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Introducing Contextual Retrieval</title>
-      <link>https://www.anthropic.com/research/contextual-retrieval</link>
-      <guid isPermaLink="true">https://www.anthropic.com/research/contextual-retrieval</guid>
-      <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku</title>
@@ -73,12 +61,6 @@
       <link>https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation</guid>
       <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>A postmortem of three recent issues</title>
-      <link>https://www.anthropic.com/research/a-postmortem-of-three-recent-issues</link>
-      <guid isPermaLink="true">https://www.anthropic.com/research/a-postmortem-of-three-recent-issues</guid>
-      <pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Enabling Claude Code to work more autonomously</title>
@@ -201,6 +183,12 @@
       <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Formalizing Fermat's Last Theorem</title>
+      <link>https://www.anthropic.com/research/formalizing-fermats-last-theorem</link>
+      <guid isPermaLink="true">https://www.anthropic.com/research/formalizing-fermats-last-theorem</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Introducing Claude Mythos and Fable 5.1</title>
       <link>https://www.anthropic.com/claude-fable-and-mythos-5-1</link>
       <guid isPermaLink="true">https://www.anthropic.com/claude-fable-and-mythos-5-1</guid>
@@ -219,6 +207,18 @@
       <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Designing more efficient quantum circuits with Claude</title>
+      <link>https://www.anthropic.com/research/designing-efficient-quantum-circuits</link>
+      <guid isPermaLink="true">https://www.anthropic.com/research/designing-efficient-quantum-circuits</guid>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Claude reveals ECDSA curve origins</title>
+      <link>https://www.anthropic.com/research/ecdsa-curve-origins</link>
+      <guid isPermaLink="true">https://www.anthropic.com/research/ecdsa-curve-origins</guid>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Working at the frontier shapes expectations for the future</title>
       <link>https://www.anthropic.com/research/expectations-for-the-future</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/expectations-for-the-future</guid>
@@ -234,12 +234,6 @@
       <title>The AI expectations gap</title>
       <link>https://www.anthropic.com/research/ai-expectations-gap</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/ai-expectations-gap</guid>
-      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Designing more efficient quantum circuits with Claude</title>
-      <link>https://www.anthropic.com/research/designing-efficient-quantum-circuits</link>
-      <guid isPermaLink="true">https://www.anthropic.com/research/designing-efficient-quantum-circuits</guid>
       <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
