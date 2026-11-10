@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Nov 2026 21:01:04 +0000</lastBuildDate>
-    <item>
-      <title>HealthBench and HealthBench Professional: Evaluating models in realistic health conversations</title>
-      <link>https://artificialanalysis.ai/articles/healthbench-professional-health-conversations</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/healthbench-professional-health-conversations</guid>
-      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Tue, 10 Nov 2026 20:34:42 +0000</lastBuildDate>
     <item>
       <title>Kimi K3.1 Pro launches at 4th on the Intelligence Index and will lead open weights models</title>
       <link>https://artificialanalysis.ai/articles/kimi-k3-1-pro-launch-benchmarks</link>
@@ -79,6 +73,12 @@
       <link>https://artificialanalysis.ai/articles/meta-s-muse-ember-is-the-cheapest-model-scoring-36-on-the-intelligence-index</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/meta-s-muse-ember-is-the-cheapest-model-scoring-36-on-the-intelligence-index</guid>
       <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Multimodal Knowledge Agent (MKA) benchmark: testing knowledge work capabilities with complex visual files</title>
+      <link>https://artificialanalysis.ai/articles/google-deepmind-multimodal-knowledge-agent</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/google-deepmind-multimodal-knowledge-agent</guid>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
