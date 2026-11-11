@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Nov 2026 20:34:42 +0000</lastBuildDate>
-    <item>
-      <title>Kimi K3.1 Pro launches at 4th on the Intelligence Index and will lead open weights models</title>
-      <link>https://artificialanalysis.ai/articles/kimi-k3-1-pro-launch-benchmarks</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/kimi-k3-1-pro-launch-benchmarks</guid>
-      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 11 Nov 2026 02:12:13 +0000</lastBuildDate>
     <item>
       <title>Code2Video-AA: how well do AI models design videos in code?</title>
       <link>https://artificialanalysis.ai/articles/code2video-aa</link>
@@ -72,6 +66,12 @@
       <title>Meta's Muse Ember is the cheapest model scoring 36 on the Intelligence Index</title>
       <link>https://artificialanalysis.ai/articles/meta-s-muse-ember-is-the-cheapest-model-scoring-36-on-the-intelligence-index</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/meta-s-muse-ember-is-the-cheapest-model-scoring-36-on-the-intelligence-index</guid>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Endpoint Accuracy Index v1.1: Tighter long context intervals and expanded model coverage</title>
+      <link>https://artificialanalysis.ai/articles/endpoint-accuracy-index-v1-1</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/endpoint-accuracy-index-v1-1</guid>
       <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
