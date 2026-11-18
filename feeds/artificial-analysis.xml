@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Nov 2026 02:12:13 +0000</lastBuildDate>
-    <item>
-      <title>Code2Video-AA: how well do AI models design videos in code?</title>
-      <link>https://artificialanalysis.ai/articles/code2video-aa</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/code2video-aa</guid>
-      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Wed, 18 Nov 2026 01:50:31 +0000</lastBuildDate>
     <item>
       <title>GPT-6.1 Terra pushes the cost efficiency frontier</title>
       <link>https://artificialanalysis.ai/articles/gpt-6-1-terra-pushes-the-cost-efficiency-frontier</link>
@@ -79,6 +73,12 @@
       <link>https://artificialanalysis.ai/articles/google-deepmind-multimodal-knowledge-agent</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/google-deepmind-multimodal-knowledge-agent</guid>
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>OpenAI has the #2 model in the Intelligence Index with the release of GPT-6.2 Astra and GPT-6.2 Sol</title>
+      <link>https://artificialanalysis.ai/articles/openai-has-the-2-model-in-the-intelligence-index-with-the-release-of-gpt-6-2-astra-and-gpt-6-2-sol</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/openai-has-the-2-model-in-the-intelligence-index-with-the-release-of-gpt-6-2-astra-and-gpt-6-2-sol</guid>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
