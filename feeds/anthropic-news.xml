@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Nov 2026 13:49:21 +0000</lastBuildDate>
-    <item>
-      <title>Krishna Rao joins Anthropic as Chief Financial Officer</title>
-      <link>https://www.anthropic.com/news/krishna-rao-joins-anthropic</link>
-      <guid isPermaLink="true">https://www.anthropic.com/news/krishna-rao-joins-anthropic</guid>
-      <pubDate>Tue, 21 May 2024 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Fri, 20 Nov 2026 18:46:30 +0000</lastBuildDate>
     <item>
       <title>Anthropic partners with Menlo Ventures to launch Anthology Fund</title>
       <link>https://www.anthropic.com/news/anthropic-partners-with-menlo-ventures-to-launch-anthology-fund</link>
@@ -241,6 +235,12 @@
       <link>https://www.anthropic.com/news/anthropic-prices-initial-public-offering</link>
       <guid isPermaLink="true">https://www.anthropic.com/news/anthropic-prices-initial-public-offering</guid>
       <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Anthropic announces closing of initial public offering, including full exercise of underwriters’ option to purchase additional shares, and closing of concurrent private placement</title>
+      <link>https://www.anthropic.com/news/ipo-close</link>
+      <guid isPermaLink="true">https://www.anthropic.com/news/ipo-close</guid>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
