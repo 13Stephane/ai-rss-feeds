@@ -320,7 +320,17 @@ class FeedSpider(scrapy.Spider):
                 newest_by_link[link] = item
                 continue
 
-            if item["date"] > existing_item["date"]:
+            # Newest date wins. On a tie, the copy that carries a description wins: Anthropic's
+            # pages repeat each article several times in the payload and only one copy has the
+            # summary, so keeping the first copy seen threw the text away (the research feed
+            # went from 21 of 65 items with a description to the newest ones having none).
+            newer = item["date"] > existing_item["date"]
+            same_day_with_text = (
+                item["date"] == existing_item["date"]
+                and item.get("description")
+                and not existing_item.get("description")
+            )
+            if newer or same_day_with_text:
                 newest_by_link[link] = item
 
         deduped_items = sorted(

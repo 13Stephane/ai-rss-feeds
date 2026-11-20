@@ -60,6 +60,11 @@ item_description_selector = "div > p::text"
 # all — both 404 or bounce. So the link comes from the article itself:
 # linkedUrl when set, otherwise the path its articleType says it lives under.
 #
+# Descriptions: only about a quarter of the articles on these pages carry one (24 of 86 on
+# 2026-11-20), as `summary` or `seoDescription`, and only on one of the several copies of
+# each article in the payload. The selector takes either, and the spider keeps the copy that
+# has the text when dates tie. The rest stay title-only; there is nothing on the index to use.
+#
 # Each feed mirrors its page. Research keeps articleType "research", which is
 # what /research is about. News keeps everything /news lists, research-type
 # included: Anthropic leads its news page with research-type pieces now (on
@@ -82,7 +87,7 @@ item_container_selector = ".. | objects | select(._type == \"article\")"
 item_title_selector = ".title"
 item_link_selector = ".linkedUrl // (if .slug.current == null then null elif .articleType == \"research\" then \"/research/\" + .slug.current else \"/news/\" + .slug.current end)"
 item_date_selector = ".publishedOn // .date"
-item_description_selector = ".summary"
+item_description_selector = ".summary // .seoDescription"
 min_item_count = 15
 min_item_ratio_vs_previous = 0
 
@@ -94,7 +99,7 @@ item_container_selector = ".. | objects | select(._type == \"article\" and .arti
 item_title_selector = ".title"
 item_link_selector = ".linkedUrl // (if .slug.current == null then null else \"/research/\" + .slug.current end)"
 item_date_selector = ".publishedOn // .date"
-item_description_selector = ".summary"
+item_description_selector = ".summary // .seoDescription"
 min_item_count = 5
 min_item_ratio_vs_previous = 0
 
