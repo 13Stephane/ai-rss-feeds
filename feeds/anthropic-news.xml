@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 21 Nov 2026 23:54:05 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 06:20:02 +0000</lastBuildDate>
     <item>
       <title>Anthropic partners with Menlo Ventures to launch Anthology Fund</title>
       <link>https://www.anthropic.com/news/anthropic-partners-with-menlo-ventures-to-launch-anthology-fund</link>
@@ -189,6 +189,18 @@
       <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Designing more efficient quantum circuits with Claude</title>
+      <link>https://www.anthropic.com/research/designing-efficient-quantum-circuits</link>
+      <guid isPermaLink="true">https://www.anthropic.com/research/designing-efficient-quantum-circuits</guid>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Claude reveals ECDSA curve origins</title>
+      <link>https://www.anthropic.com/research/ecdsa-curve-origins</link>
+      <guid isPermaLink="true">https://www.anthropic.com/research/ecdsa-curve-origins</guid>
+      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Working at the frontier shapes expectations for the future</title>
       <link>https://www.anthropic.com/research/expectations-for-the-future</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/expectations-for-the-future</guid>
@@ -204,18 +216,6 @@
       <title>The AI expectations gap</title>
       <link>https://www.anthropic.com/research/ai-expectations-gap</link>
       <guid isPermaLink="true">https://www.anthropic.com/research/ai-expectations-gap</guid>
-      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Designing more efficient quantum circuits with Claude</title>
-      <link>https://www.anthropic.com/research/designing-efficient-quantum-circuits</link>
-      <guid isPermaLink="true">https://www.anthropic.com/research/designing-efficient-quantum-circuits</guid>
-      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Claude reveals ECDSA curve origins</title>
-      <link>https://www.anthropic.com/research/ecdsa-curve-origins</link>
-      <guid isPermaLink="true">https://www.anthropic.com/research/ecdsa-curve-origins</guid>
       <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
