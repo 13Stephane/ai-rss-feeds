@@ -7,13 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 21 Nov 2026 00:56:00 +0000</lastBuildDate>
-    <item>
-      <title>GitHub Copilot Fusion orchestrates Anthropic and OpenAI models to balance performance and cost</title>
-      <link>https://artificialanalysis.ai/articles/github-copilot-fusion-orchestrates-anthropic-and-openai-models-to-balance-performance-and-cost</link>
-      <guid isPermaLink="true">https://artificialanalysis.ai/articles/github-copilot-fusion-orchestrates-anthropic-and-openai-models-to-balance-performance-and-cost</guid>
-      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
+    <lastBuildDate>Thu, 26 Nov 2026 00:37:46 +0000</lastBuildDate>
     <item>
       <title>Gemini 4 Carbon is the new #1 on the Artificial Analysis Intelligence Index v5</title>
       <link>https://artificialanalysis.ai/articles/gemini-4-carbon-new-number-1</link>
@@ -79,6 +73,12 @@
       <link>https://artificialanalysis.ai/articles/inkling-2-mini</link>
       <guid isPermaLink="true">https://artificialanalysis.ai/articles/inkling-2-mini</guid>
       <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Can language models drive a humanoid robot? Introducing AA-Robotics-Sim v0.1</title>
+      <link>https://artificialanalysis.ai/articles/aa-robotics-sim</link>
+      <guid isPermaLink="true">https://artificialanalysis.ai/articles/aa-robotics-sim</guid>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
